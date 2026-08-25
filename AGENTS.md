@@ -71,3 +71,4 @@ Use consistent severity indicators in gap assessment outputs:
 3. Create `plugins/<name>/skills/<name>/SKILL.md` following the 5-part structure
 4. Add reference files to `plugins/<name>/skills/<name>/references/`
 5. Add the plugin entry to `.Codex-plugin/marketplace.json`
+6. Run `python scripts/pack-skills.py` to refresh `skills/<name>.skill` archives for Claude.ai
