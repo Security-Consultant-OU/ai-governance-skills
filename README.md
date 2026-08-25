@@ -14,32 +14,17 @@ Collision terms (`high-risk`, `GPAI`, `FRIA`, `AISIA`, `deployer`) are disambigu
 
 ## Install
 
+Per-client steps (Claude Code, Claude.ai / Desktop, Cursor, Codex, Copilot, and a copy-folder fallback): **[INSTALL.md](INSTALL.md)**.
+
+**Claude Code** (native marketplace):
+
 ```
 /plugin marketplace add Security-Consultant-OU/ai-governance-skills
 /plugin install ai-governance@ai-governance-skills
 /plugin install eu-ai-act@ai-governance-skills
 ```
 
-Repeat `/plugin install <name>@ai-governance-skills` for any other plugin below.
-
-**Claude.ai (web / desktop):** download a `.skill` file from [`skills/`](skills/) and upload it to a conversation. Re-pack after editing source skills with `python scripts/pack-skills.py`.
-
-| Skill file | Skill |
-|---|---|
-| `skills/using-ai-governance.skill` | Dispatcher / catalog |
-| `skills/eu-ai-act.skill` | EU AI Act |
-| `skills/eu-gpai-cop.skill` | GPAI Code of Practice (Art. 56) |
-| `skills/nist-ai-rmf.skill` | NIST AI RMF |
-| `skills/iso42001.skill` | ISO/IEC 42001 AIMS |
-| `skills/iso-aisia.skill` | ISO AISIA record |
-| `skills/iso-ai-system-inventory.skill` | AI system register |
-| `skills/iso-ai-data-inventory.skill` | Data-for-AI inventory |
-| `skills/iso-ai-resources.skill` | AI resource inventory |
-| `skills/iso-aims-policy-kit.skill` | AIMS policy / SOP kit |
-| `skills/nyc-local-law-144.skill` | NYC Local Law 144 |
-| `skills/south-korea-ai-act.skill` | Korea AI Basic Act |
-| `skills/brazil-ai-act.skill` | Brazil PL 2338 (not enacted) |
-| `skills/csa-aicm.skill` | CSA AICM / AI-CAIQ |
+**Claude.ai / Desktop:** upload a file from [`skills/`](skills/). Rebuild zips with `python scripts/pack-skills.py` after editing source skills.
 
 ## Plugins
 
