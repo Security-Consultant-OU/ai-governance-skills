@@ -2,7 +2,7 @@
 
 This marketplace is a set of **specialized advisors**, not a single “AI governance” chatbot. Each skill loads when the question matches a specific law or framework. It then classifies the system, scores gaps (🔴 not started / 🟡 partial / 🟢 implemented), and fills a copy-ready artefact. It does **not** invent article, control, or Playbook IDs: it looks them up in that skill’s `references/` files.
 
-Install the dispatcher first (`/plugin install ai-governance@ai-governance-skills`), then any specialists. Versions as of **25 August 2026**: `ai-governance` **1.0.0**, `eu-ai-act` **1.3.0**, `iso42001` **1.4.0**, `csa-aicm` **1.0.0**; others **1.2.0**.
+Add the marketplace, then install the dispatcher first (`/plugin marketplace add Security-Consultant-OU/ai-governance-skills`, then `/plugin install ai-governance@ai-governance-skills`), then any specialists. Versions as of **25 August 2026**: `ai-governance` **1.0.0**, `eu-ai-act` **1.3.0**, `iso42001` **1.4.0**, `csa-aicm` **1.0.0**; others **1.2.0**.
 
 | Skill | In force? | Default artefact if you omit the document type |
 |---|---|---|

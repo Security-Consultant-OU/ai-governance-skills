@@ -1,52 +1,64 @@
-# Claude Skills for AI Governance
+# AI governance skills
 
-A Claude Code plugin marketplace containing AI governance skills covering major AI regulations and frameworks. Each skill transforms Claude into a specialized compliance advisor capable of gap assessments, document generation, risk classification, and structured guidance — all grounded in the actual regulatory text.
+A [Claude Code](https://claude.com/claude-code) plugin marketplace. Each plugin turns the agent into a **specialist** for one law or framework: classification, 🔴🟡🟢 gap tables, and a copy-ready artefact. Skills **invoke each other** instead of mixing article numbers.
 
-Skills are **aware of each other**. Install the dispatcher, then any specialists. When a question spans jurisdictions, the loaded skill **invokes** the others instead of improvising.
+Full “what / when / will not” for every skill: [SKILLS.md](SKILLS.md).
 
-**Marketplace version (25 August 2026):** `ai-governance` **1.0.0**, `eu-ai-act` **1.3.0**, `iso42001` **1.4.0**, `csa-aicm` **1.0.0**; other plugins **1.2.0**.
+## How routing works
 
-What each skill does, when to use it, and what it will not do: [SKILLS.md](SKILLS.md).
+1. Install **`ai-governance`**. A session-start hook loads `using-ai-governance` (the catalog).
+2. Install the specialists you need. Mixed-jurisdiction questions run **one skill per slice**.
+3. The agent announces `Using [skill] to [purpose]`, then follows that skill. If a skill is missing it prints `/plugin install <name>@ai-governance-skills`.
 
-## Available skills
+Collision terms (`high-risk`, `GPAI`, `FRIA`, `AISIA`, `deployer`) are disambiguated in `using-ai-governance`. Mapping tables are lookup aids, not a substitute for the source skill.
 
-| Skill | Description |
-|---|---|
-| `using-ai-governance` | Dispatcher (plugin `ai-governance`): catalog, collision terms, invoke-before-answering. Session-start hook injects it. |
-| `eu-ai-act` | EU AI Act (Regulation 2024/1689): non-exclusive classification (Art. 5 / Art. 6 / additive Art. 50), high-risk operational checklists, FRIA gate, GPAI, Art. 43 conformity/CE, Annex IV. Same plugin also installs `eu-gpai-cop` (Art. 56 Code of Practice) |
-| `nist-ai-rmf` | NIST AI RMF 1.0: Current vs Target Profile against 72 official subcategory outcomes, Playbook-safe guidance, NIST AI 600-1 overlay |
-| `iso42001` | ISO/IEC 42001:2023 AIMS: gap assessment, SoA, certification. Same plugin also installs `iso-aisia`, `iso-ai-system-inventory`, `iso-ai-data-inventory`, `iso-ai-resources`, `iso-aims-policy-kit` |
-| `nyc-local-law-144` | NYC Local Law 144: AEDT determination, DCWP bias audit (above-median scoring rate), notices, and gap assessment |
-| `south-korea-ai-act` | South Korea AI Basic Act (**in force 22 Jan 2026**; status 25 Aug 2026): high-impact AI (고영향 AI), Arts. 31–36, Art. 35 endeavor AISIA, Art. 36 domestic representative; Decree No. 36053 in force |
-| `brazil-ai-act` | Pending PL 2338/2023 (Senate substitute; **not enacted** as of 25 Aug 2026): risk, rights, SIA/ANPD as proposed coordinator, roles — always labelled as a bill |
-| `csa-aicm` | CSA AICM / AI-CAIQ: workbook-backed CAIQ answers, AICM gap rows, STAR for AI Level 1. Does not invent control IDs |
-
-Official ISO, EU, and CSA PDFs are **not** copied into this repo. Skills cite and paraphrase; AICM/CAIQ IDs come from the user's workbook.
-
-## Installation
-
-### Claude Code (CLI, IDE extensions)
-
-Add the marketplace, install the dispatcher, then the specialists you need:
+## Install
 
 ```
-/plugin marketplace add verifywise-ai/ai-governance-skills
+/plugin marketplace add Security-Consultant-OU/ai-governance-skills
 /plugin install ai-governance@ai-governance-skills
 /plugin install eu-ai-act@ai-governance-skills
 ```
 
-`ai-governance` is the Superpowers-style router: a session-start hook loads `using-ai-governance`, which requires invoking the matching specialist before answering. Specialists also name each other and say **invoke**, not guess.
+Repeat `/plugin install <name>@ai-governance-skills` for any other plugin below.
 
-Available plugin names: `ai-governance`, `eu-ai-act`, `nist-ai-rmf`, `iso42001`, `nyc-local-law-144`, `south-korea-ai-act`, `brazil-ai-act`, `csa-aicm`
+**Claude.ai (web / desktop):** this repo does not ship `.skill` zips. Copy `plugins/<plugin>/skills/<skill>/` (`SKILL.md` + `references/`) into a project. Copy `plugins/ai-governance/skills/using-ai-governance/` as well if you want routing.
 
-### Claude.ai (web and desktop app)
+## Plugins
 
-This marketplace does not currently ship packaged `.skill` archives. For Claude.ai, copy the contents of `plugins/<name>/skills/<name>/` (the `SKILL.md` plus `references/`) into a project, or install via Claude Code as above. Copy `plugins/ai-governance/skills/using-ai-governance/SKILL.md` as well if you want routing.
+Status notes as of **25 August 2026**.
 
-## Author
+| Plugin | Version | Skills you get | Use for |
+|--------|---------|----------------|---------|
+| `ai-governance` | 1.0.0 | `using-ai-governance` | Catalog, session-start routing |
+| `eu-ai-act` | 1.3.0 | `eu-ai-act`, `eu-gpai-cop` | Regulation 2024/1689: Art. 5 / Art. 6 / additive Art. 50, operational checklists, FRIA, GPAI, CE / Annex IV. CoP is `eu-gpai-cop` |
+| `nist-ai-rmf` | 1.2.0 | `nist-ai-rmf` | NIST AI 100-1 Current vs Target (72 outcomes), Playbook-safe guidance, NIST AI 600-1 overlay |
+| `iso42001` | 1.4.0 | `iso42001` plus five companions (below) | ISO/IEC 42001:2023 AIMS: gap, SoA, certification |
+| `nyc-local-law-144` | 1.2.0 | `nyc-local-law-144` | NYC AEDT determination, DCWP above-median scoring-rate tables, notices |
+| `south-korea-ai-act` | 1.2.0 | `south-korea-ai-act` | In-force Korea AI Basic Act (22 Jan 2026): **고영향 AI**, Arts. 31–36, Decree 36053 |
+| `brazil-ai-act` | 1.2.0 | `brazil-ai-act` | **Pending** PL 2338/2023 (Senate substitute). Not law. Always labelled as a bill |
+| `csa-aicm` | 1.0.0 | `csa-aicm` | CSA AICM / AI-CAIQ / STAR for AI from **your** workbook. Does not invent control IDs |
 
-Gorkem Cetin
+### ISO companions (installed with `iso42001`)
+
+| Skill | Artefact |
+|-------|----------|
+| `iso-aisia` | AISIA record (6.1.4 / 8.4, A.5.2–A.5.5) |
+| `iso-ai-system-inventory` | AI system register (Clause 4.3) |
+| `iso-ai-data-inventory` | Data-for-AI inventory (A.7, A.4.3) |
+| `iso-ai-resources` | Resource pack (A.4, Clause 7.1) |
+| `iso-aims-policy-kit` | Policies, SOPs, Stage 1 document master list |
+
+## Defaults and rules
+
+If you omit the document type, each specialist has a default (Annex IV, Current vs Target Profile, gap + SoA, and so on — see [SKILLS.md](SKILLS.md)).
+
+Gap status is always **🔴 not started / 🟡 partial / 🟢 implemented**. Skills do not invent article, Annex A, NIST subcategory, AICM, or Playbook IDs.
+
+Official ISO, EU OJ, and CSA PDFs are **cited, not copied**. AICM / CAIQ IDs come from the user’s workbook.
+
+This repo is Markdown skills only (YAML frontmatter). Conventions for contributors: [CLAUDE.md](CLAUDE.md).
 
 ## License
 
-MIT
+MIT. Maintained by [Security Consultant OÜ](https://github.com/Security-Consultant-OU/ai-governance-skills).
