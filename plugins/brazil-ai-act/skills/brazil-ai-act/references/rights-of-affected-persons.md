@@ -1,97 +1,86 @@
-# Rights of affected persons under the Brazil AI Act
+# Rights of affected persons — Senate-approved PL 2338/2023 (not enacted)
 
-## Rights table
+**Label:** based on Senate-approved PL 2338/2023; not enacted.
 
-| Right | Description | When it Applies | How to Implement | LGPD Parallel |
-|-------|-------------|-----------------|------------------|---------------|
-| Right to be informed | Know when interacting with an AI system or when AI is used in decisions | All AI systems | Clear disclosure before or during interaction; signage, notices, or in-app disclosure | Art. 18 LGPD (right to information about processing) |
-| Right to explanation | Understand how the AI system reached a specific decision or recommendation | Automated decisions affecting rights or interests of individuals | Provide meaningful explanation of logic, main criteria, and factors that influenced the decision; avoid purely technical jargon | Art. 20 LGPD (right to review of automated decisions) |
-| Right to human review | Request that a human being review an automated decision | Significant automated decisions that affect legal rights or similarly significant interests | Designate human reviewer with authority and competence to understand and override the AI decision; document review process | Art. 20 LGPD (right to request review by natural person) |
-| Right to non-discrimination | Not be subject to discriminatory outcomes produced by AI systems | All AI systems | Bias testing before deployment, ongoing fairness monitoring, remediation procedures when discrimination is detected | Constitution Art. 5 (equality before the law); Art. 6(IX) LGPD (non-discrimination) |
-| Right to correction | Correct inaccurate data used by the AI system in making decisions | When AI uses personal data for decisions | Data correction request process, consideration of whether model retraining is needed, confirmation of correction | Art. 18(III) LGPD (right to correction of incomplete, inaccurate, or outdated data) |
-| Right to data portability | Port personal data used in AI processing to another provider | When technically feasible and data is used in AI processing | Machine-readable format export, API access where applicable, reasonable timeframe for fulfillment | Art. 18(V) LGPD (right to portability of data) |
-| Right to contest | Challenge AI decisions through a formal process | Significant automated decisions that affect legal rights or interests | Formal appeals process, ombudsman or review board, access to judicial recourse, documented decision rationale | Constitutional right (Art. 5, XXXV — access to justice) |
-| Right to prior notice | Be notified before AI is used for decisions affecting the individual | Before deployment of AI system on an individual for decision-making purposes | Advance notice with purpose, scope, type of AI system, and rights available to the individual; reasonable notice period | Not explicitly stated in LGPD (new obligation under AI Act) |
+There are **not** “8 rights.” There is **no** named “right to prior notice.” Portability is **not** a general AI-bill right.
 
-## Implementation checklist for each right
+---
 
-### Right to be informed
-- [ ] AI system interaction points identified
-- [ ] Disclosure language drafted (plain Portuguese)
-- [ ] Disclosure mechanism implemented (banner, notice, verbal)
-- [ ] Disclosure timing verified (before or at point of interaction)
-- [ ] Records of disclosure maintained
+## Art. 5 — All AI systems (any risk)
 
-### Right to explanation
-- [ ] Explanation templates created for each decision type
-- [ ] Technical logic translated to plain language
-- [ ] Explanation delivery mechanism implemented
-- [ ] Staff trained to provide explanations on request
-- [ ] Explanation records maintained
+| Inciso | Right | When | How to prepare | LGPD parallel |
+|--------|-------|------|----------------|---------------|
+| I | Information on interactions with AI, accessible, free, easy to understand, including **automated character** of the interaction | All in-scope systems | Portuguese (or language of the audience) disclosure; uniform icons/symbols (Art. 5 §1) | LGPD Art. 18 information — overlay, not a substitute |
+| I exception | Cybersecurity / cyberdefense systems dedicated **exclusively** to that purpose | Per regulation | Do not over-claim this exception | — |
+| II | Privacy and personal-data protection, especially LGPD data-subject rights | When personal data are processed | Run LGPD programme in parallel | LGPD as a whole |
+| III | Non-discrimination (illicit or abusive), including correction of direct or indirect discriminatory bias | All in-scope systems | Bias testing and remediation | CF/88 Art. 5; LGPD Art. 6 IX |
 
-### Right to human review
-- [ ] Human reviewers designated with appropriate authority
-- [ ] Review request process documented and accessible
-- [ ] Reviewers trained on AI system logic and limitations
-- [ ] Override mechanism functional and tested
-- [ ] Review decisions documented and archived
+Art. 5 §2: systems aimed at **vulnerable groups** (Art. 4 XVII) must use simple language appropriate to age and cognitive capacity, considering best interests.
 
-### Right to non-discrimination
-- [ ] Protected characteristics identified for Brazilian context
-- [ ] Bias testing conducted before deployment
-- [ ] Ongoing fairness metrics monitored in production
-- [ ] Remediation process defined for detected bias
-- [ ] Discrimination complaints process established
+---
 
-### Right to correction
-- [ ] Data correction request channel established
-- [ ] Process for verifying and implementing corrections defined
-- [ ] Impact assessment for correction on model outputs documented
-- [ ] Confirmation of correction sent to requester
-- [ ] Correction records maintained
+## Art. 6 — High-risk systems only
 
-### Right to data portability
-- [ ] Data export format defined (machine-readable)
-- [ ] Export mechanism implemented and tested
-- [ ] Timeframe for fulfillment established
-- [ ] Data scope for portability documented
-- [ ] Portability request records maintained
+| Inciso | Right | When | How to prepare |
+|--------|-------|------|----------------|
+| I | Explanation of the decision, recommendation, or prediction | High-risk (Art. 14) | Sufficient, adequate, intelligible information (Art. 6 §1); Art. 7: free, simple language, reasonable time |
+| II | Contest and request **review** of decisions, recommendations, or predictions | High-risk | Accessible contest channel; documented outcome |
+| III | **Human review** of decisions, considering context, risk, and state of the art | High-risk | Reviewer with authority to intervene; see Art. 8 exception |
 
-### Right to contest
-- [ ] Appeals process documented and published
-- [ ] Review body or ombudsman designated
-- [ ] Timeline for appeal resolution defined
-- [ ] Judicial recourse information provided
-- [ ] Contest and resolution records maintained
+Art. 6 §2: implement considering state of the art; always adopt **effective and proportional** measures.
 
-### Right to prior notice
-- [ ] Notice content defined (purpose, scope, rights)
-- [ ] Notice delivery mechanism established
-- [ ] Reasonable notice period determined
-- [ ] Notice records maintained
-- [ ] Process for updating notice when system changes
+Art. 7 parágrafo único: autoridade competente will set prazos and a simplified procedure, considering complexity and agent size (MEI/PME/startups).
 
-## LGPD and AI Act rights alignment
+Art. 9: high-risk agents inform, clearly, the **procedures** to exercise Chapter II rights.
 
-| LGPD Right (Art. 18) | AI Act Right | Alignment Notes |
-|-----------------------|--------------|----------------|
-| Right to confirmation of processing | Right to be informed | AI Act extends to disclosure of AI involvement specifically |
-| Right to access data | Right to explanation | AI Act goes further — requires explanation of AI decision logic, not just data access |
-| Right to correction | Right to correction | Substantially aligned; AI Act adds consideration of model impact |
-| Right to anonymization, blocking, deletion | — | LGPD-specific; not directly replicated in AI Act but still applies |
-| Right to portability | Right to data portability | Substantially aligned |
-| Right to information about sharing | Right to be informed | AI Act extends to AI-specific disclosures |
-| Right to review of automated decisions | Right to human review, Right to explanation | AI Act provides more detailed requirements for human review process |
-| Right to object to processing | Right to contest | AI Act provides formal contestation mechanism beyond LGPD objection |
+Art. 10: autoridade competente, with sectoral SIA authorities, sets general guidelines for exercising rights against each agent.
 
-## Key implementation considerations
+Art. 11: defence before the competent administrative body or in court (individual or collective).
 
-1. **Language requirement** — All disclosures, explanations, and notices must be provided in Portuguese, in clear and accessible language appropriate for the target audience.
+---
 
-2. **Vulnerable populations** — Enhanced protections apply when AI systems affect children, elderly persons, or persons with disabilities. Explanations and notices must be adapted accordingly.
+## Art. 8 — Human oversight is not absolute
 
-3. **Timing** — Rights are not merely reactive. The right to prior notice and right to be informed require proactive disclosure before or during AI interaction, not only upon request.
+| Rule | Senate text |
+|------|-------------|
+| Caput | High-risk human oversight aims to prevent or minimise risks from normal use or reasonably foreseeable misuse; supervisors must be able to understand, interpret, decide, and intervene |
+| Parágrafo único | Oversight **is not required** if implementation is **proven impossible** or implies **disproportionate effort**; the high-risk agent must then implement **effective alternative measures** |
 
-4. **ANPD enforcement** — ANPD will issue specific guidance on implementing these rights. Organizations should monitor ANPD publications and adapt their processes accordingly.
+Do not tell clients that human review is always mandatory.
 
-5. **Documentation** — All rights exercises must be documented. ANPD may request evidence of rights implementation during audits or investigations.
+---
+
+## What is **not** a general right under this bill
+
+| Claim to drop | Where it actually sits |
+|---------------|------------------------|
+| “8 rights of affected persons” | Invented catalogue. Use Art. 5 (3) + Art. 6 (3). |
+| Right to **prior notice** | **Not named.** Information is Art. 5 I (interaction disclosure), not advance notice of every decision. |
+| Right to **data portability** as an AI-Act right | **Art. 22 I**: when **poder público** develops, contracts, or adopts high-risk AI, it must guarantee access to databases and **full portability** of citizens’ and public-management data **under LGPD**. Architecture/interoperability duty for the public sector, not a private-sector AI-bill right. |
+| Right to **correction** as a distinct AI right | Correction of **discriminatory bias** is Art. 5 III. Correction of personal data remains **LGPD Art. 18 III**. |
+
+---
+
+## Public administration extras (not private-sector rights)
+
+| Article | Content |
+|---------|---------|
+| Art. 23 II | Public bodies: facilitated explanation and **human review** of AI decisions with relevant legal effects or significant impact on the affected person’s interests, by the competent public agent |
+| Art. 23 III | Public bodies **publish** preliminary assessments of high-risk AI they develop, implement, or use — **not** a general private-sector publication duty |
+
+---
+
+## Preparedness checklist (not in-force compliance)
+
+### Art. 5 (all systems)
+- [ ] Interaction points identified
+- [ ] Portuguese (or audience-appropriate) disclosure drafted
+- [ ] Icon/symbol path considered (Art. 5 §1)
+- [ ] LGPD privacy programme mapped
+- [ ] Bias testing and complaint channel for Art. 5 III
+
+### Art. 6 (high-risk only)
+- [ ] Explanation templates in simple language (Art. 7)
+- [ ] Contest/review process
+- [ ] Human-review path **or** documented Art. 8 alternative
+- [ ] Art. 9 procedure notice to affected persons

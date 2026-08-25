@@ -1,7 +1,7 @@
 {
   "name": "nyc-local-law-144",
-  "description": "Expert NYC Local Law 144 compliance advisor — AEDT determination, bias audit planning and report generation, candidate notice requirements, and compliance gap assessment.",
-  "version": "1.0.0",
+  "description": "Determines whether a hiring or promotion tool is an NYC Local Law 144 AEDT, produces DCWP bias-audit tables (above-median scoring rate; 7 EEO-1 categories plus intersectional), and drafts candidate/employee notices. Use when the user mentions NYC Local Law 144, LL144, AEDT, DCWP bias audit, or NYC hiring AI. Do not use for ISO/IEC 42001 Statement of Applicability, EU AI Act high-risk classification, or NIST AI RMF Profile.",
+  "version": "1.2.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -10,11 +10,10 @@
   "license": "MIT",
   "keywords": [
     "nyc-local-law-144",
-    "ai-governance",
     "aedt",
+    "dcwp",
     "bias-audit",
-    "employment",
-    "compliance",
-    "gap-assessment"
+    "hiring-ai",
+    "employment"
   ]
 }

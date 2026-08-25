@@ -1,80 +1,84 @@
-# Notice requirements — NYC Local Law 144
+# Notice and publication — NYC Local Law 144
 
-## Candidate notice (hiring decisions)
+Sources: Admin. Code §§ 20-871, 20-872; 6 RCNY §§ 5-303, 5-304; DCWP AEDT FAQ.
 
-| Requirement | Detail |
-|-------------|--------|
-| Timing | At least 10 business days before the AEDT is used to assess the candidate |
-| Content — AEDT disclosure | That an automated employment decision tool will be used in the hiring process |
-| Content — characteristics assessed | The job qualifications and characteristics that the AEDT will assess |
-| Delivery — option 1 | Posted on the employment section of the employer's website |
-| Delivery — option 2 | Provided in writing to the candidate via mail or email |
-| Alternative procedure | Must include information about how to request an alternative selection process or accommodation |
-| Language | Should be clear and conspicuous; no specific language requirements but plain language recommended |
+## Who must receive notice
 
-## Employee notice (promotion decisions)
+Notice is owed to a **candidate** (person who applied for a **specific position**) or an employee being considered for promotion who **resides in NYC**. Bias-audit duty follows **job/agency location**, not residence — do not invert the two.
 
-| Requirement | Detail |
-|-------------|--------|
-| Timing | At least 10 business days before the AEDT is used to assess the employee for promotion |
-| Content | Same as candidate notice — AEDT disclosure and characteristics assessed |
-| Delivery | Same options as candidate notice — website posting or written notice |
-| Alternative procedure | Same as candidate notice — must provide information about alternative process |
+Resume-bank, outreach, and invite-to-apply uses are not candidate screening and do not trigger this notice.
 
-## Data collection notice (NYC Admin Code § 20-871, Section 20-a)
+## AEDT-use notice (§ 20-871(b)(1)–(2); 6 RCNY § 5-304(a)–(c))
 
-| Requirement | Detail |
-|-------------|--------|
-| Timing | At least 10 business days before the AEDT is used |
-| Content — data collected | What data the AEDT collects from candidates or employees |
-| Content — retention policy | How long collected data will be retained |
-| Content — data request | How candidates or employees can request their collected data |
-| Delivery — option 1 | Posted on the employment section of the employer's website |
-| Delivery — option 2 | Provided in writing to the candidate or employee |
-| Data fulfillment | Must provide requested data within 30 days of receiving a data request |
-
-## Notice delivery matrix
-
-| Scenario | Website posting sufficient? | Written notice required? |
-|----------|---------------------------|------------------------|
-| External hiring — job posted on employer website | Yes, if posted on employment section | Not required if website notice is adequate |
-| External hiring — job posted on third-party board only | No — no employer website employment section | Yes, written notice (mail or email) required |
-| Internal promotion | Depends on whether employees regularly access employer website | Written notice recommended to ensure receipt |
-| Staffing agency using AEDT | Agency must provide notice; may also need to coordinate with employer | Written notice recommended |
-
-## Notice timing requirements
-
-| Event | Timing rule |
-|-------|------------|
-| AEDT first used on a candidate | Notice must have been provided at least 10 business days prior |
-| AEDT updated or changed | New notice required if the characteristics assessed change |
-| Ongoing use of same AEDT | Initial notice sufficient if continuously posted on website; no need to re-notify for each application if website posting is maintained |
-| Candidate applies and AEDT is used immediately | Non-compliant — must wait 10 business days after notice |
-
-## Sample notice content elements
-
-### AEDT use notice
-
-Required elements:
-1. Clear statement that an AEDT will be used in the assessment process
-2. Description of the job qualifications and characteristics the AEDT evaluates
-3. Information about how to request an alternative selection process or accommodation
-
-### Data collection notice (Section 20-a)
-
-Required elements:
-1. Types of data the AEDT collects (e.g., resume data, assessment responses, video/audio)
-2. Data retention period or policy
-3. Process for requesting collected data (contact method, expected response time)
-4. Statement that data will be provided within 30 days of request
-
-## Common notice compliance failures
-
-| Failure | Risk |
+| Element | Rule |
 |---------|------|
-| Notice posted only in privacy policy, not on employment section | Does not meet delivery requirement — must be on employment section of website |
-| Notice provided at time of application, not 10 business days before | Timing violation — each candidate assessed without proper notice is a separate violation |
-| Notice describes AEDT generally but not the specific characteristics assessed | Content incomplete — must specify what qualifications and characteristics are evaluated |
-| Data collection notice omits data request process | Section 20-a violation — must inform candidates how to request their data |
-| Alternative procedure information missing | Non-compliant — must provide information about alternative selection process |
-| Notice provided in English only when candidate pool includes non-English speakers | Not explicitly required by LL144, but best practice for effective notice |
+| Timing | No less than **10 business days** before use |
+| Content — use | That an AEDT will be used to assess or evaluate the candidate or employee |
+| Content — attributes | Job qualifications and characteristics the AEDT will assess |
+| Content — alternative / accommodation | Instructions to **request** an alternative selection process or a reasonable accommodation under other laws, **if available**. Nothing in the rules **requires** the employer or agency to **provide** an alternative process |
+| Website (candidates) | Employment section of the website, clear and conspicuous. **Need not be position-specific.** **10 business days after website posting is enough**, regardless of when a given job was posted |
+| Job posting | Permitted channel for candidates and for promotion |
+| Mail or email | U.S. mail or e-mail at least 10 business days before use |
+| Promotion — written policy | Written policy or procedure provided to employees at least 10 business days before use; **need not be position-specific** |
+
+## Data notice — Admin. Code § 20-871(b)(3) / 6 RCNY § 5-304(d)
+
+This is **not** a GDPR-style dump of the candidate’s raw file. It is information about **type**, **source**, and **retention**.
+
+| Element | Rule |
+|---------|------|
+| What to disclose | Type of data collected for the AEDT; **source** of that data; data **retention policy** |
+| Where | Employment section of the website, clear and conspicuous |
+| Written request | Post instructions on the employment section for how to make a **written request** for that information |
+| Response time | Provide the information within **30 days** of a written request |
+| Withholding | May withhold if disclosure would **violate local, state, or federal law** or **interfere with a law-enforcement investigation**; explain why |
+
+## Published audit summary (6 RCNY § 5-303)
+
+| Element | Rule |
+|---------|------|
+| When | Before use of the AEDT |
+| Where | Employment section of the website, or an **active hyperlink** clearly identified as linking to the bias-audit results |
+| Required content | Date of the most recent bias audit; source and explanation of the data used; number of individuals in an **unknown** category; number of applicants, selection or scoring rates, and impact ratios for all categories |
+| Distribution date | Date the employer or agency **began using** that specific AEDT (**first use**). Must be published with the summary |
+| Duration | Keep summary **and** distribution date posted at least **6 months** after latest use |
+
+## Channel matrix
+
+| Audience | Sufficient channels |
+|----------|---------------------|
+| NYC-resident candidates | Website employment section; **or** job posting; **or** mail/email |
+| NYC-resident employees (promotion) | Written policy/procedure; **or** job posting; **or** mail/email |
+| Audit summary + distribution date | Website employment section **or** clearly labeled hyperlink |
+
+## Timing examples
+
+| Fact pattern | Compliant? |
+|--------------|------------|
+| Careers-page AEDT notice posted 10+ business days before any use | Yes — not position-specific |
+| Candidate applies the same day the AEDT scores them; no prior website/posting/mail notice | No |
+| Promotion notice only in a handbook policy given 10+ business days prior | Yes |
+| Audit summary hosted on a vendor page, linked from the employment section and labeled as audit results | Yes |
+| Summary posted without the AEDT’s distribution date | No |
+
+## Penalties (Admin. Code § 20-872)
+
+| Item | Rule |
+|------|------|
+| First violation, and each additional violation **on the same day** | Civil penalty **not more than $500** |
+| Subsequent violations (later days) | **Not less than $500** and **not more than $1,500** each |
+| Unlawful AEDT use | **Each day** of use without a required audit/publication is a **separate** violation |
+| Notice | **Each failure** to give required notice is a **separate** violation |
+| Effective / enforcement | Law **took effect 1 January 2023**; DCWP **enforcement began 5 July 2023** |
+
+This is **not** a per-candidate multiplier.
+
+## Draft notice elements (not mandated wording)
+
+DCWP does not prescribe specific language. Include:
+
+1. Statement that an AEDT will be used in assessment or evaluation.
+2. Job qualifications and characteristics the AEDT assesses.
+3. How to **request** an alternative selection process or reasonable accommodation **if available** (and do not promise a process the employer does not offer).
+4. Pointer to the employment-section data notice: type of data, source, retention, and how to make a written request (30-day response; lawful withholding).
+5. Pointer or hyperlink to the bias-audit summary and the AEDT **distribution date**.

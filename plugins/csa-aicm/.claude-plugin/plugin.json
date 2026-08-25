@@ -1,0 +1,18 @@
+{
+  "name": "csa-aicm",
+  "description": "Fills CSA AI-CAIQ answers and AICM control gap tables from the user's AICM workbook; supports STAR for AI Level 1 and mappings to ISO 42001 or NIST AI 600-1 when those sheets exist. Use when the user mentions CSA AICM, AI-CAIQ, STAR for AI, or CSA AI Controls Matrix.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gorkem Cetin"
+  },
+  "homepage": "https://github.com/verifywise-ai/ai-governance-skills",
+  "repository": "https://github.com/verifywise-ai/ai-governance-skills",
+  "license": "MIT",
+  "keywords": [
+    "csa-aicm",
+    "ai-caiq",
+    "star-for-ai",
+    "aicm",
+    "csa"
+  ]
+}

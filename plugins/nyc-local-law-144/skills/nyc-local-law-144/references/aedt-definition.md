@@ -1,65 +1,86 @@
 # AEDT definition — NYC Local Law 144
 
-## Statutory definition (DCWP Rule § 5-300)
+Sources: Admin. Code § 20-870; 6 RCNY § 5-300; DCWP AEDT FAQ (https://www.nyc.gov/assets/dca/downloads/pdf/about/DCWP-AEDT-FAQ.pdf).
+
+## Statutory terms
 
 | Term | Definition |
-|------|-----------|
-| Automated employment decision tool (AEDT) | Any computational process derived from machine learning, statistical modeling, data analytics, or artificial intelligence that issues a simplified output (score, classification, recommendation) used to substantially assist or replace discretionary decision-making for employment decisions |
-| Substantially assists | (1) Relies solely on simplified output with no other inputs, OR (2) uses simplified output as one of weighted criteria, OR (3) uses simplified output to overrule or modify conclusions derived from other factors |
-| Employment decision | Screening candidates for employment or employees for promotion within New York City |
-| Simplified output | A score, classification, ranking, or recommendation produced by the computational process |
+|------|------------|
+| AEDT | Computational process derived from machine learning, statistical modeling, data analytics, or artificial intelligence that issues a simplified output used to substantially assist or replace discretionary decision-making for an employment decision |
+| Substantially assist or replace | (1) Rely **solely** on a simplified output with **no other factors** considered; **or** (2) use a simplified output as one of a set of criteria where it is **weighted more than any other** criterion in the set; **or** (3) use a simplified output to **overrule** conclusions derived from other factors **including human decision-making** |
+| ML / statistical modeling / data analytics / AI | Mathematical, computer-based techniques that generate a prediction or classification **and** for which a computer **at least in part identifies the inputs, the relative importance of those inputs**, and, if applicable, other parameters to improve accuracy |
+| Simplified output | Prediction or classification in the form of a score, tag, categorization, recommendation, or ranking. **Does not** include tools that **translate or transcribe existing text** (e.g., PDF conversion, interview transcription) |
+| Candidate for employment | Person who has applied for a **specific** employment position by submitting the information or items in the format required by the employer or employment agency |
+| Screen | Determination about whether a candidate or employee being considered for promotion should be selected or advanced |
+| Employment decision | Screening a candidate for employment or an employee for promotion (not limited to the final hire/promote decision) |
 
-## What qualifies as an AEDT
+Equal-weight scores among several criteria, with no sole reliance and no overrule, are **not** AEDTs. Boolean or predetermined filters (computer does not identify inputs or weights) stay **out**.
+
+## What qualifies
 
 | System type | AEDT? | Reasoning |
 |-------------|-------|-----------|
-| Resume screening AI that ranks candidates | Yes | Scores and ranks candidates, reduces candidate pool |
-| Video interview AI assessing personality traits | Yes | Classifies candidates based on assessed traits |
-| Chatbot that asks screening questions and scores answers | Yes | Scores candidate responses, substantially assists decision |
-| Skills assessment platform with ML scoring | Yes | ML-based scoring of candidate performance |
-| Predictive analytics tool scoring employee promotion readiness | Yes | ML-based scoring for promotion decisions |
-| Job board algorithm that matches candidates to postings | Gray area | Depends on whether it reduces the candidate pool or merely suggests matches |
-| AI tool that summarizes resumes but does not score or rank | Gray area | Depends on whether summary substantially assists or is purely informational |
-| Calendar scheduling tool for interviews | No | Administrative function, not discretionary decision-making |
-| ATS keyword filter using Boolean logic (no ML) | No | Not derived from ML, statistical modeling, data analytics, or AI |
-| Background check service (no ML scoring) | No | Factual verification, not ML-based scoring or classification |
-| Human recruiter using AI-generated notes as one input among many with full discretion | Gray area | May not qualify if human makes 100% of the decision and AI is purely informational |
+| Resume-ranking model that is the sole screen | Yes | Prong 1 — solely relied upon |
+| Interview score weighted higher than any other criterion | Yes | Prong 2 — weighted more than any other |
+| Model output used to overturn a human “advance” decision | Yes | Prong 3 — overrules other factors including humans |
+| Skills model whose score is one of several **equal** weights; human not overruled | No | Prong 2 not met; not sole; no overrule |
+| ATS Boolean keyword filter with predetermined rules | No | Computer does not identify inputs or relative importance |
+| PDF/resume transcription or interview transcription | No | Not a simplified output |
+| Resume-bank scan, cold outreach, or invite-to-apply | Not covered | Person has not applied for a **specific** position |
+| Screening chatbot that scores answers and advances/rejects at any stage | Yes if a prong is met | Screening at any stage is an employment decision |
+| Calendar / interview-scheduling tool | No | Administrative; no simplified employment output |
+| Background check with no ML scoring | No | Factual verification, not ML/stats/AI as defined |
 
-## Gray areas and exclusions
+## Geography (do not invert)
 
-| Scenario | Analysis |
-|----------|----------|
-| Tool used only for internal promotions (no external candidates) | **Still covered** — LL144 applies to both hiring and promotion decisions |
-| Tool where human makes 100% of the decision; AI is purely informational | **May not qualify** — if AI does not substantially assist or replace discretionary decision-making, it may fall outside the definition |
-| Tool used on candidates located outside NYC | **Not covered** — LL144 only applies to employment decisions in New York City, regardless of where the employer is based |
-| Company headquartered in NYC using AEDT on candidates in other cities | **Not covered** — geographic scope is based on candidate/employee location, not employer location |
-| Multiple AEDTs used in sequence in the same hiring process | **Each must be separately audited** — each tool that qualifies as an AEDT requires its own independent bias audit |
-| AEDT used by staffing agency on behalf of employer | **Both may be liable** — employment agencies are covered entities under LL144 |
-| Vendor-provided AEDT where employer has no access to underlying model | **Employer still responsible** — the obligation to obtain a bias audit falls on the employer/employment agency using the AEDT |
+| Duty | What triggers it |
+|------|------------------|
+| Bias audit, published summary | **Job/agency location:** NYC office at least part-time; **or** fully remote job **associated with** an NYC office; **or** NYC employment agency (or out-of-city agency hiring for a job that meets a bullet above) |
+| Notice | Candidate or employee **resides in NYC** |
 
-## AEDT determination decision tree
+A NYC-headquartered employer using a tool only on jobs not located in / associated with NYC does **not** trigger the audit duty. An NYC-resident candidate for a non-NYC job does **not** trigger the audit duty. A non-resident applying to an NYC job **does** trigger the audit duty; NYC-resident notice still follows residence.
+
+## Covered vs not covered use
+
+| Scenario | Result |
+|----------|--------|
+| AEDT used to screen at an early stage (not the final decision) | Covered — “employment decision” includes screening |
+| Tool used only for internal promotion | Covered — hiring and promotion |
+| Resume bank, talent-pool outreach, sourcing | Not covered — not a candidate for a specific position |
+| Multiple distinct AEDTs in one funnel | Each AEDT needs its own bias audit |
+| Vendor-hosted model; employer cannot see weights | Employer/agency remains the responsible party |
+| Vendor commissions an independent audit | Permitted; does **not** shift legal responsibility to the vendor |
+
+## Determination tree
 
 ```
-1. Does the tool use ML, statistical modeling, data analytics, or AI?
-   ├── No → NOT AN AEDT. Stop.
-   └── Yes → Continue to step 2.
+1. Does a computer at least in part identify inputs and their relative importance
+   to generate a prediction or classification?
+   ├── No (Boolean / predetermined filters) → NOT AN AEDT
+   └── Yes → step 2
 
-2. Does the tool produce a simplified output (score, classification, ranking, recommendation)?
-   ├── No → NOT AN AEDT. Stop.
-   └── Yes → Continue to step 3.
+2. Does it produce a simplified output (score, tag, classification, ranking,
+   recommendation) — not transcription/translation of existing text?
+   ├── No → NOT AN AEDT
+   └── Yes → step 3
 
-3. Is the output used for an employment decision (hiring or promotion)?
-   ├── No → NOT AN AEDT. Stop.
-   └── Yes → Continue to step 4.
+3. Is it used to screen a candidate for a specific position or an employee
+   for promotion (any stage)?
+   ├── No (resume bank / outreach) → NOT COVERED
+   └── Yes → step 4
 
-4. Does the output substantially assist or replace discretionary decision-making?
-   ├── Solely relied upon → AEDT
-   ├── One of weighted criteria → AEDT
-   ├── Overrules/modifies other factors → AEDT
-   ├── Purely informational, human retains full discretion → GRAY AREA
-   └── Not used in decision → NOT AN AEDT
+4. Substantially assist or replace?
+   ├── Sole factor, no other factors → AEDT
+   ├── Weighted more than any other criterion → AEDT
+   ├── Overrules other factors including humans → AEDT
+   └── Equal weight, not sole, no overrule → NOT AN AEDT
 
-5. Is the employment decision for candidates/employees in NYC?
-   ├── No → NOT COVERED (even if tool qualifies as AEDT)
-   └── Yes → LL144 APPLIES — bias audit, notice, and publication required
+5. Audit duty: is the job in / associated with an NYC office, or is the
+   employment agency in NYC?
+   ├── No → audit/publication not required under LL144
+   └── Yes → bias audit + published summary required
+
+6. Notice: does the candidate or employee reside in NYC?
+   ├── No → NYC-resident notice not required
+   └── Yes → notice required (≥ 10 business days)
 ```

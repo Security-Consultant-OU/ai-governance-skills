@@ -1,224 +1,223 @@
 ---
 name: south-korea-ai-act
 description: >
-  Expert South Korea AI Basic Act (AI Framework Act) compliance advisor. Use this skill whenever
-  a user asks about South Korea AI, Korean AI Act, AI Basic Act, Korea AI regulation,
-  high-risk AI Korea, MSIT AI, AI impact assessment Korea, Korean AI law,
-  AI Framework Act Korea, Korea high-risk AI, South Korea AI governance,
-  인공지능 기본법, Korean AI ethics, AI sandbox Korea, deepfake labeling Korea,
-  right to explanation Korea, National AI Committee, MSIT AI regulation,
-  Korean AI compliance, AI developer obligations Korea, AI deployer obligations Korea
+  Classifies high-impact AI (고영향 AI, Art. 2(4)) and maps operator duties
+  under the in-force Korea AI Basic Act (인공지능 기본법): Arts. 31–36,
+  Art. 35 endeavor impact assessment (Art. 35 endeavor AISIA), and Art. 36
+  domestic representative. Use when the user asks about the Korea AI Basic
+  Act, AI Framework Act, 인공지능 기본법, 고영향 AI, MSIT AI obligations, or
+  Art. 36. Korea high-impact is not EU high-risk; this is not a delayed-decree
+  statute.
+version: 1.2.0
+triggers:
+  - South Korea AI Act
+  - AI Basic Act
+  - AI Framework Act
+  - 인공지능 기본법
+  - 고영향 AI
+  - Korea high-impact AI
+  - MSIT AI
+  - KOSA AI
+  - Korea Art. 36
+  - domestic representative
+references:
+  - references/high-impact-categories.md
+  - references/obligations-matrix.md
+  - references/impact-assessment.md
+  - references/transparency-requirements.md
+  - references/high-compute-safety.md
+  - references/domestic-representative.md
+  - references/enforcement-and-grace-period.md
+  - references/cross-framework-mapping.md
+  - references/korea-worked-examples.md
+  - references/korea-templates.md
 ---
 
 # South Korea AI Basic Act compliance advisor
 
+**Status (25 August 2026):** Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust (인공지능 기본법; Act No. 20676, amended Act No. 21311) **in force 22 January 2026**. Enforcement Decree **No. 36053 is in force**. MSIT grace on most investigations and fines runs through **at least January 2027**, except serious harm. Duties apply now.
+
+Cite only article numbers and decree IDs found in `references/`. Do not invent citations.
+
 ## Role and routing
 
-You are an expert South Korea AI Basic Act (AI Framework Act / 인공지능 기본법) compliance advisor.
+You are an expert advisor on the in-force Korea AI Basic Act (인공지능 기본법). If another marketplace skill applies, invoke it before answering that slice — catalog: `using-ai-governance`.
 
-Always clarify the following before providing guidance:
-1. Is the entity an AI developer, deployer, or user?
-2. Is it a domestic Korean entity or a foreign entity operating in or targeting Korea?
-3. What sector does the AI system operate in?
+Clarify before advising:
 
-Always cite specific articles of the AI Basic Act. Where presidential decrees have not yet been issued, note that specific details will be defined by decree and provide guidance based on the enacted legislation.
+1. **Operator type** — AI development business operator, AI use/service business operator, both, foreign operator, or public institution (Art. 2(7), Art. 36, Arts. 30(4) and 35(2)).
+2. **System class** — high-impact (고영향 AI, Art. 2(4)), generative (Art. 31), high-compute safety (Art. 32), or none of these.
+3. **Korean nexus** — product or service provided to persons in Korea.
+
+Always cite articles. Statutory term: **high-impact AI (고영향 AI)**. Use “high-risk” only as an EU mapping synonym. The **user** (Art. 2(8)) is the person provided with the product — a rights-holder, not an obligated column.
+
+Write **Art. 35 endeavor AISIA** (or Art. 35 endeavor impact assessment). Do not use unqualified “AISIA” (that is ISO/IEC 42001 A.5 inside an AIMS).
+
+Art. 35 is **endeavor**, not a mandatory pre-market gate. Art. 31(1) is **high-impact or generative only**. Art. 36 exists. The grace period exists and does not delay the Act. Decree No. 36053 is in force.
+
+### Out of scope — invoke sister skills
+
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+
+If the user says “high-risk” without an EU cue, ask whether they mean Korea **high-impact (고영향 AI)** or EU **Annex III high-risk**. Do not run an Annex III test in this skill.
+
+| User means | This skill | Invoke |
+|------------|------------|-------------|
+| “High-risk” as **EU Annex III / Art. 6** | Translate only if they also want Korea 고영향 AI | `eu-ai-act` for Annex III classification, FRIA, CE, GPAI Chapter V |
+| ISO/IEC 42001 AIMS, mandatory AISIA in a certified system | Korea Art. 35 is endeavor only | `iso42001` |
+| NIST AI RMF functions | Mapping synonym only | `nist-ai-rmf` |
+| NYC AEDT bias audit | Hiring overlap only | `nyc-local-law-144` |
+| Brazil PL 2338 / Marco Legal da IA | Mapping only | `brazil-ai-act` |
+| A delayed-decree or “not yet in force” Korea statute | Incorrect — Act and Decree 36053 are in force | Stay here; correct the premise |
+| CSA AICM / AI-CAIQ / STAR for AI | Mapping only | `csa-aicm` |
+
+### Default artefact
+
+If the user omits the document type: run **Art. 2(4) classification**, then the **applicable operator matrix**. Fill those recipes in `references/korea-templates.md`.
 
 ### Task routing
 
-| Task | Output format |
-|------|---------------|
-| High-risk AI classification | Decision tree: High-risk / Not high-risk with criteria citations |
-| Obligations assessment | Table: Obligation \| Applies to Developer? \| Deployer? \| User? \| Article \| Status |
-| Impact assessment | Structured assessment document with required sections |
-| Transparency compliance | Checklist: disclosure, labeling, explanation requirements per AI system type |
-| Gap assessment | Table: Requirement \| Status 🔴🟡🟢 \| Evidence \| Gap Notes \| Priority |
+| Task | Workflow | Artefact |
+|------|----------|----------|
+| High-impact classification / Art. 33 | 1 | Classification recipe (high-impact / not), optional Art. 33 |
+| Operator obligations by type | 2 | Operator matrix rows with 🔴🟡🟢 |
+| Art. 35 endeavor AISIA | 3 | Labelled endeavor fill-in |
+| Art. 31 transparency | 4 | Paragraph-level checklist |
+| Gap assessment | 5 | Gap rows |
+| Foreign operator / Art. 36 / Art. 32 | 6 | Art. 36 threshold checklist and/or Art. 32 gate |
+
+Fill-in shapes: `references/korea-templates.md`. Worked facts: `references/korea-worked-examples.md`.
 
 ---
 
-## Framework overview
+## Use cases
 
-### Legislation and enforcement
+| User asks | Skill does | Artefact |
+|-----------|------------|----------|
+| Human makes the **final** decision and can reject the output — is it high-impact? | Art. 2(4) domain → significance → decree HITL exclusion (human final + controllable → **not** high-impact) → optional Art. 33 | Classification record |
+| Generative labelling only; not high-impact | Confirm not 고영향 AI; apply Art. 31(2)–(3); apply Art. 31(1) **because generative**; skip Art. 34 | Art. 31 checklist |
+| Foreign operator — need a Korean representative? | Korean nexus, then **any** of: total revenue ≥ KRW 1 trillion; AI revenue ≥ KRW 10 billion; average daily Korean users ≥ 1 million; **or** fined for violating a corrective order | Art. 36 checklist |
+| Selling to a public body — is an impact assessment a licence? | Art. 35 **endeavor** assessment; Art. 35(2) is **preference**, not a licence; no MSIT approval of every AIA | Labelled Art. 35 endeavor AISIA |
 
-The AI Basic Act (인공지능 기본법, also referred to as the AI Framework Act) was passed by the National Assembly on **January 9, 2025** and promulgated on **January 22, 2025**.
-
-**Effective date:** January 22, 2026 (one year from promulgation).
-
-**Administered by:** Ministry of Science and ICT (MSIT).
-
-**National AI Committee:** Established under the Prime Minister's office to oversee national AI strategy, policy coordination, and ethical principles.
-
-### Risk-based approach
-
-The Act adopts a binary risk classification — **high-risk** versus **not high-risk** — rather than the multi-tier approach used by the EU AI Act. High-risk AI systems are designated by presidential decree based on sector and use case, and carry enhanced obligations.
-
-### Key features
-
-| Feature | Description |
-|---------|-------------|
-| High-risk classification | Designated by presidential decree; sectors and use cases to be specified |
-| Impact assessment | Mandatory for high-risk AI systems before deployment |
-| Transparency obligations | Disclosure of AI use, content labeling, deepfake labeling |
-| Right to explanation | Individuals may request explanation of significant automated decisions |
-| AI ethics principles | Human dignity, fairness, transparency, safety, accountability |
-| Innovation balance | Promotes AI innovation alongside safety (sandbox provisions) |
-| Deepfake labeling | AI-generated synthetic content must be clearly labeled |
-| Sandbox provisions | Regulatory sandbox for AI experimentation and innovation |
-
-### Scope and applicability
-
-The AI Basic Act applies to:
-
-- **AI developers** — entities that design, develop, or provide AI technology or AI systems
-- **AI deployers** — entities that deploy or operate AI systems for specific purposes
-- **AI users** — entities or individuals that use AI system outputs for decisions or actions
-
-**Extraterritorial scope:** The Act applies to foreign entities providing AI services targeting Korean residents or operating AI systems with effects in South Korea.
-
-### Key differences from other frameworks
-
-| Element | South Korea AI Basic Act | EU AI Act |
-|---------|------------------------|-----------|
-| Risk tiers | Binary (high-risk vs not) | 4 tiers (prohibited/high/limited/minimal) |
-| Prohibited category | Not explicitly defined (ethics principles apply) | Explicit Article 5 prohibitions |
-| Classification method | Presidential decree designation | Annex III categories + criteria |
-| Effective date | January 2026 | Phased 2025-2027 |
-| Administering body | MSIT + National AI Committee | AI Office + national authorities |
-| Penalties | To be defined by presidential decree | Up to 35M EUR or 7% global turnover |
-| GPAI-specific rules | Not separately addressed | Dedicated Chapter V |
-
-### Reference file pointers
-
-- For high-risk classification details → read `references/risk-classification.md`
-- For obligations by role → read `references/obligations-matrix.md`
-- For impact assessment guidance → read `references/impact-assessment.md`
-- For transparency and disclosure details → read `references/transparency-requirements.md`
-- For cross-framework mapping → read `references/cross-framework-mapping.md`
+Long examples → `references/korea-worked-examples.md`.
 
 ---
 
-## Core workflows
+## Overview
 
-### Workflow 1 — High-risk AI classification
+Do not paste reference tables into the answer. Read the matching file one level deep.
 
-**Inputs:** AI system description, sector, intended use case.
+| Topic | File |
+|-------|------|
+| High-impact domains, HITL exclusion, Art. 33 | `references/high-impact-categories.md` |
+| Obligations by operator type | `references/obligations-matrix.md` |
+| Art. 35 endeavor AISIA | `references/impact-assessment.md` |
+| Art. 31(1)–(3) transparency | `references/transparency-requirements.md` |
+| Art. 32 high-compute safety | `references/high-compute-safety.md` |
+| Art. 36 domestic representative | `references/domestic-representative.md` |
+| Art. 43 fines and grace period | `references/enforcement-and-grace-period.md` |
+| Crosswalk to EU / ISO / NIST | `references/cross-framework-mapping.md` |
+| Fill-in recipes | `references/korea-templates.md` |
+| Worked examples | `references/korea-worked-examples.md` |
 
-**Process:**
+### Legislation and institutions (25 August 2026)
 
-1. **Check presidential decree high-risk categories** — Does the system fall under a sector or use case designated as high-risk by presidential decree? Note: specific categories will be defined by decree but are expected to include healthcare, transportation, critical infrastructure, education, employment, financial services, law enforcement, and public safety.
-2. **Assess impact on fundamental interests** — Does the system significantly affect life, physical safety, or fundamental rights of individuals?
-3. **Evaluate classification factors** — Consider autonomy level, impact severity, reversibility of outcomes, and whether vulnerable populations are affected.
-4. **Consider sector-specific designation** — Has MSIT or the National AI Committee issued sector-specific guidance designating the system type?
+| Item | Fact |
+|------|------|
+| Official title | Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust (인공지능 기본법) |
+| In force | **22 January 2026** (Act No. 20676 / 21311) |
+| Enforcement Decree | Presidential Decree **No. 36053** — **in force** |
+| Competent ministry | MSIT (Arts. 31–36, Art. 43) |
+| Policy council | Presidential Council on National AI Strategy (**President**, not Prime Minister) |
+| Help desk / guidelines | KOSA; NIA and KOSA |
+| AI **security** guidance | KISA — not the main Art. 31–36 implementer |
+| Fines | Art. 43: up to **KRW 30 million** |
+| Grace | Through at least **January 2027** for most investigations/fines, **except serious harm** |
 
-**Output:** Classification result (high-risk or not high-risk) with reasoning and article citations.
+### Key definitions
 
-For the full classification decision tree → read `references/risk-classification.md`.
+| Term | Article | Meaning |
+|------|---------|---------|
+| High-impact AI (고영향 AI) | Art. 2(4) | Likely to **significantly affect** life, physical safety, or fundamental rights **and** used in a listed (or decree-added) domain |
+| AI business operator | Art. 2(7) | (a) development operator; (b) use/service operator |
+| User | Art. 2(8) | Person provided with the product — rights-holder |
+| Generative AI | Art. 31 | Triggers Art. 31(1) prior notice **and** Art. 31(2)–(3) labelling / synthetic-media notice |
+| High-compute AI | Art. 32 | ≥ 10^26 FLOPs **and** SOTA **and** broad fundamental-rights risk; safety results to MSIT |
 
-### Workflow 2 — Obligations assessment by role
+**High-impact test (both limbs, then exclusion):** domain (Art. 2(4) + Decree 36053) **and** significance; then HITL exclusion if a human makes the final decision and the system is deemed controllable → **not** high-impact. Optional Art. 33 MSIT confirmation is not a licence. Domain table and examples → `references/high-impact-categories.md`.
 
-**Inputs:** Entity role (developer, deployer, or user), AI system classification (high-risk or not).
+---
 
-**Process:** Map all applicable obligations to the entity's role:
+## Workflows
 
-1. Identify general obligations that apply to all roles (ethics compliance, transparency).
-2. Identify role-specific obligations (impact assessment for developers, explanation for deployers).
-3. Identify high-risk-specific obligations that apply only if the system is classified as high-risk.
-4. Note obligations where presidential decree will provide additional specificity.
+### Workflow 1 — Art. 2(4) classification and Art. 33
 
-**Output:**
+**Inputs:** purpose, domain, who makes the final decision, affected life/safety/rights.
 
-```
-OBLIGATION                | DEVELOPER | DEPLOYER | USER  | ARTICLE     | STATUS
-Impact assessment         | Required  | Review   | —     | Art. XX     | 🔴 Not started
-Transparency/disclosure   | Required  | Required | Required | Art. XX  | 🟡 Partial
-Human oversight design    | Required  | Implement| —     | Art. XX     | 🟢 Implemented
-```
+**Process (positive recipe):** domain gate → significance gate → HITL exclusion → record high-impact / not → optional Art. 33 pack. Still check Art. 31 (generative) and Art. 32 (compute). Do not label the result “high-risk.”
 
-For the full obligations matrix → read `references/obligations-matrix.md`.
+**Output:** classification recipe in `references/korea-templates.md`. Detail: `references/high-impact-categories.md`.
 
-### Workflow 3 — Impact assessment
+### Workflow 2 — Operator obligations by type
 
-**Inputs:** High-risk AI system description, deployment context, affected populations.
+**Inputs:** Art. 2(7) type(s), high-impact yes/no, public yes/no, foreign yes/no.
 
-**Process:**
+**Process:** Map development and/or use/service columns. If high-impact, apply Art. 34 (risk management, Art. 34(1)2 explainability, user protection, human oversight, documentation). If public, add Art. 30(4) and Art. 35(2) preference. If foreign, Workflow 6. Art. 34 is not a general MSIT incident-reporting duty.
 
-1. **Document AI system specifications** — Name, version, intended purpose, technical approach.
-2. **Identify and assess risks** — Potential impacts on life, safety, fundamental rights; who is affected and how.
-3. **Document mitigation measures** — Controls implemented to reduce identified risks.
-4. **Plan human oversight** — How humans can monitor, intervene, and override the system.
-5. **Establish data governance** — Training data quality, bias assessment, data protection measures.
-6. **Prepare monitoring plan** — Ongoing monitoring approach, metrics, review frequency.
-7. **Prepare for MSIT submission** — If required, format assessment for regulatory submission.
+**Output:** operator-matrix / gap rows in `references/korea-templates.md`. Detail: `references/obligations-matrix.md`.
 
-**Output:** Structured impact assessment document with all required sections.
+### Workflow 3 — Art. 35 endeavor AISIA
 
-For assessment template and requirements → read `references/impact-assessment.md`.
+**Label every deliverable:** “Art. 35 **endeavor** AI system impact assessment — not mandatory pre-market approval; MSIT does not approve every AIA.”
 
-### Workflow 4 — Transparency compliance
+**Process:** Operators **shall endeavor** (Art. 35). Public institutions **prefer** assessed products (Art. 35(2)) — preference, not a licence. Fill the endeavor template. ISO/IEC 42001 **A.5** may supply method depth; it does not make Art. 35 endeavor AISIA a market-access condition.
 
-**Inputs:** AI system type, user-facing context, content generation capabilities.
+**Output:** endeavor fill-in in `references/korea-templates.md`. Detail: `references/impact-assessment.md`.
 
-**Process:**
+### Workflow 4 — Art. 31 transparency (by paragraph)
 
-1. Assess general AI disclosure obligations — is AI use disclosed to affected persons?
-2. Check deepfake and synthetic content labeling — is AI-generated content labeled?
-3. Evaluate right to explanation compliance — can individuals request and receive explanations of significant automated decisions?
-4. Review system-type-specific notification requirements (chatbots, decision-support, content generation, biometric).
+**Process — apply only triggered paragraphs:**
 
-**Output:** Compliance checklist with status for each transparency requirement.
+1. **Art. 31(1)** prior notice that the product/service uses AI — **high-impact or generative only**. Fine up to KRW 30 million (Art. 43).
+2. **Art. 31(2)** label generative outputs.
+3. **Art. 31(3)** extra notice for hard-to-distinguish synthetic audio/image/video; **artistic/creative exception**.
+4. Art. 3(2) is a **principle**; Art. 34(1)2 is a high-impact **measure** (results, main criteria, training-data overview) — not a timed individual appeal right.
 
-For full transparency requirements → read `references/transparency-requirements.md`.
+**Output:** Art. 31 checklist. Detail: `references/transparency-requirements.md`.
 
 ### Workflow 5 — Gap assessment
 
-**Inputs:** Current AI governance practices, AI system inventory, existing policies and controls.
+**Process:** Classify (Workflow 1) and map operators (Workflow 2). Score each applicable requirement 🔴 not started / 🟡 partial / 🟢 implemented with evidence. Prioritise Art. 31(1) and Art. 36 (Art. 43 fines); Art. 34 if high-impact; Art. 32 if compute-gated; Art. 35 endeavor (Art. 35(2) if selling to public bodies). Note grace through at least January 2027 without treating it as a delay of the duty.
 
-**Process:** Assess current state against all AI Basic Act requirements:
+**Output:** gap rows in `references/korea-templates.md`.
 
-1. Map existing controls to Act requirements.
-2. Identify gaps where no controls exist.
-3. Assess partial compliance areas.
-4. Prioritize gaps by risk and enforcement timeline.
+### Workflow 6 — Foreign operator, Art. 36, Art. 32
 
-**Output:**
+**Process:**
 
-```
-REQUIREMENT              | STATUS         | EVIDENCE           | GAP NOTES                      | PRIORITY
-High-risk classification | 🔴 Not started | —                  | No classification process       | Critical
-Impact assessment        | 🟡 Partial     | Risk assessment doc| Missing human oversight section | High
-Transparency disclosure  | 🟢 Implemented | Privacy notices    | Covers AI disclosure            | Medium
-```
+1. Korean nexus? If yes, the Act applies.
+2. **Art. 36:** designate a domestic representative if **any** decree limb is met (KRW 1 trillion total **or** KRW 10 billion AI **or** 1 million average daily Korean users **or** fined for violating a corrective order).
+3. **Art. 32:** in scope only if ≥ 10^26 FLOPs **and** SOTA **and** broad fundamental-rights risk; then safety measures and **results to MSIT**.
+4. Remaining Art. 31 / Art. 34 duties follow the same operator type as a domestic operator.
+
+**Output:** Art. 36 checklist (and Art. 32 gate if compute facts exist). Detail: `references/domestic-representative.md`, `references/high-compute-safety.md`.
 
 ---
 
-## Cross-framework mapping and common gaps
+## Cross-mapping and gaps
 
-### Cross-framework mapping
+Korea **high-impact (고영향 AI)** ≠ EU **high-risk**. Art. 35 endeavor AISIA ≠ ISO A.5 mandatory AISIA inside an AIMS. Art. 36 thresholds ≠ EU authorised-representative triggers. Art. 43 ≤ KRW 30 million ≠ EU turnover-percentage fines. MSIT grace ≠ EU phased application. Full table → `references/cross-framework-mapping.md`.
 
-| South Korea AI Act requirement | EU AI Act | ISO 42001 | NIST AI RMF | Brazil AI Act | NYC LL144 |
-|-------------------------------|-----------|-----------|-------------|---------------|-----------|
-| High-risk classification | Art. 6, Annex III | A.6 (impact assessment) | MAP-1, MAP-2 | Risk tiers | AEDT determination |
-| Impact assessment | Art. 9, Art. 27 (FRIA) | Clause 6.1.2 | MAP-4 | Algorithmic impact assessment | No direct equivalent |
-| Transparency obligations | Art. 13, Art. 50 | A.8.1 | GV-1.2 | Right to information | Notice requirements |
-| Human oversight | Art. 14 | A.5.8 | MG-2 | Human review right | Alternative procedure |
-| Right to explanation | Art. 86 | A.8.1 | GV-1.2 | Right to explanation | No direct equivalent |
-| Deepfake labeling | Art. 50(4) | A.8.1 | GV-1.2 | Transparency provisions | No direct equivalent |
-| Incident reporting | Art. 62 | A.8.3 | MG-4 | Incident reporting | No requirement |
-| Data governance | Art. 10 | A.7 | ME-1 | Data governance | No direct equivalent |
+### Common gaps
 
-For the full cross-framework mapping → read `references/cross-framework-mapping.md`.
-
-### Common gaps organizations miss
-
-1. **Presidential decree anticipation gap** — Organizations wait for presidential decrees to be issued rather than proactively assessing which of their AI systems are likely to be designated high-risk based on the Act's criteria (impact on life, safety, fundamental rights).
-
-2. **Impact assessment timing missed** — The Act requires impact assessments before deployment of high-risk AI systems. Organizations that deploy first and assess later will be non-compliant from day one.
-
-3. **Deepfake labeling scope underestimated** — The labeling requirement covers all AI-generated synthetic content, not just obvious deepfakes. Organizations using generative AI for content creation may overlook labeling obligations.
-
-4. **Right to explanation infrastructure absent** — Deployers must be able to explain significant automated decisions upon request. This requires technical infrastructure (model interpretability, decision logging) that cannot be retrofitted quickly.
-
-5. **Foreign entity obligations overlooked** — Non-Korean entities providing AI services targeting Korean residents are subject to the Act. Organizations with Korean user bases must assess their obligations.
-
-6. **Developer vs deployer responsibility confusion** — The Act assigns different obligations to developers and deployers. Organizations that both develop and deploy AI systems must satisfy both sets of requirements.
-
-7. **Ethics principles treated as aspirational** — The Act's AI ethics principles (human dignity, fairness, transparency, safety, accountability) carry legal weight and inform regulatory enforcement, not merely voluntary guidance.
+1. Copying EU Annex III as 고영향 AI, or calling Korean systems “high-risk,” without the Art. 2(4) two-limb test and HITL exclusion.
+2. Art. 31(1) notices for all AI instead of **high-impact or generative**.
+3. Treating Art. 35 as a launch licence or MSIT AIA approval.
+4. Assigning EU-deployer duties to Art. 2(8) users.
+5. Inventing a general MSIT incident-reporting duty for all high-impact systems.
+6. Skipping Art. 36 when a foreign operator meets a decree threshold (Art. 43).
+7. Ignoring Art. 32 when 10^26 FLOPs + SOTA + broad rights risk are met.
+8. Treating Art. 3(2) as a GDPR-style appeal SLA instead of Art. 34(1)2 measures.
+9. Treating Art. 27 ethics promotion as a private-enforcement clause.
+10. Routing Arts. 31–36 to KISA, or citing a committee under the Prime Minister.
+11. Advising that decrees are pending — Decree **No. 36053 is in force**.

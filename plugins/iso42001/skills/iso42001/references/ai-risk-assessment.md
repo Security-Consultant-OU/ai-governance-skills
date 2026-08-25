@@ -1,6 +1,6 @@
 # AI risk assessment and AISIA — ISO/IEC 42001:2023
 
-Two complementary but distinct processes required under Clause 6.1.2. This reference covers methodology, scales, templates, and integration with the EU AI Act.
+Two complementary processes: **AI risk assessment (Clause 6.1.2, performed under 8.2)** and **AISIA (Clause 6.1.4, performed under 8.4, controls in A.5)**. Do not cite AISIA as 6.1.2.
 
 ---
 
@@ -92,10 +92,12 @@ Two complementary but distinct processes required under Clause 6.1.2. This refer
 
 | Score range | Rating | Treatment expectation |
 |-------------|--------|----------------------|
-| 1–4 | 🟢 Low | Accept with standard monitoring — review at next scheduled assessment |
-| 5–9 | 🟡 Medium | Treat within 90 days — implement additional controls or enhanced monitoring |
-| 10–16 | 🔴 High | Treat within 30 days — implement controls before continued operation, escalate to management |
-| 17–25 | 🔴 Critical | Immediate action — consider suspending AI system operation until risk is reduced to acceptable level |
+| 1–4 | Low | Accept with standard monitoring — review at next scheduled assessment |
+| 5–9 | Medium | Treat within 90 days — additional controls or enhanced monitoring |
+| 10–16 | High | Treat within 30 days — escalate to management |
+| 17–25 | Critical | Immediate action — consider suspending operation until residual risk is acceptable |
+
+Use **Low / Medium / High / Critical** for risk ratings. Reserve 🔴🟡🟢 for gap-assessment implementation status only.
 
 ### Treatment options
 
@@ -104,7 +106,7 @@ Two complementary but distinct processes required under Clause 6.1.2. This refer
 | Modify | Change the AI system (retrain, add guardrails, change architecture, add human oversight) | Risk can be reduced to acceptable level through technical or operational changes | 6.1.3 |
 | Accept with monitoring | Accept the residual risk with continuous monitoring and defined escalation thresholds | Risk is within appetite after considering existing controls, but requires ongoing vigilance | 6.1.3 |
 | Avoid | Do not deploy the AI system for this use case, or withdraw from the context that generates the risk | Risk cannot be reduced to acceptable level, or cost of treatment exceeds benefit of AI system | 6.1.3 |
-| Transfer | Shift risk through contractual obligations, insurance, or outsourcing to a party better positioned to manage it | Risk can be contractually allocated to AI provider or insured; note that accountability cannot be transferred | 6.1.3, A.9 |
+| Transfer | Shift risk through contractual obligations, insurance, or outsourcing to a party better positioned to manage it | Risk can be contractually allocated to AI provider or insured; accountability cannot be transferred | 6.1.3, A.10 |
 
 ### Risk register template
 
@@ -119,7 +121,7 @@ R-001   | [Name]   | Model    | [Description]    | [1-5]      | [1-5]      | [Lx
 
 ### When to conduct an AISIA
 
-An AISIA is mandatory under Clause 6.1.2 for every AI system within the AIMS scope. Conduct or reassess when:
+An AISIA is mandatory under **Clause 6.1.4** (process) and **8.4** (perform) for every AI system within the AIMS scope. Annex A.5 is the control layer. ISO/IEC 42005 may be used for method depth; it is not required by 42001. The six-step process below is **one acceptable process**, not “the” ISO method.
 
 - A new AI system is being considered for deployment
 - An existing AI system's intended purpose, affected population, or deployment context changes significantly
@@ -162,13 +164,13 @@ Map all populations affected by the AI system: direct users, subjects of AI deci
 
 | Control area | Low impact | Medium impact | High impact |
 |-------------|-----------|--------------|------------|
-| Transparency (A.8.1) | General disclosure of AI use | Specific disclosure of AI role in decisions, accessible explanation | Full transparency — detailed explanation of decision factors, proactive notification |
-| Human oversight (A.5.8) | Periodic review of AI outputs | Human review of flagged or borderline decisions | Human review of every consequential decision, override capability |
-| Bias monitoring (A.5.7) | Annual bias assessment | Quarterly bias monitoring with defined metrics | Continuous bias monitoring, real-time alerts, published fairness reports |
-| Incident response (A.8.3) | Standard incident process | Enhanced response for AI-specific incidents, 48-hour notification | Immediate response, 24-hour internal escalation, external notification where required |
-| Data quality (A.7.3) | Standard data quality controls | Enhanced quality criteria, quarterly validation | Continuous quality monitoring, independent data quality audit |
-| Stakeholder engagement (A.8.2) | Feedback mechanism available | Active stakeholder consultation before deployment | Formal impact consultation with affected communities, ongoing dialogue |
-| Recourse mechanism | General complaint process | Specific AI decision appeal process | Formal appeal mechanism with human review guarantee, independent oversight |
+| Transparency (A.8.2, A.8.5) | General disclosure of AI use | Specific disclosure of AI role in decisions, accessible explanation | Full transparency — decision factors, proactive notification |
+| Human oversight (A.9.2, A.6 life-cycle gates) | Periodic review of AI outputs | Human review of flagged or borderline decisions | Documented override and escalation; EU Art. 14 may require more for high-risk systems |
+| Bias monitoring (A.6.2.6, A.7.4) | Annual bias assessment | Quarterly bias monitoring with defined metrics | Continuous bias monitoring and alerts |
+| Incident communication (A.8.4) | Standard incident process | Enhanced AI-incident response | Immediate internal escalation; external notice where required |
+| Data quality and provenance (A.7.4, A.7.5) | Standard data quality controls | Enhanced criteria, quarterly validation | Continuous quality monitoring; recoverable lineage |
+| Stakeholder information (A.8.3, A.8.5) | Feedback mechanism available | Consultation before deployment | Formal consultation with affected communities |
+| Recourse | General complaint process | Specific AI decision appeal process | Formal appeal with human review |
 
 **Step 6 — Document findings:**
 
@@ -236,7 +238,7 @@ Next Review Date: [Date]
 | **Scope** | All risk categories: model, data, operational, supply chain, regulatory | Impact on individuals (autonomy, dignity, safety) and society (equity, trust, democracy) |
 | **Frequency** | At planned intervals and when triggered by change | At planned intervals and when triggered by change |
 | **Feeds into** | Risk treatment plan, SoA control selection, operational controls | Control requirements by impact level, transparency obligations, human oversight levels |
-| **Clause reference** | 6.1.2 (assessment), 6.1.3 (treatment), 8.2 (execution) | 6.1.2 (assessment), A.6 (impact assessment controls) |
+| **Clause reference** | 6.1.2 (process), 6.1.3 (treatment), 8.2 (perform) | 6.1.4 (process), 8.4 (perform), A.5 (controls) |
 
 Both processes inform the Statement of Applicability. The risk assessment determines which Annex A controls are needed based on risk levels. The AISIA determines the depth and rigour of control implementation based on impact levels. Together they provide a complete picture: what risks exist and what impacts those risks could have on people and society.
 
@@ -250,8 +252,8 @@ Both processes inform the Statement of Applicability. The risk assessment determ
 |------------------------|-------------------------------------|
 | AI system description and intended purpose | Description of the deployer's processes using the high-risk AI system |
 | Affected populations identification | Description of the period of use and frequency of use |
-| Impact on individuals (A.6.2) | Specific risks of harm likely to impact the categories of persons identified |
-| Impact on society (A.6.3) | Risks to fundamental rights and democratic processes |
+| Individual impacts (A.5.4) | Specific risks of harm likely to impact the categories of persons identified |
+| Societal impacts (A.5.5) | Risks to fundamental rights and democratic processes |
 | Human oversight assessment | Human oversight measures implemented |
 | Recourse mechanism assessment | Complaint and redress mechanisms available |
 | Impact classification and control requirements | Risk mitigation measures and their proportionality |
@@ -261,7 +263,7 @@ Both processes inform the Statement of Applicability. The risk assessment determ
 | AISIA impact level | Typical EU AI Act classification | Rationale |
 |-------------------|--------------------------------|-----------|
 | Low | Minimal risk or Limited risk | Limited impact on individuals, strong oversight, easy reversibility — likely falls below high-risk threshold or only requires transparency |
-| Medium | Limited risk or High-risk (with Art. 6(2) exceptions) | Moderate impact may trigger Annex III listing but could qualify for exception under Art. 6(2) if narrow procedural task or preparatory function |
+| Medium | Limited risk or High-risk (with Art. 6(3) derogation if it applies) | Moderate impact may trigger Annex III listing but could qualify under Art. 6(3) if the system does not pose a significant risk of harm |
 | High | High-risk (Annex III) | Significant impact on individuals in sensitive domains aligns with Annex III high-risk categories — full conformity assessment required |
 
 ### Practical integration guidance

@@ -1,73 +1,83 @@
-# Cross-framework mapping for the Brazil AI Act
+# Cross-framework mapping — Senate-approved PL 2338/2023 (not enacted)
+
+**Label:** based on Senate-approved PL 2338/2023; not enacted.
+
+ISO 42001 IDs: **A.5** impact, **A.6** life cycle, **A.10** suppliers. A.x.1 is an objective, not a control.
+
+**EU compliance does not cover:** Portuguese Art. 5 information; LGPD overlay; SIA and sectoral high-risk lists; Art. 13 extras (predictive policing/recidivism, CSAM generation, autonomous weapons); GPAI **copyright summary** and rightholder opt-out (Arts. 62–64).
+
+---
 
 ## Requirement-level mapping
 
-| Brazil AI Act Requirement | EU AI Act Article | ISO 42001 Control | NIST AI RMF Subcategory | South Korea AI Act | NYC LL144 |
-|---------------------------|-------------------|-------------------|------------------------|-------------------|-----------|
-| Risk classification (excessive / high / non-high) | Art. 6, Annex III (4-tier risk classification) | A.6 AISIA (AI system impact assessment) | MAP-2 (context and risk identification) | High-risk AI classification system | AEDT determination (is it an automated employment decision tool?) |
-| Rights of affected persons (information, explanation, human review, contestation) | Art. 86 (right to explanation); Art. 68 (right to lodge complaint) | A.8 (Information for interested parties; transparency) | GV-1.2 (stakeholder engagement and awareness) | Right to explanation of AI decisions; right to refuse AI-only decisions | Notice to candidates/employees of AEDT use (10 business days prior) |
-| Algorithmic impact assessment (pre-deployment, high-risk) | Art. 9 (risk management system); Art. 27 (FRIA for deployers) | Clause 6.1.2 (AI risk assessment); A.6.2 (assessment process) | MAP-4 (risks and benefits mapped for all components) | AI impact assessment for high-impact AI | — (bias audit is closest, but not a full impact assessment) |
-| Transparency (disclosure of AI use, system information) | Art. 13 (transparency for deployers); Art. 50 (limited risk disclosure) | A.8.1 (Transparency for AI systems) | GV-1.2 (organizational AI transparency) | Transparency obligations for AI operators | Notice requirements (10 business days before use; alternative selection option) |
-| Human oversight (human review, override capability) | Art. 14 (human oversight measures for high-risk) | A.5.8 (Human oversight of AI systems) | MG-2 (mechanisms for human oversight) | Human oversight provisions; right to refuse AI-only decisions | Alternative selection procedure or process (if candidate requests) |
-| Non-discrimination (bias prevention, fairness) | Art. 10 (data governance, bias in training data) | A.5.5 (Bias management in AI lifecycle) | ME-3 (mechanisms for bias detection and mitigation) | Non-discrimination provisions for AI systems | Bias audit requirement (annual independent audit of AEDT) |
-| Incident reporting (serious incidents to ANPD) | Art. 62 (reporting of serious incidents) | A.8.3 (Reporting of AI system incidents) | MG-4 (incident tracking and response) | Incident reporting obligations for high-impact AI | — (no incident reporting requirement) |
-| Governance system (structure, policies, risk management) | Art. 9 (risk management system); Arts. 8-15 (high-risk requirements) | Clauses 4-10 (full AIMS — AI Management System) | GOVERN (organizational AI governance function) | Obligations by actor (developer, service provider, user) | — (no governance system requirement) |
-| Data governance (training data quality, bias in data) | Art. 10 (data and data governance for high-risk) | A.7 (Data for AI systems — quality, provenance) | ME-1 (measurement of AI system performance and data) | Data quality and management requirements | — (data quality implied but not explicitly required) |
+| Senate PL 2338 (not law) | EU AI Act | ISO 42001 | NIST AI RMF | South Korea AI Basic Act | NYC LL144 |
+|--------------------------|-----------|-----------|-------------|--------------------------|-----------|
+| Arts. 12–16 risk (optional Art. 12; Art. 13 prohibited; Art. 14 context-specific) | Arts. 5–6, Annex III | **A.5** impact; **A.6** life cycle | MAP (context and risk) | High-impact classification | AEDT determination |
+| Arts. 5–6 rights (Art. 5 all systems; Art. 6 high-risk only — not an “8 rights” catalogue) | Arts. 50, 86; Art. 14 oversight | A.8 information; A.9.2 responsible use | GOVERN 1; MAP 5 | Explanation / refusal of AI-only decisions | Candidate/employee notice |
+| Arts. 25–27 AIA | Art. 9 risk mgmt; Art. 27 FRIA | **A.5** (A.5.2–A.5.5); 6.1.4 AISIA | MAP 5 | Impact endeavor (not FRIA) | Bias audit ≠ AIA |
+| Art. 18 governance split | Arts. 8–15 high-risk | **A.6** life cycle (A.6.1–A.6.2) | GOVERN + MANAGE | Operator measures | — |
+| Art. 4 / 16 §3 / 18 §2–§5 value chain | Arts. 16, 25, 26, 28 | **A.10** suppliers/customers (A.10.2–A.10.4) | GOVERN 6 | Actor types + domestic representative | Vendor may audit; employer remains liable |
+| Arts. 29–33 GPAI/generative; Arts. 62–64 copyright summary/opt-out | Chapter V GPAI; no equivalent copyright summary | A.7 data; A.8 information | MAP / MEASURE | Transparency / labelling | — |
+| Art. 42 incidents → sectoral authority, prazo TBD | Art. 73 serious incidents | A.8.4 incident communication | MANAGE 4 | Incident reporting | — |
+| Arts. 45–49 SIA (ANPD coordinates in Senate text; Chamber may change) | AI Office + national authorities | Clause 5 leadership / interested parties | GOVERN | MSIT + National AI Committee | NYC DCWP |
+| Art. 50 sanctions (warning; fine ≤ R$ 50m or 2% Brazilian turnover; suspension; sandbox ban) | Arts. 99–101 turnover fines | Loss of certification | None (voluntary) | Administrative fines | Daily civil penalty |
+
+---
 
 ## Structural comparison
 
-| Dimension | Brazil AI Act | EU AI Act | ISO 42001 | NIST AI RMF | South Korea AI Act | NYC LL144 |
-|-----------|---------------|-----------|-----------|-------------|-------------------|-----------|
-| Legal nature | National law (pending signature) | Binding EU regulation | Voluntary certifiable standard | Voluntary framework | National law | City ordinance |
-| Scope | All AI systems affecting persons in Brazil | All AI systems in EU market | Any organization choosing to implement | Any organization choosing to apply | All AI systems in South Korea | Automated employment decision tools in NYC |
-| Risk approach | 3-tier (excessive/high/non-high) | 4-tier (prohibited/high/limited/minimal) | Organization-defined risk assessment | Contextual risk throughout lifecycle | Risk-based classification | Binary (AEDT or not) |
-| Regulator | ANPD | National authorities + EU AI Office | Certification bodies | None (voluntary) | Ministry of Science and ICT | NYC DCWP |
-| Penalties | ANPD-enforced (details pending) | Up to 35M EUR or 7% global turnover | Loss of certification | None | Penalties defined in law | Up to $1,500 per violation per day |
-| Rights focus | Strong (8 specific rights) | Moderate (FRIA, explanation) | Indirect (interested parties) | Indirect (stakeholders) | Moderate (explanation, refusal) | Limited (notice, alternative) |
-| Data protection alignment | LGPD (same regulator) | GDPR (separate regulators) | References data management | References data governance | PIPA alignment | NYC data protection laws |
+| Dimension | Senate PL 2338 | EU AI Act | ISO 42001 | NIST AI RMF | SK AI Basic Act | NYC LL144 |
+|-----------|----------------|-----------|-----------|-------------|-----------------|-----------|
+| Legal nature | **Bill** (not enacted) | Binding regulation | Voluntary certifiable standard | Voluntary framework | National law | City ordinance |
+| Scope | AI **in Brazil** (Art. 1); listed exclusions | EU market + extra-territorial output rule | Organisation that chooses AIMS | Organisation that chooses RMF | AI in Korea | AEDTs in NYC hiring |
+| Roles | Desenvolvedor, distribuidor, aplicador | Provider, deployer, importer, distributor | Provider / user in Annex A | Not statutory roles | Operator types | Employer / employment agency |
+| Regulator | SIA: ANPD coordinates + sectoral + Cria + Cecia (Senate); Chamber may change coordinator | National authorities + AI Office | Certification bodies | None | MSIT | DCWP |
+| Rights catalogue | Art. 5 (all) + Art. 6 (high-risk only) | Transparency + Art. 86 explanation | Interested parties | Stakeholders | Explanation, refusal | Notice + alternative process |
+| Extra-territoriality | **Not** LGPD-style. Art. 1 is national rules for AI in Brazil | Art. 2(1)(c) output-in-EU | N/A | N/A | Foreign operators targeting Korea | NYC use |
 
-## Mapping by compliance activity
+---
 
-### If you are already compliant with the EU AI Act
+## If already aligned with the EU AI Act
 
-| Brazil AI Act Requirement | EU AI Act Equivalent | Gap to Address |
-|---------------------------|---------------------|----------------|
-| Risk classification | Art. 6 risk classification | Brazil uses 3 tiers (no limited risk category); review Brazil-specific prohibited list |
-| Algorithmic impact assessment | Art. 9 risk management + Art. 27 FRIA | Brazil requires publication of summary; verify FRIA content meets Brazil requirements |
-| Rights of affected persons | Art. 86 + national rights | Brazil has 8 specific rights (more detailed than EU); implement right to prior notice (not in EU Act) |
-| Human oversight | Art. 14 human oversight | Substantially aligned; verify human review process meets Brazil standards |
-| Transparency | Art. 13 + Art. 50 | Substantially aligned; ensure Portuguese language disclosures |
-| Incident reporting | Art. 62 serious incidents | Report to ANPD (not EU authorities); align with LGPD 72-hour timeline |
-| Governance | Arts. 8-15 requirements | Substantially aligned; ensure ANPD-specific requirements are met |
+| Senate topic | Closest EU hook | Residual gap |
+|--------------|-----------------|--------------|
+| Risk | Arts. 5–6 | Re-run Art. 12 (optional) + Art. 13 extras + Art. 14 purpose filters + Art. 14 parágrafo único + Art. 16 sectoral lists |
+| AIA | Art. 9 + Art. 27 FRIA | AIA to **sectoral authority** (Art. 25 §1); Art. 44 database is authority-run; Art. 23 III is public admin only |
+| Rights | Arts. 50, 86, 14 | Portuguese Art. 5 I; LGPD Art. 5 II; no prior-notice right; no general portability right |
+| Incidents | Art. 73 | Art. 42 to sectoral authority, **prazo TBD** — not 72 hours to ANPD |
+| GPAI | Chapter V | Art. 62 **copyright summary**; Art. 64 opt-out; Art. 19 synthetic identifier |
+| Governance overlay | Arts. 8–15 | SIA coordination; Chamber may change ANPD’s coordinator role |
 
-### If you are already compliant with ISO 42001
+---
 
-| Brazil AI Act Requirement | ISO 42001 Equivalent | Gap to Address |
-|---------------------------|---------------------|----------------|
-| Risk classification | A.6 AISIA | ISO uses org-defined risk; Brazil mandates 3-tier classification — map ISO assessment to Brazil tiers |
-| Algorithmic impact assessment | Clause 6.1.2 + A.6.2 | ISO assessment may not cover all Brazil-required content; supplement with Brazil-specific elements |
-| Rights of affected persons | A.8 Transparency | ISO addresses interested parties generally; Brazil requires 8 specific enforceable rights — implement each |
-| Incident reporting | A.8.3 Reporting | ISO reporting is org-defined; Brazil requires ANPD reporting within expected 72 hours |
-| Governance | Clauses 4-10 AIMS | Strong foundation; ensure ANPD-specific requirements and Brazil-specific policies are included |
+## If already aligned with ISO 42001
 
-### If you are already compliant with NIST AI RMF
+| Senate topic | ISO hook | Residual gap |
+|--------------|----------|--------------|
+| AIA | **A.5** impact; 6.1.4 / 8.4 AISIA | Map AISIA content to Art. 25 methodology (fundamental-rights risks/benefits, mitigations, effectiveness) |
+| Lifecycle evidence | **A.6** | Split artefacts to Art. 18 I (aplicador) vs II (desenvolvedor) |
+| Suppliers / downstream | **A.10** | Brazilian distributor **verification** (Art. 18 §2) and Art. 18 §5 reclassification |
+| Rights | A.8, A.9.2 | Art. 5 vs Art. 6 split; Art. 8 disproportionate-oversight alternative |
+| Incidents | A.8.4 | Sectoral authority, not a generic “notify the DPA in 72 hours” |
 
-| Brazil AI Act Requirement | NIST AI RMF Equivalent | Gap to Address |
-|---------------------------|----------------------|----------------|
-| Risk classification | MAP-2 context/risk | NIST uses contextual risk (no tiers); must map to Brazil's mandatory 3-tier system |
-| Algorithmic impact assessment | MAP-4 risk/benefit mapping | NIST mapping is broader; must create Brazil-specific impact assessment document |
-| Rights of affected persons | GV-1.2 stakeholder engagement | NIST is voluntary/advisory; Brazil requires legally enforceable rights — implement formal processes |
-| Incident reporting | MG-4 incident response | NIST is voluntary; Brazil requires mandatory ANPD reporting — establish formal reporting channel |
-| Governance | GOVERN function | Good foundation; must formalize into Brazil-compliant governance system with ANPD alignment |
+---
+
+## If already aligned with NIST AI RMF
+
+| Senate topic | NIST hook | Residual gap |
+|--------------|-----------|--------------|
+| Risk | MAP | Mandatory Art. 13/14 categories if enacted — RMF has no statutory tiers |
+| AIA | MAP 5 | Produce an Art. 25 AIA document, not only a MAP narrative |
+| Rights | GOVERN 1 / MAP 5 | Enforceable Art. 5–6 processes, Portuguese disclosures, LGPD |
+| Governance | GOVERN | Formal Art. 18 split; SIA-facing evidence |
+| Incidents | MANAGE 4 | Art. 42 sectoral channel once prazo exists |
+
+---
 
 ## Key differences to watch
 
-1. **Brazil's rights emphasis is stronger than most frameworks** — Eight specific enforceable rights for affected persons, influenced by LGPD tradition. Organizations compliant with other frameworks likely need to implement additional rights mechanisms.
-
-2. **ANPD as sole regulator for both data protection and AI** — Unique regulatory structure means AI compliance and LGPD compliance will be assessed together. Integrate governance rather than maintaining separate streams.
-
-3. **No limited risk category** — Unlike the EU AI Act, Brazil does not have a separate limited risk tier. Systems that would be limited risk under the EU Act fall into non-high risk in Brazil, but transparency obligations from the rights framework still apply.
-
-4. **Extraterritorial scope applies broadly** — Any AI system affecting persons in Brazil is in scope, regardless of where the developer, deployer, or operator is located. Foreign organizations must assess their exposure.
-
-5. **Pending final promulgation** — As of early 2025, the Act awaits presidential signature. Specific articles and numbering may change. Monitor ANPD publications for final text and implementing regulations.
+1. **Not law.** Do not certify “Brazil AI Act compliance.”
+2. **Roles are not EU roles.** Aplicador ≠ deployer as a defined term.
+3. **ANPD is not sole AI regulator** in the Senate text.
+4. **Art. 12 is optional.** Starting with a hard EU tree misstates the bill.
+5. **Copyright summary (Art. 62)** has **immediate** vacatio if enacted (Art. 80) — EU GPAI documentation does not substitute it.

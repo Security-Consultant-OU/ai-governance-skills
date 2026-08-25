@@ -1,37 +1,53 @@
-# Measure function — AI risk analysis, assessment, and monitoring
+# MEASURE function — NIST AI RMF 1.0 (Table 3)
 
-The Measure function employs quantitative and qualitative tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts. It uses the outputs of the Map function to inform measurement approaches and feeds results into the Manage function.
+Official subcategory outcomes from NIST AI 100-1. **4 categories, 22 subcategories**. MEASURE 2 has **13** TEVV rows (ME-2.1–ME-2.13). Do not collapse fairness, privacy, safety, or environment into other IDs.
 
-## ME-1: Risks measured
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| ME-1.1 | Appropriate metrics identified | Approaches and metrics for measurement of AI risks enumerated during the Map function are selected for implementation starting with the most significant risks | Identify metrics aligned with each trustworthy AI characteristic; select quantitative metrics where possible, qualitative where necessary; prioritize metrics by risk significance; document metric selection rationale | Metrics inventory; selection rationale; measurement plan | Art. 9 (risk management — metrics) | A.5.4 (system verification and validation) |
-| ME-1.2 | Measurement approaches for trustworthy characteristics | Appropriately trained personnel are assigned to evaluate AI system performance and determine whether existing metrics are appropriate | Define measurement approaches for each of the 7 trustworthy AI characteristics; assign measurement responsibilities to qualified personnel; establish measurement frequency and triggers | Measurement methodology documents; personnel qualification records; measurement schedule | Art. 15 (accuracy, robustness) | A.5.4 (system verification and validation) |
-| ME-1.3 | Internal and external expertise | Internal experts who did not serve as combatants of the system and/or independent, external experts are identified to assess the AI system and its associated metrics | Engage internal subject matter experts not involved in system development; consider independent external auditors; document expert qualifications and findings | Expert engagement records; qualification documentation; assessment reports | Art. 43 (conformity assessment) | Clause 9.2 (internal audit) |
+## MEASURE 1 — Appropriate methods and metrics (3)
 
-## ME-2: AI systems evaluated
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| ME-1.1 | Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented. | Metric plan; explicit “not measured” log. |
+| ME-1.2 | Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities. | Metric review cycle; community-impact error reports. |
+| ME-1.3 | Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance. | Independent / non-developer review. **Not** “combatants.” |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| ME-2.1 | Testing and evaluation (TEVV) | Test sets, metrics, and details about the tools used during test, evaluation, verification, and validation (TEVV) are documented | Develop comprehensive TEVV plan; document test datasets, evaluation metrics, validation criteria; conduct pre-deployment testing; record all results | TEVV plan; test dataset documentation; evaluation results; validation reports | Art. 9 (risk management — testing) | A.5.4 (system verification and validation) |
-| ME-2.2 | Red-teaming | Evaluations involving AI actors encompass demographic and domain expertise and are representative of the affected population | Conduct red-team exercises targeting identified risks; include adversarial testing for security, bias, and misuse scenarios; document findings and remediation actions | Red-team exercise plans; findings reports; remediation action items | Art. 15 (robustness — adversarial testing) | A.5.4 (system verification and validation) |
-| ME-2.3 | Bias testing | AI system performance and trustworthiness — including impacts on human decision-making — are evaluated and documented | Conduct bias testing across protected characteristics and proxy variables; test for disparate impact; evaluate fairness metrics; document bias testing methodology and results | Bias testing methodology; results by demographic group; fairness metric reports; remediation documentation | Art. 10(2)(f) (bias examination) | A.5.5 (assessing impacts — bias) |
-| ME-2.4 | Domain-specific evaluation | The functionality and behavior of the AI system and its components — as identified in the Map function — are monitored when in production | Perform domain-specific evaluations (clinical, financial, legal, etc.); engage domain experts in evaluation design; validate against domain-specific standards and benchmarks | Domain evaluation reports; expert consultation records; benchmark comparisons | Art. 15 (accuracy metrics) | A.5.4 (system verification and validation) |
-| ME-2.5 | Environmental impact assessment | AI system performance is examined and documented regularly following deployment for any type of performance degradation | Assess computational resource requirements; document energy consumption and carbon footprint; evaluate environmental sustainability; consider resource-efficient alternatives | Environmental impact assessment; energy consumption reports; sustainability documentation | — | A.5.3 (AI system impact assessment) |
+---
 
-## ME-3: Risks tracked
+## MEASURE 2 — Evaluated for trustworthy characteristics (13)
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| ME-3.1 | Identified risks monitored | Risks identified are monitored over time | Establish continuous monitoring for identified risks; define monitoring triggers and thresholds; automate monitoring where feasible; escalate when thresholds breached | Monitoring dashboards; threshold definitions; alert configurations; escalation logs | Art. 72 (post-market monitoring) | A.8 (operation and monitoring) |
-| ME-3.2 | Metrics tracked | Responses, including mitigation and controls, are documented and are monitored for effectiveness | Track metrics over time to detect trends and drift; compare current metrics against baselines; document metric trends and anomalies; trigger reassessment when metrics degrade | Metric trend reports; baseline comparisons; anomaly documentation; reassessment triggers | Art. 72 (post-market monitoring) | Clause 9.1 (monitoring, measurement, analysis) |
-| ME-3.3 | Model drift detected | Feedback about efficacy of measurement is gathered and assessed | Implement model drift detection (data drift, concept drift, performance drift); define acceptable drift thresholds; establish automated drift alerts; document drift events and responses | Drift detection system; threshold definitions; drift event logs; response documentation | Art. 72 (post-market monitoring) | A.8 (operation and monitoring) |
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| ME-2.1 | Test sets, metrics, and details about the tools used during TEVV are documented. | TEVV toolkit register. |
+| ME-2.2 | Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population. | IRB/ethics and sampling plan — **not** “red-teaming.” |
+| ME-2.3 | AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented. | Production-like test conditions. |
+| ME-2.4 | The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production. | Production monitoring of mapped components. |
+| ME-2.5 | The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented. | Validity/reliability evidence + OOD limits. |
+| ME-2.6 | The AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures. | Safety case; fail-safe beyond knowledge limits. |
+| ME-2.7 | AI system security and resilience – as identified in the MAP function – are evaluated and documented. | Adversarial, poisoning, availability, integrity tests. |
+| ME-2.8 | Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented. | Transparency/accountability measures. |
+| ME-2.9 | The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance. | Explanation + contextual interpretation evidence. |
+| ME-2.10 | Privacy risk of the AI system – as identified in the MAP function – is examined and documented. | Privacy TEVV (membership inference, leakage, minimisation). |
+| ME-2.11 | Fairness and bias – as identified in the MAP function – are evaluated and results are documented. | Fairness metrics by relevant groups; document limits. |
+| ME-2.12 | Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented. | Energy/water/compute impact of training and operations. |
+| ME-2.13 | Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented. | Meta-evaluation of the measurement programme. |
 
-## ME-4: Feedback gathered
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| ME-4.1 | Input from affected individuals | Measurement approaches for identifying AI risks are connected to deployment context and informed by input from domain experts and other relevant AI actors | Establish feedback channels for individuals affected by AI system decisions; collect and analyze user experience data; incorporate feedback into risk measurement | Feedback collection mechanisms; user experience reports; feedback analysis and integration records | Art. 27 (FRIA — affected persons) | A.8 (transparency and provision of information) |
-| ME-4.2 | Deployer and operator feedback | Measurement results regarding AI system trustworthiness in deployment context and target community context are informed by input from domain experts, affected communities, and relevant AI actors | Gather feedback from deployers, operators, and maintainers; assess operational challenges and workarounds; incorporate operational insights into measurement | Deployer feedback records; operational challenge logs; measurement refinement documentation | Art. 13 (transparency to deployers) | A.9 (third-party and customer relationships) |
-| ME-4.3 | Domain expert consultation | AI system performance or assurance criteria are measured qualitatively or quantitatively and documented | Consult domain experts on measurement adequacy; validate metrics against domain standards; refine measurement approaches based on expert input | Expert consultation records; measurement validation reports; refinement documentation | Art. 9 (risk management — expertise) | Clause 7.2 (competence) |
+## MEASURE 3 — Tracking identified AI risks over time (3)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| ME-3.1 | Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts. | Risk tracker comparing intended vs actual. |
+| ME-3.2 | Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available. | Qualitative / sentinel tracking where metrics do not exist. |
+| ME-3.3 | Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics. | Appeal/report channel feeding metrics. |
+
+---
+
+## MEASURE 4 — Feedback about efficacy of measurement (3)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| ME-4.1 | Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented. | Context-calibrated metrics. |
+| ME-4.2 | Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented. | External validation of trustworthiness results. |
+| ME-4.3 | Measurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about context-relevant risks and trustworthiness characteristics are identified and documented. | Trend log of improvement/decline. |

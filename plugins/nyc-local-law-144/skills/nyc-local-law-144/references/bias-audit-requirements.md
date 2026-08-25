@@ -1,122 +1,122 @@
 # Bias audit requirements — NYC Local Law 144
 
-## Independent auditor requirements
+Sources: 6 RCNY §§ 5-300–5-303; Admin. Code § 20-871(a); DCWP AEDT FAQ.
 
-| Requirement | Detail |
-|-------------|--------|
-| Independence | Must not have a financial interest in the employer or AEDT vendor, other than compensation for the audit itself |
-| Certification | No specific certification required by law, but auditor should have statistical analysis and data science expertise |
-| Methodology | Auditor independently selects methodology and conducts analysis; employer cannot dictate analytical approach |
-| Conflict of interest | Auditor cannot be an employee of, or have an ownership stake in, the employer or AEDT developer |
+## Independent auditor (6 RCNY § 5-300)
 
-## Impact ratio calculation
+| Test | Rule |
+|------|------|
+| Capability | Person or group capable of objective and impartial judgment on all issues in the audit scope |
+| Using / developing / distributing | **Not independent** if involved in using, developing, or distributing the AEDT |
+| Employment | **Not independent** if, during the audit, employed by the employer/agency that will use the AEDT or by the vendor that developed or distributes it |
+| Financial interest | **Not independent** if, during the audit, has a direct or material indirect financial interest in that employer/agency or vendor |
+| DCWP list | DCWP has **no** approved-auditor list and does not certify auditors |
+| Responsible party | **Employer or employment agency** must ensure an audit exists before use. The vendor is **not** the responsible party. A vendor may still hire an independent auditor |
 
-### Selection-based AEDTs
+## Scoring rate vs selection rate (6 RCNY §§ 5-300, 5-301)
 
-| Metric | Formula |
-|--------|---------|
-| Selection rate | (Number selected in category) / (Total applicants in category) |
-| Impact ratio | (Selection rate for category) / (Selection rate for most-selected category) |
+**Scoring rate** = rate at which individuals in a category receive a score **above the sample median** (median of the **full applicant sample**, as calculated by the AEDT). Do **not** use mean score or “highest mean.”
 
-### Scoring-based AEDTs
+**Impact ratio (scoring)** = category scoring rate / **highest** category scoring rate.
 
-| Metric | Formula |
-|--------|---------|
-| Scoring rate | (Average score for category) / (Average score for highest-scoring category) |
-| Impact ratio | Scoring rate for each category compared to highest-scoring category |
+**Selection rate** (pass/fail or classification tools) = individuals in the category selected to move forward **or** assigned a classification / total individuals in the category who applied or were considered.
 
-### Interpreting impact ratios
+**Impact ratio (selection)** = category selection rate / **highest** category selection rate.
 
-| Impact ratio | Interpretation |
-|--------------|---------------|
-| 1.0 | No disparity — category performs equal to most-selected/highest-scoring group |
-| 0.8–1.0 | Generally acceptable — no adverse impact indicated |
-| Below 0.8 | Potential adverse impact — reference to EEOC four-fifths rule |
-| Significantly below 0.8 | Strong indicator of adverse impact — requires attention |
+If the AEDT **classifies into groups** (e.g., leadership styles), run the required calculations **for each group**.
 
-Note: The EEOC four-fifths (80%) rule is a reference point, not a bright-line legal standard under LL144. Impact ratios below 0.8 should trigger further analysis.
+| AEDT type | Required calculations (minimum) |
+|-----------|----------------------------------|
+| Selects or classifies into groups (§ 5-301(b)) | Selection rate per category; impact ratio per category; separately for sex, race/ethnicity, and intersectional sex × race/ethnicity; repeat per classification group; state unknown-category counts |
+| Scores (§ 5-301(c)) | Median of the full sample; scoring rate per category (share **above that median**); impact ratio per category; same three demographic cuts; unknown-category counts |
 
-## Required statistical tables
+## Required demographic tables
 
-### By race/ethnicity (10 EEOC categories)
+Race/ethnicity uses **EEO-1 Component 1** categories (**7**, not 10). Intersectional **sex × race/ethnicity** analysis is **required**, not optional.
 
-| Category | # Applicants | # Selected | Selection Rate | Impact Ratio |
-|----------|-------------|------------|----------------|--------------|
-| Hispanic or Latino | | | | |
-| White (not Hispanic or Latino) | | | | |
-| Black or African American (not Hispanic or Latino) | | | | |
-| Native Hawaiian or Other Pacific Islander (not Hispanic or Latino) | | | | |
-| Asian (not Hispanic or Latino) | | | | |
-| American Indian or Alaska Native (not Hispanic or Latino) | | | | |
-| Two or More Races (not Hispanic or Latino) | | | | |
+Unknown sex and unknown race/ethnicity **counts must be stated**. Those individuals are omitted from rate/ratio calculations.
 
-Note: Categories with fewer than 2% of total applicants may have unreliable impact ratios due to small sample size. Report all categories but flag statistical limitations.
+A category that is **under 2%** of the audit data **may** be excluded from **impact-ratio calculations only**. The summary must still include the auditor’s justification **and** the number of applicants and the selection or scoring rate for the excluded category.
 
-### By sex
+### Sex
 
-| Category | # Applicants | # Selected | Selection Rate | Impact Ratio |
-|----------|-------------|------------|----------------|--------------|
+| Category | # Applicants | # Selected or # above median | Selection or scoring rate | Impact ratio |
+|----------|--------------|------------------------------|---------------------------|--------------|
 | Male | | | | |
 | Female | | | | |
 
-### Intersectional analysis (race/ethnicity × sex)
+### Race/ethnicity (EEO-1 Component 1 — 7 categories)
 
-Required if data is sufficient. "Sufficient data" is not defined by law — generally 30 or more applicants per category is considered adequate for statistical reliability.
+| Category | # Applicants | # Selected or # above median | Selection or scoring rate | Impact ratio |
+|----------|--------------|------------------------------|---------------------------|--------------|
+| Hispanic or Latino | | | | |
+| White (Not Hispanic or Latino) | | | | |
+| Black or African American (Not Hispanic or Latino) | | | | |
+| Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) | | | | |
+| Asian (Not Hispanic or Latino) | | | | |
+| American Indian or Alaska Native (Not Hispanic or Latino) | | | | |
+| Two or More Races (Not Hispanic or Latino) | | | | |
 
-| Category | Sex | # Applicants | # Selected | Selection Rate | Impact Ratio |
-|----------|-----|-------------|------------|----------------|--------------|
+### Intersectional (sex × race/ethnicity) — required
+
+| Race/ethnicity | Sex | # Applicants | # Selected or # above median | Selection or scoring rate | Impact ratio |
+|----------------|-----|--------------|------------------------------|---------------------------|--------------|
 | Hispanic or Latino | Male | | | | |
 | Hispanic or Latino | Female | | | | |
-| White | Male | | | | |
-| White | Female | | | | |
-| Black or African American | Male | | | | |
-| Black or African American | Female | | | | |
-| Asian | Male | | | | |
-| Asian | Female | | | | |
-| (other categories as data permits) | | | | | |
+| White (Not Hispanic or Latino) | Male | | | | |
+| White (Not Hispanic or Latino) | Female | | | | |
+| Black or African American (Not Hispanic or Latino) | Male | | | | |
+| Black or African American (Not Hispanic or Latino) | Female | | | | |
+| Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) | Male | | | | |
+| Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) | Female | | | | |
+| Asian (Not Hispanic or Latino) | Male | | | | |
+| Asian (Not Hispanic or Latino) | Female | | | | |
+| American Indian or Alaska Native (Not Hispanic or Latino) | Male | | | | |
+| American Indian or Alaska Native (Not Hispanic or Latino) | Female | | | | |
+| Two or More Races (Not Hispanic or Latino) | Male | | | | |
+| Two or More Races (Not Hispanic or Latino) | Female | | | | |
 
-## Data source requirements
+Unknown: state `# assessed with unknown sex or race/ethnicity` (omitted from the tables above).
 
-| Data source | When to use | Requirements |
-|-------------|------------|--------------|
-| Historical data | Preferred when available | Minimum one year of AEDT use data; must reflect actual candidate pool |
-| Test data | When historical data is insufficient | Acceptable if less than one year of historical data; must be representative of expected candidate population |
-| Combined approach | When historical data is partial | May supplement historical data with test data if historical data covers less than one year |
+## Worked scoring example (above-median, not mean)
 
-## Audit scope and timing
+Full-sample **median** score = 70. Scoring rate = share of the category scoring **above 70**. Highest scoring rate is the denominator of every impact ratio.
+
+| Sex | # Applicants | # above median | Scoring rate | Impact ratio |
+|-----|--------------|----------------|--------------|--------------|
+| Male | 92 | 50 | 54.3% | 1.00 |
+| Female | 76 | 34 | 44.7% | 0.82 |
+
+Impact ratio for Female = 44.7% / 54.3% ≈ 0.82. This is **not** mean(Female) / mean(Male).
+
+## Data rules (6 RCNY § 5-302)
+
+| Rule | Detail |
+|------|--------|
+| Historical data | Data collected during an employer’s or agency’s **actual use** of the AEDT to assess candidates or employees. **Must** be used when it can support a statistically significant audit |
+| Statistical significance | DCWP has **not** set a one-year, n=30, or other numeric threshold. The **independent auditor** decides whether historical data is sufficient |
+| Test data | Only if historical data is **insufficient**. Summary **must** explain why historical data was not used and how the test data was generated and obtained |
+| Other employers’ historical data (same AEDT) | An employer may rely on it **only if** it **contributed its own** historical data to that audit **or** it is the employer’s **first use** of the AEDT |
+| Imputation | **Cannot** impute or infer sex or race/ethnicity |
+| Limiting the dataset | No ban on limiting time period or region, but the summary must explain the source and any limits |
+
+## Timing, scope, publication (6 RCNY §§ 5-301, 5-303)
 
 | Requirement | Detail |
 |-------------|--------|
-| Timing | Bias audit must be completed before AEDT is first used |
-| Annual renewal | Audit must be conducted within one year prior to use; must be updated annually |
-| Scope | Each AEDT must be independently audited; a single audit cannot cover multiple distinct AEDTs |
-| Multiple positions | If same AEDT is used across different job categories, audit should cover all categories or representative sample |
+| Freshness | Do not use or continue to use an AEDT if more than one year has passed since the most recent bias audit |
+| First use | Audit must exist **before** first use |
+| Distinct tools | Each AEDT is audited separately |
+| Published summary | Date of the most recent audit; source and explanation of data; number in an **unknown** category; number of applicants, selection or scoring rates, and impact ratios for **all** categories; **distribution date** (date the employer/agency **began using** that AEDT) |
+| Hyperlink | An active, clearly labeled hyperlink to the summary and distribution date satisfies publication |
+| Duration | Keep the summary and distribution date posted **at least 6 months** after latest use |
 
-## Published summary requirements
+## 4/5ths rule vs LL144 vs other law
 
-| Requirement | Detail |
-|-------------|--------|
-| Location | Must be posted on employer's employment section of website |
-| Duration | Must remain posted for at least 6 months after last use of the AEDT |
-| Required content — date | Date the bias audit was conducted |
-| Required content — data | Source and type of data used (historical vs. test) |
-| Required content — applicants | Number of applicants assessed |
-| Required content — results | Impact ratios for each race/ethnicity category and sex category |
-| Distribution type | Must indicate whether AEDT is selection-based (selects/rejects) or scoring-based (provides scores) |
+| Framework | Role of an impact ratio below 0.80 |
+|-----------|-------------------------------------|
+| LL144 / DCWP | **Disclosure reference only.** The law does **not** require any action based on audit results and does **not** treat 0.80 as a pass/fail |
+| EEOC Uniform Guidelines (4/5ths) | Federal **reference point** for adverse-impact screening — not an LL144 legal test |
+| NYCHRL / Title VII | **Separate** discrimination law. Flag potential disparate-impact risk independently of LL144 publication |
 
-## Example impact ratio calculation
-
-For a selection-based AEDT:
-
-| Category | # Applicants | # Selected | Selection Rate | Impact Ratio |
-|----------|-------------|------------|----------------|--------------|
-| White | 500 | 100 | 20.0% | 1.00 |
-| Black or African American | 300 | 42 | 14.0% | 0.70 |
-| Hispanic or Latino | 250 | 40 | 16.0% | 0.80 |
-| Asian | 200 | 36 | 18.0% | 0.90 |
-
-In this example:
-- White has the highest selection rate (20.0%) and serves as the reference group (impact ratio = 1.00)
-- Black or African American has an impact ratio of 0.70 (14.0% / 20.0%), which is below 0.8 — potential adverse impact
-- Hispanic or Latino has an impact ratio of 0.80, at the threshold
-- Asian has an impact ratio of 0.90, no adverse impact indicated
+Do not label a ratio below 0.80 as “LL144 non-compliant.”

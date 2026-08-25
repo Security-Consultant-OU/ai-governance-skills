@@ -1,7 +1,7 @@
 {
   "name": "iso42001",
-  "description": "Expert ISO/IEC 42001:2023 AI Management System advisor — gap assessment, AISIA, AI risk assessment, SoA generation for 38 Annex A controls, policy generation, and certification readiness.",
-  "version": "1.0.0",
+  "description": "ISO/IEC 42001:2023 AIMS plugin: gap assessment, SoA, certification, plus companions for AISIA, inventories, resources, and AIMS policy/SOP kit.",
+  "version": "1.4.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -10,12 +10,17 @@
   "license": "MIT",
   "keywords": [
     "iso42001",
-    "ai-governance",
+    "iso-iec-42001",
     "ai-management-system",
+    "aims",
     "gap-assessment",
     "soa",
+    "statement-of-applicability",
     "certification",
-    "annex-a",
-    "aisia"
+    "iso-aisia",
+    "ai-system-register",
+    "ai-data-inventory",
+    "ai-resource-inventory",
+    "aims-policy-kit"
   ]
 }

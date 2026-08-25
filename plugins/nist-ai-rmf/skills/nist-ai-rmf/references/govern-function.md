@@ -1,52 +1,78 @@
-# Govern function — organizational AI risk management
+# GOVERN function — NIST AI RMF 1.0 (Table 1)
 
-The Govern function establishes and manages organizational AI risk management policies, processes, procedures, and oversight structures. It is cross-cutting — it informs and is informed by the other three functions (Map, Measure, Manage).
+Official subcategory outcomes from NIST AI 100-1. Short labels are for tables only; **cite the official outcome**. Suggested actions are implementation hints, not Playbook Action IDs. For Playbook text, use the [NIST AI RMF Playbook](https://airc.nist.gov/airmf-resources/playbook/) and do not invent Action IDs.
 
-## GV-1: Policies, processes, procedures, and practices
+Shorthand: GV-1.1 = GOVERN 1.1. Counts: **6 categories, 19 subcategories**.
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-1.1 | AI risk management policies | Legal and regulatory requirements involving AI are understood, managed, and documented | Inventory applicable laws and regulations; document compliance obligations; establish policy review cadence; integrate AI-specific requirements into enterprise policy framework | AI risk management policy document; regulatory inventory; policy review schedule | Art. 9 (risk management system) | Clause 5.2 (policy) |
-| GV-1.2 | Roles and responsibilities | Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization | Define AI risk management roles (RACI matrix); document reporting lines; communicate roles across teams; establish escalation procedures | RACI matrix; organizational chart; role descriptions; communication plan | Art. 17 (quality management system) | Clause 5.3 (roles, responsibilities) |
-| GV-1.3 | Enterprise risk integration | Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance | Integrate AI risk into existing enterprise risk management (ERM); define AI risk tolerance levels; establish risk appetite statements for AI systems | ERM integration documentation; AI risk tolerance statement; risk appetite framework | Art. 9 (risk management system) | Clause 6.1 (actions to address risks) |
-| GV-1.4 | Risk management process | The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities | Document end-to-end AI risk management process; define decision gates; establish criteria for risk acceptance; publish process documentation internally | Process documentation; decision gate criteria; risk acceptance criteria | Art. 9 (risk management system) | Clause 6.1.2 (AI risk assessment) |
-| GV-1.5 | Ongoing monitoring | Ongoing monitoring and periodic review of the risk management process and its outcomes are planned, organizational roles are clear, and considerations are documented | Establish monitoring cadence; define KPIs for risk management effectiveness; assign monitoring responsibilities; document review findings and actions | Monitoring plan; KPI dashboards; review meeting minutes; corrective action logs | Art. 72 (post-market monitoring) | Clause 9 (performance evaluation) |
-| GV-1.6 | Feedback mechanisms | Mechanisms are in place to inventory AI systems, facilitate oversight, and allow for feedback on risks and performance | Create AI system inventory/register; establish feedback channels for risk reporting; define whistleblower protections for AI concerns | AI system inventory; feedback mechanism documentation; whistleblower policy | Art. 49 (registration database) | A.8 (operation and monitoring) |
-| GV-1.7 | Compliance processes | Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization's trustworthiness | Define decommissioning criteria and procedures; establish sunset policies; plan for data handling post-decommission; communicate decommissioning to stakeholders | Decommissioning policy; sunset criteria; data retention/disposal plan | Art. 20 (corrective action) | Clause 10 (improvement) |
+---
 
-## GV-2: Accountability structures
+## GOVERN 1 — Policies, processes, procedures, and practices
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-2.1 | Clear roles and responsibilities | Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization | Designate AI risk management owner; define cross-functional accountability; establish governance committee with defined charter | Governance charter; committee membership; accountability framework | Art. 17 (quality management system) | Clause 5.3 (roles, responsibilities) |
-| GV-2.2 | Senior leadership engagement | The organization's senior leadership is responsible for managing AI risks and promoting a culture of responsible AI | Brief senior leadership on AI risk posture; include AI risk in board/executive reporting; define executive AI risk oversight role | Board briefing materials; executive AI risk reports; leadership role descriptions | Art. 17 (quality management system) | Clause 5.1 (leadership and commitment) |
-| GV-2.3 | Organizational buy-in | Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment | Secure executive sponsorship for AI governance; communicate AI risk management priorities organization-wide; allocate dedicated budget | Executive sponsorship documentation; budget allocation; organization-wide communications | Art. 17 (quality management system) | Clause 5.1 (leadership and commitment) |
+Policies, processes, procedures, and practices across the organization related to mapping, measuring, and managing AI risks are in place, transparent, and implemented effectively.
 
-## GV-3: Workforce diversity, equity, inclusion, and accessibility
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-1.1 | Legal and regulatory requirements involving AI are understood, managed, and documented. | Maintain a legal inventory (EU AI Act, sectoral law, NYC LL144, etc.) mapped to systems; review on change. |
+| GV-1.2 | The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices. | Embed the seven trustworthy characteristics into policy and SDLC gates — not a “roles” control. |
+| GV-1.3 | Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance. | Document risk tolerance and scale TEVV effort to it. |
+| GV-1.4 | The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities. | Publish how risks are identified, escalated, and accepted. |
+| GV-1.5 | Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review. | Set review cadence and owners for the *process*, not only for systems. |
+| GV-1.6 | Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. | Live AI inventory with owner, purpose, data, and risk tier. |
+| GV-1.7 | Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness. | Retirement runbook: data, model artefacts, user notice, residual risk. |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-3.1 | Interdisciplinary teams | Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle | Assemble interdisciplinary AI risk teams (technical, legal, ethical, domain experts); include diverse perspectives in risk assessment; track team composition demographics | Team composition records; diversity metrics; interdisciplinary participation logs | Art. 9 (risk management — diverse expertise) | A.5.2 (AI system lifecycle processes) |
-| GV-3.2 | AI literacy | Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and from other supply chain issues | Develop AI literacy programs for all stakeholders; provide role-specific AI risk training; assess and track training completion | Training curriculum; completion records; literacy assessment results | Art. 4 (AI literacy) | Clause 7.2 (competence) |
+---
 
-## GV-4: Organizational context
+## GOVERN 2 — Accountability structures
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-4.1 | Mission and values alignment | Organizational practices are in place to enable AI testing, identification of incidents, and information sharing | Align AI risk management with organizational mission, values, and strategic objectives; document how AI systems support organizational goals | Mission alignment documentation; strategic AI roadmap | Art. 9 (risk management system) | Clause 4.1 (understanding the organization) |
-| GV-4.2 | Risk tolerance | Organizational risk tolerance is determined and clearly communicated | Define AI-specific risk tolerance thresholds; communicate tolerance levels across the organization; review tolerance annually | Risk tolerance statement; communication records; annual review documentation | Art. 9 (risk management system) | Clause 6.1 (actions to address risks) |
-| GV-4.3 | Sector-specific context | Sector-specific and application-specific requirements, norms, and standards are identified and accounted for | Inventory sector-specific AI requirements (healthcare, finance, etc.); map industry standards to AI risk management; document regulatory landscape | Sector requirements inventory; standards mapping; regulatory landscape analysis | Art. 6 (classification rules) | Clause 4.2 (interested parties) |
+Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.
 
-## GV-5: Stakeholder engagement
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-2.1 | Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization. | RACI for GOVERN/MAP/MEASURE/MANAGE; named system owners. |
+| GV-2.2 | The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements. | Role-based training; include suppliers who operate in-scope systems. |
+| GV-2.3 | Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment. | Leadership sign-off on residual risk and go/no-go. |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-5.1 | Affected communities | Ongoing engagement with relevant AI actors and affected communities is in place | Identify and map affected communities; establish engagement mechanisms (surveys, focus groups, advisory panels); document engagement outcomes and how they inform risk management | Stakeholder map; engagement plan; meeting records; outcome reports | Art. 27 (FRIA — affected persons) | A.5.3 (AI system impact assessment) |
-| GV-5.2 | External stakeholder input | Mechanisms are established to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors and affected communities | Create external advisory board; establish public comment mechanisms; integrate stakeholder feedback into risk management processes | Advisory board charter; feedback integration procedures; comment response documentation | Art. 13 (transparency to deployers) | A.8 (transparency and provision of information) |
+---
 
-## GV-6: Oversight and governance
+## GOVERN 3 — Workforce DEI and accessibility
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| GV-6.1 | Third-party monitoring | Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of intellectual property and other rights | Establish third-party AI risk assessment procedures; include AI risk clauses in vendor contracts; monitor third-party AI system performance; conduct periodic vendor AI audits | Third-party assessment procedures; contract AI risk clauses; vendor audit reports | Art. 25 (obligations of distributors/importers) | A.9 (third-party and customer relationships) |
-| GV-6.2 | Appeals and redress | Mechanisms are in place for internal and external stakeholders to appeal or seek redress for AI system decisions or outcomes | Establish appeals process for AI-assisted decisions; document redress mechanisms; communicate appeal rights to affected individuals; track and analyze appeal outcomes | Appeals process documentation; redress mechanism procedures; appeal outcome records | Art. 14 (human oversight) | A.5.8 (human oversight of AI systems) |
+Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-3.1 | Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds). | Staff risk reviews with mixed discipline and demographic representation; record who participated. |
+| GV-3.2 | Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems. | Define human-in-the-loop / on-the-loop / in-command patterns per system. |
+
+---
+
+## GOVERN 4 — Culture that considers and communicates AI risk
+
+Organizational teams are committed to a culture that considers and communicates AI risk.
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-4.1 | Organizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts. | Blameless incident culture; safety review before launch. |
+| GV-4.2 | Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. | Impact notes in design docs; share beyond the build team. |
+| GV-4.3 | Organizational practices are in place to enable AI testing, identification of incidents, and information sharing. | Test windows, incident taxonomy, internal sharing channel. |
+
+---
+
+## GOVERN 5 — Engagement with relevant AI actors
+
+Processes are in place for robust engagement with relevant AI actors.
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-5.1 | Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks. | User, community, and domain-expert feedback intake. |
+| GV-5.2 | Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation. | Adjudication log: feedback → accept/reject → design change. |
+
+---
+
+## GOVERN 6 — Third-party software, data, and supply chain
+
+Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| GV-6.1 | Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party’s intellectual property or other rights. | Vendor due diligence, IP/data-rights clauses, model cards. |
+| GV-6.2 | Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk. | Fallback, kill switch, and incident playbook for third-party failure — not an appeals process. |

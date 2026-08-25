@@ -1,45 +1,56 @@
-# Map function — context establishment and risk framing
+# MAP function — NIST AI RMF 1.0 (Table 2)
 
-The Map function establishes the context for framing AI risks. It identifies and documents risks relative to the AI system, its intended purposes, deployment context, and affected stakeholders. The Map function produces the contextual foundation that informs Measure and Manage activities.
+Official subcategory outcomes from NIST AI 100-1. **5 categories, 18 subcategories**. There is no MAP-2.4.
 
-## MAP-1: Intended purposes, uses, and context
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MAP-1.1 | Intended purpose documentation | Intended purpose of the AI system, its expected benefits and costs compared with appropriate benchmarks, and the assumptions and context in which the AI system is expected to operate are documented | Document intended purpose statement; define operational context and deployment environment; specify expected user population; document assumptions and constraints | Intended purpose document; operational context description; user population analysis; assumptions register | Art. 9 (risk management — intended purpose) | A.5.2 (AI system lifecycle processes) |
-| MAP-1.2 | Interdisciplinary input | Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their perspectives are integrated into the mapping process | Involve domain experts, ethicists, legal counsel, affected community representatives in context mapping; document perspectives gathered and how they influenced risk framing | Stakeholder consultation records; interdisciplinary team composition; perspective integration documentation | Art. 9 (risk management — diverse expertise) | A.5.3 (AI system impact assessment) |
-| MAP-1.3 | Benefits and costs baseline | The organization's mission, relevant goals, and values, as well as technology and business context are considered in mapping AI risks | Conduct cost-benefit analysis for AI system deployment; compare AI solution against non-AI alternatives; document expected value creation and risk tradeoffs | Cost-benefit analysis; alternatives assessment; value proposition documentation | Art. 6 (classification rules — risk proportionality) | Clause 4.1 (understanding the organization) |
-| MAP-1.4 | AI system metadata | The business value or context of business use has been clearly defined or — in the case of assessing existing AI systems — the relevance of the AI system to the organization's goals is regularly evaluated | Document AI system metadata: model type, training approach, data sources, version history, performance baselines; maintain system registry entries | System metadata documentation; model cards; registry entries; version history | Art. 11 (technical documentation) | A.5.6 (documentation) |
-| MAP-1.5 | Deployment context | The context of deployment, including the operational environment, target user populations, and affected communities, is documented | Characterize deployment environment (geographic, institutional, technical); identify target users and affected populations; document contextual factors affecting system behavior | Deployment context document; user population analysis; affected community mapping | Art. 13 (transparency — deployment context) | A.5.3 (AI system impact assessment) |
-| MAP-1.6 | Scientific integrity | AI system requirements — including AI transparency and accountability — are considered as part of the AI design | Apply scientific integrity standards to AI development; document methodology choices and their justifications; ensure reproducibility where feasible | Methodology documentation; reproducibility assessment; scientific integrity statement | Art. 15 (accuracy, robustness) | A.5.4 (system verification and validation) |
+## MAP 1 — Context is established and understood (6)
 
-## MAP-2: AI system categorization
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MAP-1.1 | Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics. | Context dossier: purpose, users, laws, benefits/harms, limits, TEVV metrics. |
+| MAP-1.2 | Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. | Record who established context and their disciplines. |
+| MAP-1.3 | The organization’s mission and relevant goals for AI technology are understood and documented. | Link the system to mission/OKRs. |
+| MAP-1.4 | The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. | Value case or re-evaluation memo. |
+| MAP-1.5 | Organizational risk tolerances are determined and documented. | Numeric or qualitative tolerance; this is **not** “deployment context.” |
+| MAP-1.6 | System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks. | Socio-technical requirements in the spec. |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MAP-2.1 | Risk level classification | The specific tasks and methods used to implement the tasks that the AI system will support are defined | Classify AI system by risk level (to individuals, groups, organizations, ecosystems); categorize by deployment scope; document classification rationale | Risk classification document; categorization rationale; scope assessment | Art. 6 (classification rules) | A.6 (AI system impact assessment) |
-| MAP-2.2 | Lifecycle stage identification | Information about the AI system's knowledge limits and how system output may be used, managed, and overseen is documented | Identify current and planned lifecycle stages; document stage-specific risks and requirements; establish stage-gate criteria | Lifecycle stage documentation; stage-gate criteria; transition plans | Art. 9 (risk management — lifecycle) | A.5.2 (AI system lifecycle processes) |
-| MAP-2.3 | Data characterization | AI system performance or assurance criteria are measured qualitatively or quantitatively and documented | Characterize data types used (training, validation, test, operational); document data sensitivity levels; assess data quality and representativeness; map data to affected populations | Data characterization reports; sensitivity classification; quality assessments; representativeness analysis | Art. 10 (data governance) | A.7 (data for AI systems) |
-| MAP-2.4 | Affected population mapping | Risks and benefits of AI systems for individuals, groups, communities, organizations, and society are regularly assessed and documented | Map affected populations by demographics, vulnerability status, and exposure level; document potential differential impacts; assess power dynamics | Affected population map; differential impact analysis; vulnerability assessment | Art. 27 (FRIA) | A.5.3 (AI system impact assessment) |
+---
 
-## MAP-3: Benefits and costs
+## MAP 2 — Categorization of the AI system is performed (3)
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MAP-3.1 | AI vs non-AI alternatives | Potential benefits and costs, including potential risks, of the AI system to individuals, communities, organizations, or society, are examined and documented | Compare AI system benefits and costs against non-AI alternatives; document the justification for using AI; assess proportionality of risk to benefit | Alternatives analysis; AI justification document; proportionality assessment | Art. 9 (risk management — proportionality) | A.5.3 (AI system impact assessment) |
-| MAP-3.2 | Risk-benefit tradeoffs | Potential costs, including the potential risk to individuals, communities, organizations, or society, are documented for each component of the AI system | Document risk-benefit tradeoffs explicitly; quantify where possible; establish acceptability thresholds; identify scenarios where risks outweigh benefits | Risk-benefit tradeoff analysis; acceptability criteria; scenario analysis | Art. 9 (risk management — risk assessment) | Clause 6.1.2 (AI risk assessment) |
-| MAP-3.3 | Deployment go/no-go criteria | AI system is evaluated for deployment based on defined criteria, including risk-benefit analysis and stakeholder input | Define deployment go/no-go criteria; incorporate risk-benefit analysis and stakeholder feedback into decision; document decision rationale | Go/no-go criteria document; deployment decision record; stakeholder input summary | Art. 9 (risk management system) | A.5.2 (AI system lifecycle processes) |
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MAP-2.1 | The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders). | Task/method card — **not** a 1–5 risk class. If generative, also run the 600-1 profile. |
+| MAP-2.2 | Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions. | Knowledge limits + human oversight design. |
+| MAP-2.3 | Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation. | TEVV plan: data selection, construct validity, experimental design. |
 
-## MAP-4: Risks and impacts
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MAP-4.1 | Risk likelihood and severity | Risks and impacts of AI systems — including risks to individuals, groups, communities, organizations, and society — are characterized | Assess likelihood and severity for each identified risk; use consistent rating scales; document assessment methodology and evidence | Risk assessment records; likelihood-severity matrices; methodology documentation | Art. 9 (risk management — risk estimation) | Clause 6.1.2 (AI risk assessment) |
-| MAP-4.2 | Impacts on individuals and communities | Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented | Document impacts on individuals (physical, psychological, economic, social); assess community-level impacts; identify cumulative and cascading effects | Individual impact assessments; community impact analysis; cumulative effects documentation | Art. 27 (FRIA) | A.5.3 (AI system impact assessment) |
+## MAP 3 — Capabilities, usage, benefits and costs (5)
 
-## MAP-5: Risk documentation
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MAP-3.1 | Potential benefits of intended AI system functionality and performance are examined and documented. | Benefit register. |
+| MAP-3.2 | Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented. | Cost/harm register including non-monetary costs. |
+| MAP-3.3 | Targeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization. | In-scope / out-of-scope uses. |
+| MAP-3.4 | Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented. | Operator proficiency standard. |
+| MAP-3.5 | Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function. | Oversight procedure aligned to GV-3.2. |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MAP-5.1 | Risk tracking | Likelihood and severity of identified risks, including risks to privacy, are documented and tracked over time | Establish risk register; track risks throughout AI system lifecycle; update risk documentation at each lifecycle stage; version-control risk records | Risk register; risk tracking logs; version-controlled documentation | Art. 9 (risk management system) | Clause 6.1.2 (AI risk assessment) |
-| MAP-5.2 | Documentation maintenance | Risks are documented and tracked systematically throughout the AI system lifecycle, including during design, development, deployment, and operation | Maintain living risk documentation; assign documentation ownership; establish review and update cadence; integrate documentation into change management | Living risk documentation; ownership assignments; review cadence records; change management integration | Art. 11 (technical documentation) | A.5.6 (documentation) |
+---
+
+## MAP 4 — Risks and benefits mapped for all components (2)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MAP-4.1 | Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party’s intellectual property or other rights. | Component + third-party risk map (IP included). |
+| MAP-4.2 | Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented. | Control map per component — **not** “impacts on individuals.” |
+
+---
+
+## MAP 5 — Impacts characterized (2)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MAP-5.1 | Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented. | Impact register with likelihood × magnitude. |
+| MAP-5.2 | Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented. | Engagement cadence and integration into MAP-5.1. |

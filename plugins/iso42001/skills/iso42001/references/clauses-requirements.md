@@ -41,7 +41,7 @@ Detailed requirements for each mandatory clause. Use for gap assessment, audit p
 | Aspect | Detail |
 |--------|--------|
 | Requirement | Establish, implement, maintain, and continually improve the AIMS in accordance with the standard's requirements |
-| AI-specific considerations | The AIMS must address the full lifecycle of AI systems from planning through decommission, integrate with existing management systems (ISO 27001, ISO 9001), and maintain documented processes for all required activities |
+| AI-specific considerations | The AIMS must address the full lifecycle of AI systems from planning through retirement, integrate with existing management systems (ISO 27001, ISO 9001), and maintain documented processes for all required activities |
 | Required outputs | AIMS manual or process documentation, process interaction map, integration points with other management systems |
 | Audit evidence | Documented AIMS processes, evidence of implementation, evidence of continual improvement activities |
 | Common nonconformities | AIMS exists as documentation only — processes not implemented in practice; no integration with existing management systems; AIMS processes not communicated to relevant personnel |
@@ -85,12 +85,12 @@ Detailed requirements for each mandatory clause. Use for gap assessment, audit p
 | Role | Responsibility | Clause reference |
 |------|---------------|-----------------|
 | AIMS owner / AI governance lead | Overall accountability for the AIMS | 5.3 |
-| AI risk manager | Ownership of AI risk assessment and AISIA processes | 6.1.2 |
+| AI risk manager | Ownership of AI risk assessment (6.1.2 / 8.2) and AISIA (6.1.4 / 8.4) | 6.1.2, 6.1.4 |
 | AI system owner (per system) | Accountable for each AI system's lifecycle and compliance | 8.1 |
 | Data governance lead for AI | Ownership of data quality, provenance, and bias management | A.7 |
-| AI ethics / responsible AI lead | Advisory role on fairness, transparency, and societal impact | A.6, A.8 |
+| AI ethics / responsible AI lead | Advisory role on fairness, transparency, and societal impact | A.5, A.8 |
 | Internal auditor (AI competent) | Conducts AIMS internal audits with AI domain knowledge | 9.2 |
-| AI incident manager | Leads AI-specific incident response and reporting | A.8.3 |
+| AI incident manager | Leads AI-specific incident response and reporting | A.8.4 |
 
 ---
 
@@ -101,27 +101,54 @@ Detailed requirements for each mandatory clause. Use for gap assessment, audit p
 | Aspect | Detail |
 |--------|--------|
 | Requirement | Plan actions to address risks and opportunities identified through context analysis and stakeholder requirements |
-| AI-specific considerations | Planning must address both organisational risks to the AIMS and AI system-specific risks. Two mandatory processes: AI risk assessment and AISIA |
+| AI-specific considerations | Planning must address organisational AIMS risks **and** AI-system risks. Three distinct planning processes: **6.1.2** AI risk assessment, **6.1.3** AI risk treatment (including SoA), **6.1.4** AISIA. Do not collapse AISIA into 6.1.2 |
 
-#### 6.1.2 AI risk assessment and AISIA
+#### 6.1.1 General
 
 | Aspect | Detail |
 |--------|--------|
-| Requirement | Establish and execute an AI risk assessment process that evaluates risks specific to AI systems, and an AI system impact assessment (AISIA) that evaluates impacts on individuals and society |
-| AI-specific considerations | AI risk assessment uses likelihood x severity for AI-specific risks (model, data, operational, supply chain, regulatory). AISIA uses impact dimensions (nature, severity, breadth, reversibility, consent, oversight, recourse). These are separate but complementary processes |
-| Required outputs | AI risk assessment methodology document, risk register for each in-scope AI system, AISIA methodology document, AISIA record for each in-scope AI system |
-| Audit evidence | Completed risk registers with treatment decisions, completed AISIA records with impact classifications, evidence of periodic reassessment, evidence that results informed control selection |
-| Common nonconformities | Risk assessment and AISIA conflated into a single process; not performed for all in-scope AI systems; results not linked to control selection in SoA; no defined reassessment triggers or frequency |
+| Requirement | When planning the AIMS, consider issues from 4.1 and 4.2 and determine risks and opportunities that need to be addressed so the AIMS can achieve intended outcomes, prevent or reduce undesired effects, and continually improve |
+| Required outputs | Planning record that links context/interested-party issues to AIMS-level risks and opportunities |
+| Common nonconformities | Only AI-system risks are assessed; AIMS-level risks (competence gaps, scope creep, regulatory change) are omitted |
+
+#### 6.1.2 AI risk assessment
+
+| Aspect | Detail |
+|--------|--------|
+| Requirement | Establish, implement, and maintain an AI risk assessment process for risks specific to AI systems (likelihood × severity or equivalent). Perform it under **8.2** |
+| AI-specific considerations | Cover model, data, operational, supply chain, and regulatory risks. This is **not** AISIA |
+| Required outputs | Risk assessment methodology; risk register per in-scope AI system |
+| Audit evidence | Registers with treatment decisions; reassessment triggers; results feeding 6.1.3 |
+| Common nonconformities | Combined with AISIA into one document; not run for every in-scope system; no reassessment after model change |
 
 #### 6.1.3 AI risk treatment and Statement of Applicability
 
 | Aspect | Detail |
 |--------|--------|
-| Requirement | Select risk treatment options and determine which Annex A controls are applicable. Document the Statement of Applicability (SoA) with justification for inclusion or exclusion of each control |
-| AI-specific considerations | All 38 Annex A controls must be considered. Applicability depends on role (provider/user/both), AI system characteristics, impact level from AISIA, and risk level from risk assessment |
-| Required outputs | Risk treatment plan, Statement of Applicability (SoA) covering all 38 controls with applicability determination and justification |
-| Audit evidence | SoA document with justification for each control, risk treatment plan linked to risk register, evidence that SoA is reviewed when scope or risk profile changes |
-| Common nonconformities | SoA exclusions not justified — controls marked "not applicable" without rationale; SoA not updated when new AI systems are added to scope; treatment plan not linked to specific risks |
+| Requirement | Select treatment options and determine which Annex A controls apply. Document the SoA with justification for inclusion or exclusion of each of the 38 controls |
+| AI-specific considerations | Applicability follows role, AISIA (6.1.4), and risk (6.1.2). A.x.1 entries are objectives, not SoA line items |
+| Required outputs | Treatment plan; SoA covering all 38 controls |
+| Audit evidence | Justified exclusions; SoA updated when scope or risk profile changes |
+| Common nonconformities | Unjustified "N/A"; excluding a policy because "nothing is retiring now"; treatment not linked to named risks |
+
+#### 6.1.4 AI system impact assessment (AISIA)
+
+| Aspect | Detail |
+|--------|--------|
+| Requirement | Establish and maintain a process to assess impacts of AI systems on individuals, groups, and society. Perform assessments under **8.4**. Annex A.5 operationalises the control layer |
+| AI-specific considerations | Separate from 6.1.2. ISO/IEC 42005 may be used for methodology depth; it is not required by 42001 |
+| Required outputs | AISIA methodology; AISIA record for each in-scope AI system |
+| Audit evidence | Dated records; update on change; results informing SoA depth (especially A.5, A.8, A.9.2) |
+| Common nonconformities | Cited as 6.1.2; privacy-only; societal dimension (A.5.5) skipped; no records for embedded SaaS AI |
+
+### 6.3 Planning of changes
+
+| Aspect | Detail |
+|--------|--------|
+| Requirement | When the organisation determines the need for changes to the AIMS, changes shall be carried out in a planned manner |
+| AI-specific considerations | Include new AI systems, material model updates, role changes (provider vs user), and regulatory change |
+| Required outputs | Change-planning records tied to 4.3 scope and 6.1 assessments |
+| Common nonconformities | Model updates deployed without planned AIMS change or AISIA refresh |
 
 ### 6.2 AI objectives and planning to achieve them
 
@@ -218,11 +245,11 @@ Detailed requirements for each mandatory clause. Use for gap assessment, audit p
 
 | Aspect | Detail |
 |--------|--------|
-| Requirement | Execute the AI risk assessment process (defined in 6.1.2) at planned intervals and when significant changes occur |
-| AI-specific considerations | Triggers for reassessment include: new AI system deployment, significant model update, change in deployment context, regulatory changes, incident occurrence, stakeholder feedback, and scheduled periodic review |
-| Required outputs | Completed risk assessments for all in-scope AI systems, completed AISIA records, updated risk register |
-| Audit evidence | Dated risk assessment records, evidence that assessments were triggered by defined events, evidence that results were communicated to relevant parties |
-| Common nonconformities | Initial assessment completed but no reassessment scheduled; reassessment not triggered by model updates or context changes; results not communicated to AI system owners |
+| Requirement | Execute the AI risk assessment process defined in **6.1.2** at planned intervals and when significant changes occur |
+| AI-specific considerations | Triggers: new system, significant model update, context change, regulatory change, incident, stakeholder feedback, scheduled review |
+| Required outputs | Completed risk assessments and updated risk register for all in-scope systems (AISIA records belong under **8.4**) |
+| Audit evidence | Dated registers; event-triggered reassessment; results communicated to system owners |
+| Common nonconformities | Initial assessment only; model updates do not trigger 8.2 |
 
 ### 8.3 AI risk treatment execution
 
@@ -233,6 +260,16 @@ Detailed requirements for each mandatory clause. Use for gap assessment, audit p
 | Required outputs | Evidence of treatment implementation, residual risk assessment |
 | Audit evidence | Implementation records for each treatment action, residual risk ratings, evidence that treatments are effective |
 | Common nonconformities | Treatment plan documented but not fully implemented; residual risk not reassessed after treatment; treatment effectiveness not measured |
+
+### 8.4 AI system impact assessment execution
+
+| Aspect | Detail |
+|--------|--------|
+| Requirement | Perform AISIA in accordance with the process established in **6.1.4** at planned intervals and when significant changes occur |
+| AI-specific considerations | Same change triggers as 8.2. Results must be documented (A.5.3) and must cover individuals/groups (A.5.4) and society (A.5.5) |
+| Required outputs | Dated AISIA record per in-scope AI system |
+| Audit evidence | Records linked to the AI system register; evidence of update after model or context change |
+| Common nonconformities | AISIA filed under 8.2; no 8.4 records; assessment not repeated after deployment |
 
 ---
 

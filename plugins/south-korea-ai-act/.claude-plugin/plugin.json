@@ -1,7 +1,7 @@
 {
   "name": "south-korea-ai-act",
-  "description": "Expert South Korea AI Basic Act compliance advisor — high-risk AI classification, obligations by role, impact assessment, transparency compliance, and gap assessment.",
-  "version": "1.0.0",
+  "description": "Classifies high-impact AI (고영향 AI, Art. 2(4)) and maps operator duties under the in-force Korea AI Basic Act: Arts. 31–36, Art. 35 endeavor AISIA, and Art. 36 domestic representative. Use when the user asks about the Korea AI Basic Act, 인공지능 기본법, 고영향 AI, MSIT, or Korea Art. 36. Not EU high-risk; Decree No. 36053 is in force.",
+  "version": "1.2.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -10,11 +10,12 @@
   "license": "MIT",
   "keywords": [
     "south-korea-ai-act",
-    "ai-governance",
     "ai-basic-act",
-    "high-risk-ai",
-    "impact-assessment",
-    "transparency",
-    "gap-assessment"
+    "korea-high-impact-ai",
+    "고영향",
+    "msit",
+    "인공지능-기본법",
+    "korea-art-36",
+    "domestic-representative"
   ]
 }

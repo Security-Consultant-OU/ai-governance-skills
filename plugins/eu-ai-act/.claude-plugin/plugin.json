@@ -1,7 +1,7 @@
 {
   "name": "eu-ai-act",
-  "description": "Expert EU AI Act (Regulation 2024/1689) compliance advisor — risk classification, high-risk gap assessment, conformity assessment, FRIA generation, GPAI obligations, and technical documentation.",
-  "version": "1.0.0",
+  "description": "Classifies systems under the EU AI Act (Regulation 2024/1689); high-risk gap and operational checklists; Art. 27 FRIA; Chapter V GPAI; Art. 43 CE. Companion skill eu-gpai-cop for the Art. 56 Code of Practice. Do not use for Brazil PL 2338 or Korea high-impact AI.",
+  "version": "1.3.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -10,12 +10,14 @@
   "license": "MIT",
   "keywords": [
     "eu-ai-act",
-    "ai-governance",
-    "compliance",
-    "risk-classification",
+    "regulation-2024-1689",
+    "eu-high-risk-ai",
+    "eu-gpai",
+    "art-27-fria",
     "conformity-assessment",
-    "fria",
-    "gpai",
-    "technical-documentation"
+    "ce-marking",
+    "annex-iii",
+    "eu-gpai-cop",
+    "high-risk-operational-checklist"
   ]
 }

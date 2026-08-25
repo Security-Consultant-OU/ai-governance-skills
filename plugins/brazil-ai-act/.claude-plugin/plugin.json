@@ -1,7 +1,7 @@
 {
   "name": "brazil-ai-act",
-  "description": "Expert Brazil AI Act (Marco Legal da IA) compliance advisor — risk classification, rights of affected persons, governance system design, obligations by role, and gap assessment.",
-  "version": "1.0.0",
+  "description": "Advises on pending Brazilian AI bill PL 2338/2023 (Senate substitute of 10 Dec 2024; not enacted) — risco excessivo / alto risco, rights of affected persons, AIA, SIA/ANPD as proposed coordinator, GPAI/copyright preparedness.",
+  "version": "1.2.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -9,11 +9,12 @@
   "repository": "https://github.com/verifywise-ai/ai-governance-skills",
   "license": "MIT",
   "keywords": [
-    "brazil-ai-act",
+    "pl-2338",
+    "pl-2338-2023",
     "marco-legal-da-ia",
-    "ai-governance",
-    "risk-classification",
-    "governance-system",
-    "gap-assessment"
+    "aplicador",
+    "desenvolvedor",
+    "risco-excessivo",
+    "brazil-ai-bill"
   ]
 }

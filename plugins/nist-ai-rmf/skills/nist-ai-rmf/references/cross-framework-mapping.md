@@ -1,42 +1,54 @@
-# Cross-framework mapping — NIST AI RMF to other frameworks
+# Cross-framework mapping — NIST AI RMF 1.0
 
-## Subcategory-level mapping
+Use **official** subcategory meanings. ISO 42001 IDs match this marketplace’s iso42001 skill (A.x.1 is an objective). Brazil PL 2338/2023 is not enacted as of August 2026. Korea = high-impact AI, not EU high-risk.
 
-| NIST AI RMF Subcategory | EU AI Act Article | ISO 42001 Control | South Korea AI Act | Brazil AI Act | NYC LL144 |
-|-------------------------|-------------------|--------------------|--------------------|---------------|-----------|
-| GV-1.1 — AI risk management policies | Art. 9 (risk management system), Art. 17 (quality management system) | Clause 5.2 (policy), Clause 6.1 (actions to address risks) | AI governance framework and policy requirements for operators | Governance requirements for AI providers and operators; responsible development principles | No direct equivalent — limited to employer notice obligations |
-| GV-1.2 — Roles and responsibilities | Art. 17 (quality management system — organizational roles) | Clause 5.3 (organizational roles, responsibilities, and authorities) | Designated AI safety officers for high-risk systems | Accountability and responsibility requirements for AI providers | No direct equivalent — employer is responsible entity |
-| GV-2.1 — Clear accountability | Art. 17 (quality management system), Art. 26 (deployer obligations) | Clause 5.1 (leadership and commitment), Clause 5.3 (roles) | Clear accountability structures for AI operators | Provider and operator accountability provisions | Employer accountability for AEDT use |
-| GV-3.1 — Interdisciplinary teams | Art. 9 (risk management — diverse expertise) | A.5.2 (AI system lifecycle — competence requirements) | Diversity and inclusion in AI development teams | Multidisciplinary participation requirements | No direct equivalent |
-| GV-5.1 — Affected communities | Art. 27 (fundamental rights impact assessment) | A.5.3 (AI system impact assessment — stakeholder engagement) | Public participation in AI governance; stakeholder consultation | Right to participation and public consultation on AI impacts | Candidate/employee notification requirement |
-| GV-6.1 — Third-party monitoring | Art. 25 (obligations of distributors, importers), Art. 28 (obligations along the value chain) | A.9 (third-party and customer relationships) | Supply chain oversight requirements for AI components | Third-party provider accountability provisions | Independent auditor requirement for bias audit |
-| MAP-1.1 — Intended purpose | Art. 6 (classification rules — intended purpose), Art. 9 (risk management — intended purpose) | A.5.2 (AI system lifecycle processes — purpose definition) | Documentation of intended purpose and use cases | Purpose limitation and documentation requirements | AEDT scope definition — employment decision or substantial assistance |
-| MAP-2.1 — Risk level classification | Art. 6 (classification rules — risk tiers), Annex III (high-risk categories) | A.6 (AI system impact assessment — risk categorization) | High-risk AI classification system with designation criteria | Risk-based tiered classification (high-risk, excessive-risk) | AEDT determination — binary classification as automated employment decision tool |
-| MAP-2.3 — Data characterization | Art. 10 (data and data governance — quality, representativeness) | A.7 (data for AI systems — data quality and provenance) | Data quality and management requirements for AI training | Data governance provisions including data quality, accuracy, relevance | Data requirements implicit in bias audit methodology |
-| MAP-3.1 — AI vs non-AI alternatives | Art. 9 (risk management — proportionality of risk measures) | A.5.3 (AI system impact assessment — alternatives consideration) | Necessity and proportionality assessment for AI deployment | Proportionality and necessity requirements for AI use | No direct equivalent — assumes AEDT will be used |
-| MAP-4.1 — Risk likelihood and severity | Art. 9 (risk management — risk estimation and evaluation) | Clause 6.1.2 (AI risk assessment — likelihood and impact) | Impact assessment requirements for high-risk AI systems | Algorithmic impact assessment with risk quantification | No direct equivalent — bias audit uses statistical measures |
-| MAP-5.1 — Risk tracking | Art. 9 (risk management — ongoing), Art. 11 (technical documentation — lifecycle) | Clause 6.1.2 (AI risk assessment — continuous), A.5.6 (documentation) | Ongoing risk documentation and tracking requirements | Continuous risk monitoring and documentation provisions | Annual bias audit constitutes periodic risk tracking (limited scope) |
-| ME-1.1 — Appropriate metrics | Art. 15 (accuracy, robustness, cybersecurity — declared metrics) | A.5.4 (system verification and validation — metrics selection) | Performance and reliability standards for AI systems | Accuracy and reliability measurement requirements | Statistical significance requirements in bias audit methodology |
-| ME-2.1 — Testing and evaluation (TEVV) | Art. 9 (risk management — testing prior to market placement) | A.5.4 (system verification and validation — TEVV processes) | Testing and evaluation requirements for high-risk AI | Testing and validation provisions for AI systems | Bias audit as form of evaluation (disparate impact testing) |
-| ME-2.2 — Red-teaming | Art. 55 (obligations for systemic risk GPAI — adversarial testing) | A.5.4 (system verification and validation — adversarial testing) | Security testing requirements for AI systems | No direct equivalent — general testing provisions apply | No direct equivalent |
-| ME-2.3 — Bias testing | Art. 10(2)(f) (data governance — bias examination) | A.5.5 (assessing AI system impacts — bias management) | Non-discrimination obligations; fairness testing requirements | Non-discrimination provisions; prohibition of discriminatory outcomes | Bias audit requirement — annual independent audit for disparate impact by race/ethnicity and sex |
-| ME-3.1 — Identified risks monitored | Art. 72 (post-market monitoring system) | A.8 (operation and monitoring of AI systems) | Ongoing monitoring requirements for deployed AI systems | Continuous monitoring provisions for AI systems | Annual bias audit constitutes periodic monitoring (limited scope) |
-| ME-3.3 — Model drift detected | Art. 72 (post-market monitoring — performance changes) | A.8 (operation and monitoring — performance degradation) | Performance monitoring requirements | Ongoing accuracy and reliability monitoring | No direct equivalent — annual audit may not detect drift |
-| MG-1.1 — Risk treatment decisions | Art. 9 (risk management — risk measures adopted) | Clause 6.1.3 (AI risk treatment — treatment selection) | Risk mitigation requirements for identified AI risks | Risk treatment and mitigation provisions | No direct equivalent — remediation not prescribed |
-| MG-2.2 — Human oversight | Art. 14 (human oversight — effective oversight during use) | A.5.8 (controlling and monitoring AI systems — human oversight) | Human oversight provisions; right to request human review | Right to human review of AI-assisted decisions | Alternative selection procedure — candidates may request alternative process |
-| MG-2.3 — Incident response | Art. 73 (reporting of serious incidents) | A.8.3 (reporting AI system performance and incidents) | Incident reporting to competent authorities | Incident reporting obligations for serious harm | No incident reporting requirement under LL144 |
-| MG-3.1 — Ongoing monitoring | Art. 72 (post-market monitoring system — ongoing) | A.8 (operation and monitoring of AI systems — continuous) | Ongoing monitoring requirements for high-risk AI | Continuous monitoring provisions | Annual bias audit constitutes periodic monitoring (limited scope) |
-| MG-4.1 — Incident reporting | Art. 73 (reporting of serious incidents — 15-day timeline) | A.8.3 (reporting — incident notification) | Incident reporting to competent authorities with defined timelines | Incident reporting obligations for serious harm | No incident reporting requirement |
-| MG-4.2 — Stakeholder notification | Art. 13 (transparency and provision of information to deployers) | A.8 (transparency and provision of information) | Transparency obligations including right to explanation | Right to information about AI system use; right to explanation | Notice requirement — 10 business days before AEDT use |
+---
 
-## Compliance gap analysis across frameworks
+## Function-level
 
-| Gap area | Detail |
-|----------|--------|
-| Voluntary vs mandatory | NIST AI RMF is entirely voluntary with no penalties. Organizations mapping from AI RMF to EU AI Act or South Korea AI Act must recognize that completing AI RMF subcategories does not constitute legal compliance — additional regulatory-specific requirements apply |
-| Conformity assessment | NIST AI RMF has no conformity assessment or certification equivalent. EU AI Act requires CE marking (Annexes VI-VII); ISO 42001 offers third-party certification. Organizations need separate conformity processes |
-| Prohibited practices | NIST AI RMF does not define prohibited AI uses. EU AI Act Article 5 bans specific practices outright. Organizations must layer prohibitions on top of AI RMF risk management |
-| Penalties and enforcement | NIST AI RMF carries no penalties. EU AI Act penalties reach 35M EUR or 7% global turnover. NYC LL144 imposes fines of $500-$1,500 per violation per day. Legal compliance requires framework-specific evidence |
-| Sector-specific requirements | NIST AI RMF is sector-agnostic. Specific regulations (healthcare, finance, employment) impose additional requirements not captured in AI RMF subcategories. Organizations must supplement with sector-specific regulatory mapping |
-| Supply chain obligations | NIST AI RMF addresses third-party risk at a governance level (GV-6.1). EU AI Act creates cascading legal obligations from GPAI providers to AI system providers to deployers. Legal supply chain compliance requires additional documentation |
-| Fundamental rights | NIST AI RMF addresses fairness and bias as trustworthy characteristics. EU AI Act Article 27 requires specific fundamental rights impact assessments. Brazil AI Act and South Korea AI Act have explicit rights-based provisions. AI RMF fairness assessment alone may not satisfy rights-based requirements |
+| NIST function | EU AI Act | ISO/IEC 42001 | Korea AI Basic Act | Brazil PL 2338 (Senate) | NYC LL144 |
+|---------------|-----------|---------------|--------------------|-------------------------|-----------|
+| GOVERN | Arts. 9, 16, 26 organisational duties | Clauses 5–7, A.2, A.3 | Operator measures Art. 34 | Governance Arts. 17–18 | Employer is the responsible party |
+| MAP | Art. 6 classification; Art. 9 risk ID | 6.1.2 risk; 6.1.4 AISIA; A.5 | Art. 33 self-review; Art. 2(4) domains | Arts. 12–16 risk | AEDT determination |
+| MEASURE | Arts. 9(7), 10, 15 TEVV | A.6.2.4 V&V; A.7 data | Testing / safety Art. 32–34 | AIA evidence | Bias audit statistics (different method) |
+| MANAGE | Arts. 20–21, 72–73 | Clause 8, A.8, A.9, A.10 | Art. 34; incidents to MSIT only where the Act says so | Art. 42 incidents (sectoral) | Annual re-audit; publication |
+
+---
+
+## Selected subcategory mappings
+
+| NIST ID | Official meaning (short) | EU AI Act | ISO 42001 | Notes |
+|---------|--------------------------|-----------|-----------|-------|
+| GV-1.1 | Legal requirements understood | Art. 2 scope; national law | 4.1–4.2 | |
+| GV-1.2 | Trustworthy characteristics in policies | Art. 9 artefacts | 5.2, A.2.2 | **Not** “roles” |
+| GV-1.6 | AI inventory | Implicit for providers | 4.3 register | Art. 49 EU database is **not** a general inventory duty |
+| GV-1.7 | Safe decommission | No dedicated article | A.6 life cycle + 8.1 | Not ISO A.10 |
+| GV-2.1 | Roles documented | Arts. 16, 26 | 5.3, A.3.2 | |
+| GV-2.2 | AI risk training | Art. 4 literacy | 7.2–7.3, A.4.6 | |
+| GV-6.1 | Third-party / IP risks | Arts. 25, 28 | A.10.2–A.10.3 | |
+| GV-6.2 | Contingency for third-party failure | Art. 26 operational | A.10.3 | **Not** appeals/redress |
+| MAP-1.5 | Risk tolerances documented | Art. 9 risk acceptance | 6.1.2, 6.1.3 | **Not** deployment context |
+| MAP-2.1 | Tasks/methods defined | Annex III use-case vs GPAI | A.6.2.2 | If GAI → 600-1 |
+| MAP-5.1 | Impact likelihood × magnitude | Art. 9; Art. 27 if in FRIA scope | 6.1.4, A.5.4–A.5.5 | |
+| ME-2.5 | Valid and reliable | Art. 15 | A.6.2.4 | |
+| ME-2.6 | Safety | Art. 15 | A.6.2.4, A.6.2.6 | |
+| ME-2.7 | Security and resilience | Art. 15 | A.6 + ISO 27001 overlay | |
+| ME-2.10 | Privacy | GDPR; Art. 10 | A.7 | |
+| ME-2.11 | Fairness and bias | Art. 10(2)(f)–(g) | A.5.4, A.7.4 | NYC audit is a different statistic |
+| ME-2.12 | Environmental impact | Recital / GPAI practices | A.5.5 | |
+| MG-1.1 | Go/no-go | Conformity / deployment | 8.1, A.6.2.5 | |
+| MG-2.4 | Supersede / disengage / deactivate | Art. 20 logs ≠ this; corrective Arts. 21 | A.9.2, A.6.2.6 | |
+| MG-3.2 | Monitor pre-trained models | GPAI / value chain | A.10.3, A.4.4 | |
+| MG-4.3 | Communicate incidents | Art. 73 | A.8.4 | Korea: not a general MSIT duty for all AI |
+
+---
+
+## Honest gaps vs regulation
+
+| Topic | NIST | Regulation |
+|-------|------|------------|
+| Legal force | Voluntary | EU, Korea, NYC are binding; Brazil still a bill |
+| CE / certification | None | EU conformity; ISO 42001 certification |
+| Prohibitions | None | EU Art. 5; Korea Art. 13 analogue in Brazil Senate text |
+| Penalties | None | EU turnover caps; Korea KRW 30M band; NYC daily stacking |
+| GPAI | 600-1 profile | EU Chapter V; Korea Art. 32 compute gate |

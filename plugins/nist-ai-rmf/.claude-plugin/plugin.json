@@ -1,7 +1,7 @@
 {
   "name": "nist-ai-rmf",
-  "description": "Expert NIST AI Risk Management Framework advisor — organizational profile assessment, AI risk identification, playbook action guidance, trustworthy AI characteristics mapping, and gap assessment.",
-  "version": "1.0.0",
+  "description": "Builds a NIST AI RMF 1.0 (NIST AI 100-1) Current vs Target Profile against the 72 official subcategory outcomes across GOVERN, MAP, MEASURE, and MANAGE, and applies the NIST AI 600-1 generative overlay. Use when the user mentions NIST AI RMF, AI 100-1, Current vs Target Profile, GOVERN/MAP/MEASURE/MANAGE, AI RMF Playbook, or NIST AI 600-1. Does not perform CE marking, ISO/IEC 42001 certification, NYC Local Law 144 audit math, or statutory high-risk classification.",
+  "version": "1.2.0",
   "author": {
     "name": "Gorkem Cetin"
   },
@@ -10,11 +10,12 @@
   "license": "MIT",
   "keywords": [
     "nist-ai-rmf",
-    "ai-governance",
-    "risk-management",
-    "trustworthy-ai",
-    "playbook",
+    "nist-ai-100-1",
+    "current-vs-target-profile",
+    "govern-map-measure-manage",
+    "ai-rmf-playbook",
     "gap-assessment",
-    "organizational-profile"
+    "generative-ai-profile",
+    "nist-ai-600-1"
   ]
 }

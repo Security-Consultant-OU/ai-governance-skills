@@ -1,168 +1,112 @@
-# South Korea AI Basic Act — Impact assessment
+# Art. 35 endeavor AI system impact assessment (AISIA)
 
-## When an impact assessment is required
+**Legal character:** operators **shall endeavor** to perform an impact assessment (Art. 35). This is **not** a mandatory pre-market gate. MSIT does **not** approve every AIA. Public institutions **prefer** products that have undergone assessment (Art. 35(2)).
 
-| Trigger | Description |
-|---------|-------------|
-| New high-risk AI deployment | All high-risk AI systems require an impact assessment before initial deployment |
-| Significant modification | When substantial changes are made to an existing high-risk AI system (new data sources, changed decision logic, expanded scope) |
-| Periodic reassessment | As specified by MSIT guidelines; expected to require reassessment at regular intervals |
-| MSIT request | MSIT may request an updated assessment at any time for high-risk AI systems |
-| Change in risk profile | When the operational context changes in ways that may alter the risk profile |
+## When Art. 35 applies
 
-## Required assessment content
+| Situation | Article | Duty |
+|-----------|---------|------|
+| Operator provides or operates AI (especially high-impact) | Art. 35 | **Shall endeavor** to assess impacts |
+| Significant change to purpose, data, or affected persons | Art. 35 | Renew the endeavor assessment |
+| Public institution procures or uses AI | Art. 35(2) | **Prefer** products that have undergone assessment |
+| Operator wants ISO AIMS alignment | Art. 35 + ISO/IEC 42001 A.5 | Voluntary method depth — ISO AISIA is mandatory **inside** an AIMS, not under Art. 35 |
+| Placing a system on the market | Art. 35 | **No** statutory MSIT filing or approval as a condition of launch |
+| Optional high-impact status confirmation | Art. 33 | Separate from Art. 35; optional; not an AIA licence |
 
-### Section 1 — AI system description
+## Endeavor assessment content
 
-| Element | Content required |
-|---------|-----------------|
-| System name and version | Official name, version number, date of assessment |
-| Intended purpose | Clear description of what the AI system is designed to do |
-| Technical specifications | Architecture type, model approach, key technical parameters |
-| Operational context | Where and how the system is deployed, integration with other systems |
-| Developer and deployer | Identifying information for responsible entities |
-| Data inputs | What data the system processes and from what sources |
-| Outputs and decisions | What the system produces, recommends, or decides |
+### 1 — Metadata
 
-### Section 2 — Risk identification
+| Element | Article | Record |
+|---------|---------|--------|
+| Assessment date and version | Art. 35 | Date, version, endeavor (not “approval package”) |
+| System name | Art. 35 | Name and version |
+| Operator type | Art. 2(7) | Development / use-service / both / foreign / public |
+| High-impact status | Art. 2(4), Art. 33 optional | High-impact / not; HITL exclusion if used |
+| Public-institution buyer | Art. 35(2) | Yes/No — preference, not a licence |
 
-| Risk category | Assessment questions |
-|--------------|---------------------|
-| Life and physical safety | Could the system's outputs or failures directly endanger life or physical safety? |
-| Fundamental rights | Could the system affect privacy, non-discrimination, due process, freedom of expression, or other fundamental rights? |
-| Economic impact | Could the system affect individuals' economic opportunities, financial access, or livelihoods? |
-| Psychological impact | Could the system cause psychological harm, manipulation, or undue stress? |
-| Vulnerable populations | Does the system affect children, elderly, persons with disabilities, or other vulnerable groups? |
-| Systemic risk | Could the system create cascading failures or systemic risks to critical infrastructure or public services? |
-| Bias and discrimination | Could the system produce discriminatory outcomes against protected groups? |
+### 2 — System and context
 
-### Section 3 — Impact analysis
+| Element | Article | Record |
+|---------|---------|--------|
+| Intended purpose | Art. 35 | What the system does |
+| Domain | Art. 2(4) | Listed domain or none |
+| Persons provided with the product (users) | Art. 2(8), Art. 35 | Who receives the product/service |
+| Data and outputs | Art. 35 | Inputs, outputs, decisions supported |
+| Human final decision | Decree exclusion | Who decides; controllability |
 
-| Element | Content required |
-|---------|-----------------|
-| Affected populations | Who is affected, demographics, estimated scale |
-| Impact pathways | How the AI system's outputs reach and affect individuals |
-| Severity assessment | How severe are potential negative impacts (minor, moderate, significant, critical) |
-| Likelihood assessment | How likely are negative impacts to occur (rare, unlikely, possible, likely, almost certain) |
-| Risk rating | Combined severity and likelihood rating for each identified risk |
-| Cumulative effects | Assessment of combined effects when multiple risks interact |
+### 3 — Effects on life, safety, and fundamental rights
 
-### Section 4 — Mitigation measures
+| Effect class | Article | Questions |
+|--------------|---------|-----------|
+| Life / physical safety | Art. 2(4), Art. 35 | Could outputs or failures endanger life or safety? |
+| Fundamental rights | Art. 2(4), Art. 35 | Privacy, equality, due process, other constitutional rights? |
+| Hiring / loan / similar obligations | Art. 2(4), Art. 35 | Does it determine rights or obligations? |
+| Public-service eligibility or cost | Art. 2(4), Art. 35 | Public institution determining eligibility or fees? |
+| Students (early childhood / elementary / secondary) | Art. 2(4), Art. 35 | Evaluation of those students? |
 
-| Measure type | Content required |
-|-------------|-----------------|
-| Technical controls | Algorithm fairness measures, accuracy thresholds, fail-safe mechanisms |
-| Organizational controls | Policies, procedures, training, oversight structures |
-| Data controls | Data quality standards, bias detection, data protection measures |
-| Access controls | Who can access, modify, or override the AI system |
-| Monitoring controls | Real-time monitoring, anomaly detection, performance tracking |
-| Residual risk | Assessment of remaining risk after mitigation measures are applied |
+### 4 — Measures (align with Art. 34 if high-impact)
 
-### Section 5 — Human oversight
+| Measure | Article | Record if high-impact | If not high-impact |
+|---------|---------|----------------------|--------------------|
+| Risk management | Art. 34, Art. 35 | Treatments and residual risk | Endeavor narrative only |
+| Explainability (results, main criteria, training-data overview) | Art. 34(1)2, Art. 35 | How those three elements are provided | Optional |
+| User protection | Art. 34, Art. 35 | Protections for Art. 2(8) users | Endeavor narrative only |
+| Human oversight | Art. 34, Art. 35 | Monitor / intervene / override | HITL exclusion evidence if claimed |
+| Documentation | Art. 34, Art. 35 | Where the measures live | Assessment file itself |
 
-| Element | Content required |
-|---------|-----------------|
-| Oversight model | How humans monitor and supervise the AI system (human-in-the-loop, human-on-the-loop, human-in-command) |
-| Intervention capability | How and when humans can intervene in or override AI decisions |
-| Override procedures | Documented procedures for human override of AI outputs |
-| Competency requirements | Qualifications and training required for oversight personnel |
-| Escalation paths | When and how issues are escalated beyond frontline oversight |
+### 5 — What not to include as a legal claim
 
-### Section 6 — Data governance
+| Claim | Article | Correct reading |
+|-------|---------|-----------------|
+| “Required before deployment” | Art. 35 | Endeavor — not a statutory launch condition |
+| “Submitted to MSIT for approval” | Art. 35 | No general MSIT approval of every AIA |
+| “EU FRIA / Art. 27 equivalent” | Art. 35 | Different addressee, trigger, and force |
+| “Incident report to MSIT attached” | Art. 34, Art. 35 | Not a general high-impact incident-reporting duty |
 
-| Element | Content required |
-|---------|-----------------|
-| Training data description | Sources, size, characteristics, collection methods |
-| Data quality measures | How data quality is assessed and maintained |
-| Bias assessment | How training data is assessed for discriminatory bias |
-| Data protection | How personal data is protected in compliance with PIPA (Personal Information Protection Act) |
-| Data retention | How long data is retained and under what conditions |
-| Data provenance | Documentation of data origin and processing chain |
-
-### Section 7 — Monitoring plan
-
-| Element | Content required |
-|---------|-----------------|
-| Performance metrics | Key metrics monitored (accuracy, fairness, error rates) |
-| Monitoring frequency | How often metrics are reviewed (real-time, daily, weekly, monthly) |
-| Drift detection | How model drift and performance degradation are detected |
-| Incident thresholds | What performance levels trigger review or intervention |
-| Review schedule | When the full impact assessment is reviewed and updated |
-| Reporting | How monitoring results are reported to oversight personnel and MSIT if required |
-
-## MSIT submission requirements
-
-| Requirement | Detail |
-|------------|--------|
-| When to submit | High-risk AI systems may be required to submit assessments to MSIT (specific triggers to be defined by presidential decree) |
-| Format | Expected to follow MSIT-specified template (to be issued) |
-| Review process | MSIT may review the assessment and request modifications or additional safeguards |
-| Outcome | MSIT may approve, request changes, or restrict deployment based on assessment findings |
-| Ongoing obligations | Assessment results inform national AI safety monitoring; updates may be required |
-
-## Impact assessment document template
+## Endeavor document template
 
 ```
-SOUTH KOREA AI BASIC ACT — AI IMPACT ASSESSMENT
+ART. 35 ENDEAVOR AI SYSTEM IMPACT ASSESSMENT
+(Not a pre-market gate. MSIT does not approve this document.)
 
-1. ASSESSMENT METADATA
-   - Assessment date:
-   - AI system name and version:
-   - Developer:
-   - Deployer:
-   - Assessor(s):
-   - Assessment type: [Initial / Update / Periodic / MSIT-requested]
+1. METADATA
+   - Date / version:
+   - System name / version:
+   - Operator type (Art. 2(7)): development / use-service / both / foreign / public
+   - High-impact (Art. 2(4)): Yes / No
+   - HITL exclusion (decree): Applies / Does not apply
+   - Art. 33 confirmation: Sought / Not sought
+   - Public-institution use (Art. 35(2)): Yes / No
 
-2. AI SYSTEM DESCRIPTION
-   - Intended purpose:
-   - Technical approach:
-   - Data inputs and sources:
-   - Outputs and decisions:
-   - Operational context:
-   - Affected populations:
+2. SYSTEM AND USERS (Art. 2(8))
+   - Purpose:
+   - Domain:
+   - Persons provided with the product:
+   - Data / outputs:
 
-3. RISK IDENTIFICATION AND ANALYSIS
-   [For each identified risk:]
-   - Risk description:
-   - Risk category: [Life/Safety | Rights | Economic | Psychological | Vulnerable populations | Systemic | Bias]
-   - Severity: [Minor | Moderate | Significant | Critical]
-   - Likelihood: [Rare | Unlikely | Possible | Likely | Almost certain]
-   - Risk rating: [Low | Medium | High | Critical]
+3. EFFECTS (Art. 2(4), Art. 35)
+   - Life / physical safety:
+   - Fundamental rights:
+   - Other listed-domain effects:
 
-4. MITIGATION MEASURES
-   [For each identified risk:]
-   - Mitigation measure:
-   - Measure type: [Technical | Organizational | Data | Access | Monitoring]
-   - Residual risk after mitigation:
+4. MEASURES (Art. 34 if high-impact; otherwise endeavor narrative)
+   - Risk management:
+   - Explainability (results / main criteria / training-data overview):
+   - User protection:
+   - Human oversight:
+   - Documentation location:
 
-5. HUMAN OVERSIGHT
-   - Oversight model:
-   - Intervention capability:
-   - Override procedures:
-   - Personnel competency:
-   - Escalation paths:
-
-6. DATA GOVERNANCE
-   - Training data description:
-   - Data quality measures:
-   - Bias assessment results:
-   - Data protection measures:
-
-7. MONITORING PLAN
-   - Key metrics:
-   - Monitoring frequency:
-   - Drift detection approach:
-   - Incident thresholds:
-   - Review schedule:
-
-8. CONCLUSIONS AND RECOMMENDATIONS
-   - Overall risk assessment:
-   - Deployment recommendation: [Proceed | Proceed with conditions | Do not proceed]
-   - Conditions (if applicable):
-   - Next review date:
-
-9. APPROVAL
-   - Approved by:
-   - Date:
-   - Signature:
+5. ENDEAVOR CONCLUSION
+   - Residual issues:
+   - Owner / next review:
+   - Not an MSIT licence or market-access certificate
 ```
+
+## Status
+
+| Item | Article | Status |
+|------|---------|--------|
+| Endeavor AISIA exists and is current | Art. 35 | 🔴🟡🟢 |
+| Labelled endeavor (not “mandatory approval”) | Art. 35 | 🔴🟡🟢 |
+| Public-buyer preference file if selling to public bodies | Art. 35(2) | 🔴🟡🟢 |

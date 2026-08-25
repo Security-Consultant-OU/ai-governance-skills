@@ -1,0 +1,16 @@
+{
+  "name": "ai-governance",
+  "description": "Dispatcher for the AI governance marketplace. Injects using-ai-governance at session start so the agent invokes eu-ai-act, nist-ai-rmf, iso42001, nyc-local-law-144, south-korea-ai-act, brazil-ai-act, csa-aicm, and their companions instead of improvising across jurisdictions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gorkem Cetin"
+  },
+  "homepage": "https://github.com/verifywise-ai/ai-governance-skills",
+  "repository": "https://github.com/verifywise-ai/ai-governance-skills",
+  "license": "MIT",
+  "keywords": [
+    "ai-governance-dispatcher",
+    "using-ai-governance",
+    "skill-routing"
+  ]
+}

@@ -4,46 +4,47 @@
 
 | Obligation | Article | What to implement | Evidence needed | Common gaps |
 |------------|---------|-------------------|-----------------|-------------|
-| Technical documentation | Art. 53(1)(a), Annex XI | Maintain and keep up to date technical documentation of the model including training and testing process and results, containing at minimum the information set out in Annex XI | Annex XI compliant documentation: model architecture, training methodology, data sources, compute used, evaluation results, known limitations | Documentation focuses on capabilities without disclosing limitations; training data description insufficient; Annex XI sections incomplete |
-| Information to downstream providers | Art. 53(1)(b) | Provide information and documentation to downstream AI system providers to enable their compliance with the AI Act | Downstream provider information package: model capabilities, limitations, integration guidelines, known risks, appropriate use cases, instructions for compliance | Information provided is marketing-oriented rather than compliance-enabling; limitations and risks not adequately communicated; no guidance for downstream risk management |
-| Copyright policy | Art. 53(1)(c) | Establish a policy to comply with EU copyright law, in particular to identify and comply with reservations of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790 (text and data mining opt-out) | Documented copyright compliance policy; opt-out mechanism; records of rights reservations identified and respected | No systematic process to identify opt-out signals; policy exists but not operationalized; no audit trail of copyright compliance |
-| Training content summary | Art. 53(1)(d) | Draw up and make publicly available a sufficiently detailed summary about the content used for training the GPAI model, according to the template provided by the AI Office | Published training content summary per AI Office template | Summary too vague to be meaningful; does not follow AI Office template; not publicly accessible |
+| Technical documentation | Art. 53(1)(a), Annex XI | Maintain and keep up to date technical documentation of the model including the training and testing process and the results of its evaluation, containing at minimum the information set out in Annex XI | Annex XI documentation: architecture, training methodology, data sources, compute used, evaluation results, known limitations | Documentation focuses on capabilities without disclosing limitations; training-data description insufficient; Annex XI sections incomplete |
+| Information to downstream providers | Art. 53(1)(b) | Provide information and documentation to downstream AI system providers to enable their compliance with the AI Act | Downstream provider information package: capabilities, limitations, integration guidelines, known risks, appropriate use cases, instructions for compliance | Information is marketing-oriented rather than compliance-enabling; limitations and risks not adequately communicated |
+| Copyright policy | Art. 53(1)(c) | Establish a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790 (text and data mining opt-out) | Documented copyright compliance policy; opt-out mechanism; records of rights reservations identified and respected | No systematic process to identify opt-out signals; policy exists but is not operationalised |
+| Training content summary | Art. 53(1)(d) | Draw up and make **publicly available** a sufficiently detailed summary of the content used for training the GPAI model, according to the template provided by the AI Office | Published training content summary per AI Office template | Summary too vague; does not follow the AI Office template; not publicly accessible; wrongly treated as OSS-exempt |
 
-## Systemic risk GPAI models — Article 55 additional obligations
+## Free and open-source GPAI models (Article 53(2))
 
-| Obligation | Article | What to implement | Evidence needed | Common gaps |
-|------------|---------|-------------------|-----------------|-------------|
-| Model evaluation | Art. 55(1)(a) | Perform model evaluation in accordance with standardised protocols and tools, including conducting and documenting adversarial testing of the model | Model evaluation reports using standardised protocols; documented test methodologies; benchmark results | Evaluation limited to capability benchmarks without safety evaluations; no standardised protocol adherence; evaluation not updated post-deployment |
-| Adversarial testing (red-teaming) | Art. 55(1)(a) | Conduct adversarial testing to identify and mitigate systemic risks, including potential misuse scenarios | Red-team reports; adversarial scenario documentation; mitigation measures for identified risks; retest results | Red-teaming is superficial or limited to common prompt injection; systemic risks (CBRN, cyber, societal) not tested; no external red-team involvement |
-| Serious incident tracking and reporting | Art. 55(1)(b) | Track, document, and report serious incidents and possible corrective measures to the AI Office and relevant national competent authorities without undue delay | Incident tracking system; incident reports; corrective action documentation; reporting records | No formal incident tracking for model-level issues; reporting threshold unclear; incidents tracked at application level but not model level |
-| Cybersecurity protections | Art. 55(1)(c) | Ensure an adequate level of cybersecurity protection for the GPAI model with systemic risk and the physical infrastructure of the model | Cybersecurity assessment; protection measures documentation; penetration testing results; model security measures (anti-extraction, anti-poisoning) | Cybersecurity focused on infrastructure only; model-specific threats (weights exfiltration, fine-tuning attacks) not addressed; no model-level security assessment |
+| Aspect | Rule |
+|--------|------|
+| Definition | Released under a free and open-source licence that allows access, usage, modification, and distribution of the model, **and** whose parameters, including the weights, **the information on the model architecture**, and **the information on model usage**, are made publicly available |
+| Art. 53(1)(a) technical documentation | **Dropped** by Art. 53(2) unless the model has systemic risk |
+| Art. 53(1)(b) downstream provider information | **Dropped** by Art. 53(2) unless the model has systemic risk |
+| Art. 53(1)(c) copyright policy | **Always applies** — not dropped |
+| Art. 53(1)(d) training content summary | **Always applies** — not dropped |
+| Art. 55 systemic-risk obligations | **Not exempt** — full compliance required; Art. 53(2) does not apply to GPAI models with systemic risk |
 
-## Systemic risk determination
+## Systemic risk determination and notification
 
 | Criterion | Threshold | Detail |
 |-----------|-----------|--------|
-| Training compute | >10^25 FLOPs | GPAI models trained using total computing power of more than 10^25 floating point operations are presumed to have systemic risk |
-| Commission designation | Case-by-case | The Commission may designate a GPAI model as having systemic risk based on criteria in Annex XIII (number of registered end users, degree of market integration, reach of AI system, capabilities) |
-| Provider notification | Mandatory | Providers must notify the Commission without delay when their model meets the systemic risk threshold |
+| Training compute | >10^25 FLOPs | GPAI models trained with a cumulative amount of computation greater than 10^25 floating point operations are presumed to have systemic risk (Art. 51) |
+| Commission designation | Case-by-case | The Commission may designate a GPAI model as having systemic risk on the basis of the criteria in Annex XIII |
+| Provider notification (Art. 52) | Mandatory | Providers shall notify the Commission **without delay and in any event within 2 weeks** after the requirement in Art. 51 is met or it becomes known that it will be met |
 
-## Free and open-source GPAI models
+## Systemic risk GPAI models — Article 55 additional obligations
 
-| Aspect | Rule | Exception |
-|--------|------|-----------|
-| Art. 53(1)(a) — Technical documentation | Exempt: may instead provide sufficiently detailed summary of content used for training | Exemption does NOT apply if model has systemic risk |
-| Art. 53(1)(b) — Downstream provider info | Exempt | Exemption does NOT apply if model has systemic risk |
-| Art. 53(1)(c) — Copyright policy | NOT exempt — must comply | Applies to all GPAI regardless of license |
-| Art. 53(1)(d) — Training content summary | NOT exempt — must publish | Applies to all GPAI regardless of license |
-| Art. 55 — Systemic risk obligations | NOT exempt — full compliance required | All systemic risk obligations apply regardless of license |
+Article 55(1)(b) is **its own obligation**. It is not the same as adversarial testing / red-teaming under Art. 55(1)(a).
 
-**Definition:** A model is considered free and open-source when its parameters (weights) are made publicly available with a license permitting access, use, modification, and distribution.
+| Obligation | Article | What to implement | Evidence needed | Common gaps |
+|------------|---------|-------------------|-----------------|-------------|
+| Model evaluation, including adversarial testing | Art. 55(1)(a) | Perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing (red-teaming) to identify and mitigate systemic risks | Evaluation reports using standardised protocols; documented test methodologies; benchmark and safety-evaluation results; red-team reports | Evaluation limited to capability benchmarks; red-teaming superficial; systemic-risk scenarios (CBRN, cyber, loss of control) not tested |
+| Assess and mitigate systemic risks at Union level | Art. 55(1)(b) | **Assess and mitigate possible systemic risks at Union level**, including their sources, that may stem from the development, placing on the market, or use of GPAI models with systemic risk | Union-level systemic-risk assessment; identified sources of risk; mitigation plan and residual-risk record | Collapsed into red-teaming; no Union-level (as opposed to model-lab) assessment; mitigations not documented |
+| Serious incident tracking and reporting | Art. 55(1)(c) | Keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures | Incident tracking system; incident reports; corrective-action documentation; reporting records | No formal incident tracking at model level; reporting threshold unclear |
+| Cybersecurity protections | Art. 55(1)(d) | Ensure an adequate level of cybersecurity protection for the GPAI model with systemic risk and the physical infrastructure of the model | Cybersecurity assessment; protection-measures documentation; penetration testing; model-security measures (anti-extraction, anti-poisoning) | Cybersecurity focused on infrastructure only; model-specific threats not addressed |
 
 ## Codes of practice (Article 56)
 
 | Aspect | Detail |
 |--------|--------|
-| Purpose | Enable GPAI model providers to demonstrate compliance with obligations |
+| Purpose | Enable GPAI model providers to demonstrate compliance with Chapter V obligations |
 | Development | AI Office coordinates development; providers and other stakeholders participate |
-| Compliance presumption | Adherence to a code of practice creates a presumption of compliance with the corresponding obligations |
+| Compliance presumption | Adherence to a code of practice approved by the Commission creates a presumption of conformity with the corresponding obligations |
 | Monitoring | AI Office and Board monitor and evaluate; codes must be updated based on new developments |
 | Alternative | Providers may demonstrate compliance through alternative adequate means if they choose not to adhere to a code of practice |

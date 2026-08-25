@@ -1,58 +1,74 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "ai-governance-skills",
-  "description": "Claude Code skills for AI Governance — EU AI Act, NIST AI RMF, ISO 42001, NYC Local Law 144, South Korea AI Basic Act, and Brazil AI Act.",
+  "description": "Claude Code skills for AI Governance — dispatcher plus EU AI Act, NIST AI RMF, ISO 42001, NYC Local Law 144, South Korea AI Basic Act, Brazil AI Act, and CSA AICM / AI-CAIQ.",
   "owner": {
     "name": "Gorkem Cetin"
   },
   "plugins": [
     {
-      "name": "eu-ai-act",
-      "source": "./plugins/eu-ai-act",
-      "description": "Expert EU AI Act (Regulation 2024/1689) compliance advisor — risk classification, high-risk gap assessment, conformity assessment, FRIA generation, GPAI obligations, and technical documentation.",
+      "name": "ai-governance",
+      "source": "./plugins/ai-governance",
+      "description": "Dispatcher: injects using-ai-governance at session start so the agent invokes the correct specialist skill instead of mixing jurisdictions.",
       "version": "1.0.0",
       "category": "ai-governance",
-      "keywords": ["eu-ai-act", "ai-regulation", "high-risk-ai", "gpai", "conformity-assessment", "ai-governance"]
+      "keywords": ["using-ai-governance", "skill-routing", "ai-governance-dispatcher"]
+    },
+    {
+      "name": "eu-ai-act",
+      "source": "./plugins/eu-ai-act",
+      "description": "Classifies systems under the EU AI Act (Regulation 2024/1689); high-risk gap and operational checklists; Art. 27 FRIA; Chapter V GPAI; Art. 43 CE. Companion skill eu-gpai-cop for the Art. 56 Code of Practice.",
+      "version": "1.3.0",
+      "category": "ai-governance",
+      "keywords": ["eu-ai-act", "regulation-2024-1689", "eu-high-risk-ai", "eu-gpai", "art-27-fria", "conformity-assessment", "ce-marking", "eu-gpai-cop"]
     },
     {
       "name": "nist-ai-rmf",
       "source": "./plugins/nist-ai-rmf",
-      "description": "Expert NIST AI Risk Management Framework advisor — organizational profile assessment, AI risk identification, playbook action guidance, trustworthy AI characteristics mapping, and gap assessment.",
-      "version": "1.0.0",
+      "description": "Builds a NIST AI RMF 1.0 (NIST AI 100-1) Current vs Target Profile against the 72 official subcategory outcomes across GOVERN, MAP, MEASURE, and MANAGE, and applies the NIST AI 600-1 generative overlay.",
+      "version": "1.2.0",
       "category": "ai-governance",
-      "keywords": ["nist-ai-rmf", "ai-risk", "trustworthy-ai", "ai-governance"]
+      "keywords": ["nist-ai-rmf", "ai-risk", "current-vs-target-profile", "playbook", "generative-ai-profile", "nist-ai-600-1"]
     },
     {
       "name": "iso42001",
       "source": "./plugins/iso42001",
-      "description": "Expert ISO/IEC 42001:2023 AI Management System advisor — gap assessment, AISIA, AI risk assessment, SoA generation for 38 Annex A controls, policy generation, and certification readiness.",
-      "version": "1.0.0",
+      "description": "ISO/IEC 42001:2023 AIMS: gap assessment, SoA, certification, plus companions for AISIA, AI system register, data-for-AI inventory, A.4/7.1 resources, and AIMS policy/SOP kit.",
+      "version": "1.4.0",
       "category": "ai-governance",
-      "keywords": ["iso42001", "aims", "ai-management-system", "aisia", "ai-governance"]
+      "keywords": ["iso42001", "aims", "ai-management-system", "iso-aisia", "soa", "annex-a", "certification", "aims-policy-kit"]
     },
     {
       "name": "nyc-local-law-144",
       "source": "./plugins/nyc-local-law-144",
-      "description": "Expert NYC Local Law 144 compliance advisor — AEDT determination, bias audit planning and report generation, candidate notice requirements, and compliance gap assessment.",
-      "version": "1.0.0",
+      "description": "Determines whether a hiring or promotion tool is an NYC Local Law 144 AEDT, produces DCWP bias-audit tables (above-median scoring rate; 7 EEO-1 categories plus intersectional), and drafts candidate/employee notices.",
+      "version": "1.2.0",
       "category": "ai-governance",
-      "keywords": ["nyc-local-law-144", "aedt", "bias-audit", "hiring-ai", "ai-governance"]
+      "keywords": ["nyc-local-law-144", "aedt", "bias-audit", "hiring-ai", "employment", "dcwp"]
     },
     {
       "name": "south-korea-ai-act",
       "source": "./plugins/south-korea-ai-act",
-      "description": "Expert South Korea AI Basic Act compliance advisor — high-risk AI classification, obligations by role, impact assessment, transparency compliance, and gap assessment.",
-      "version": "1.0.0",
+      "description": "Classifies high-impact AI (고영향 AI, Art. 2(4)) under the in-force Korea AI Basic Act; maps Arts. 31–36, Art. 35 endeavor AISIA, and Art. 36 domestic representative. Decree No. 36053 is in force.",
+      "version": "1.2.0",
       "category": "ai-governance",
-      "keywords": ["south-korea-ai-act", "ai-basic-act", "korea-ai", "ai-governance"]
+      "keywords": ["south-korea-ai-act", "ai-basic-act", "korea-high-impact-ai", "고영향", "msit", "korea-art-36"]
     },
     {
       "name": "brazil-ai-act",
       "source": "./plugins/brazil-ai-act",
-      "description": "Expert Brazil AI Act (Marco Legal da IA) compliance advisor — risk classification, rights of affected persons, governance system design, obligations by role, and gap assessment.",
+      "description": "Advises on pending Brazilian AI bill PL 2338/2023 (Senate substitute of 10 Dec 2024; not enacted) — risco excessivo / alto risco, rights, AIA, SIA/ANPD as proposed coordinator, GPAI/copyright preparedness.",
+      "version": "1.2.0",
+      "category": "ai-governance",
+      "keywords": ["brazil-ai-act", "marco-legal-da-ia", "pl-2338", "aplicador", "desenvolvedor", "risco-excessivo"]
+    },
+    {
+      "name": "csa-aicm",
+      "source": "./plugins/csa-aicm",
+      "description": "Fills CSA AI-CAIQ answers and AICM control gap tables from the user's AICM workbook; supports STAR for AI Level 1 and mappings to ISO 42001 or NIST AI 600-1 when those sheets exist.",
       "version": "1.0.0",
       "category": "ai-governance",
-      "keywords": ["brazil-ai-act", "marco-legal-ia", "anpd", "ai-governance"]
+      "keywords": ["csa-aicm", "ai-caiq", "star-for-ai", "aicm", "csa"]
     }
   ]
 }

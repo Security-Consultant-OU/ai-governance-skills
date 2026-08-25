@@ -1,37 +1,44 @@
-# Manage function — risk treatment, response, and communication
+# MANAGE function — NIST AI RMF 1.0 (Table 4)
 
-The Manage function allocates resources to mapped and measured risks on a regular basis. It includes plans, processes, procedures, and practices for risk response, recovery, and communication. The Manage function operationalizes the outputs of Map and Measure into concrete risk treatment actions.
+Official subcategory outcomes from NIST AI 100-1. **4 categories, 13 subcategories**. There is no MG-3.3. MG-3.2 is **pre-trained model monitoring**.
 
-## MG-1: Risks prioritized
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MG-1.1 | Risk treatment decisions | A determination is made as to whether the AI system achieves its intended purpose and stated objectives and whether its development or deployment should proceed | Make explicit risk treatment decisions for each identified risk: mitigate, transfer, accept, or avoid; document decision rationale; obtain appropriate approval | Risk treatment decision records; approval documentation; decision rationale | Art. 9 (risk management — risk treatment) | Clause 6.1.3 (AI risk treatment) |
-| MG-1.2 | Resource allocation | Treatment of documented AI risks is prioritized based on impact, likelihood, available resources, and organization's risk tolerance | Allocate resources (personnel, budget, technology) to risk treatment activities proportionate to risk priority; document resource allocation decisions; track resource utilization | Resource allocation plans; budget documentation; utilization tracking | Art. 9 (risk management system) | Clause 6.1.3 (AI risk treatment) |
-| MG-1.3 | Response plans | Responses to the AI risks deemed high priority, as identified by the Map function, are developed, planned, and documented | Develop risk response plans for high-priority risks; define response timelines, responsibilities, and success criteria; establish contingency plans | Response plans; timeline documentation; contingency plans; success criteria | Art. 9 (risk management system) | Clause 6.1.3 (AI risk treatment) |
-| MG-1.4 | Risk acceptance criteria | Risk treatment decisions are documented and reviewed regularly, and residual risks are accepted based on established criteria | Define residual risk acceptance criteria; document accepted residual risks with justification; review accepted risks periodically; escalate when residual risk exceeds tolerance | Risk acceptance criteria; residual risk register; periodic review records | Art. 9 (risk management — residual risk) | Clause 6.1.3 (AI risk treatment) |
+## MANAGE 1 — Prioritized, responded to, and managed (4)
 
-## MG-2: Risks managed
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MG-1.1 | A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. | Documented go/no-go using MAP and MEASURE outputs. |
+| MG-1.2 | Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. | Ranked treatment backlog. |
+| MG-1.3 | Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting. | Treatment plan per high-priority risk. |
+| MG-1.4 | Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. | Residual-risk statement for acquirers and users. |
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MG-2.1 | Controls implemented | Planned risk treatments, including controls and mitigations, are implemented | Implement technical controls (access controls, input validation, output filtering); implement process controls (review workflows, approval gates); verify control effectiveness through testing | Control implementation records; testing results; effectiveness verification | Art. 9 (risk management — risk measures) | A.5 (AI system lifecycle management) |
-| MG-2.2 | Human oversight | Mechanisms are in place and applied to sustain the value of deployed AI systems | Design and implement human oversight mechanisms appropriate to the AI system's risk level; define when human intervention is required; train oversight personnel; test override capabilities | Human oversight plan; intervention criteria; training records; override test results | Art. 14 (human oversight) | A.5.8 (human oversight of AI systems) |
-| MG-2.3 | Incident response | Procedures are followed to respond to and recover from a previously unknown risk when it is identified | Develop AI-specific incident response procedures; define incident severity levels; establish response teams and communication protocols; conduct incident response drills | Incident response plan; severity definitions; team assignments; drill records | Art. 73 (incident reporting) | A.8.3 (reporting) |
-| MG-2.4 | Risk treatment effectiveness | Mechanisms are in place and applied, and approaches are in use, to sustain the value of deployed AI systems | Evaluate risk treatment effectiveness regularly; compare actual outcomes against expected results; adjust treatments when effectiveness is insufficient | Effectiveness evaluation reports; outcome comparisons; treatment adjustment records | Art. 72 (post-market monitoring) | Clause 9.1 (monitoring and measurement) |
+---
 
-## MG-3: Risks monitored
+## MANAGE 2 — Maximize benefits and minimize negative impacts (4)
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MG-3.1 | Ongoing monitoring | Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors | Implement continuous post-deployment monitoring; define monitoring metrics and thresholds; automate monitoring where feasible; assign monitoring responsibilities | Monitoring system documentation; metric definitions; threshold configurations; responsibility assignments | Art. 72 (post-market monitoring) | A.8 (operation and monitoring) |
-| MG-3.2 | Third-party risk management | Post-deployment monitoring includes regular assessments of AI system performance, including risks arising from third-party components | Assess third-party AI component risks regularly; include third-party monitoring in overall monitoring plan; require third-party risk reporting; maintain third-party risk inventory | Third-party risk assessments; monitoring integration documentation; vendor risk reports; third-party inventory | Art. 25 (obligations of importers/distributors) | A.9 (third-party and customer relationships) |
-| MG-3.3 | Model performance monitoring | AI system performance and impacts — including for affected communities — are monitored on an ongoing basis | Monitor model performance against established baselines; track performance across demographic groups; detect and respond to performance degradation; document performance trends | Performance monitoring dashboards; demographic performance breakdowns; degradation alerts; trend analysis reports | Art. 72 (post-market monitoring) | Clause 9.1 (monitoring and measurement) |
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MG-2.1 | Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts. | Resource plan; consider non-AI alternatives. |
+| MG-2.2 | Mechanisms are in place and applied to sustain the value of deployed AI systems. | Value-sustainment (retraining, UX, support) — **not** “deployment decision” (that is MG-1.1). |
+| MG-2.3 | Procedures are followed to respond to and recover from a previously unknown risk when it is identified. | Emergent-risk response procedure. |
+| MG-2.4 | Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use. | Kill switch / deactivate authority — **not** “treatment effectiveness.” |
 
-## MG-4: Risk communication
+---
 
-| Subcategory | Name | Description | Suggested Actions | Evidence/Artifacts | EU AI Act Cross-ref | ISO 42001 Cross-ref |
-|-------------|------|-------------|-------------------|-------------------|-------------------|-------------------|
-| MG-4.1 | Incident reporting | Processes for managing and communicating AI risks are documented and integrated into organizational risk management | Establish incident reporting procedures; define reporting timelines and escalation paths; report incidents to appropriate internal and external stakeholders; maintain incident log | Incident reporting procedures; escalation path documentation; incident log; stakeholder notification records | Art. 73 (incident reporting) | A.8.3 (reporting) |
-| MG-4.2 | Stakeholder notification | Organizational processes for engaging relevant AI actors and affected communities throughout the AI system lifecycle are documented | Notify affected stakeholders of material AI risks; provide transparent communication about AI system capabilities and limitations; establish regular risk communication cadence | Stakeholder notification records; transparency reports; communication schedules | Art. 13 (transparency) | A.8 (transparency and provision of information) |
-| MG-4.3 | Transparency maintained | AI risk management plans and related documentation are shared with relevant AI actors, including affected communities, when risks are identified | Maintain public-facing transparency documentation; update transparency artifacts when risks change; respond to stakeholder inquiries about AI risks | Transparency documentation; update logs; inquiry response records | Art. 50 (transparency obligations) | A.8 (transparency and provision of information) |
+## MANAGE 3 — Third-party entities (2)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MG-3.1 | AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented. | Ongoing third-party monitoring. |
+| MG-3.2 | Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance. | Track upstream model versions, cards, and known issues. |
+
+---
+
+## MANAGE 4 — Treatments documented and monitored (3)
+
+| ID | Official outcome | Suggested actions |
+|----|------------------|-------------------|
+| MG-4.1 | Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management. | Monitoring plan covering appeal, decommission, IR, change. |
+| MG-4.2 | Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors. | Improvement backlog with engagement evidence. |
+| MG-4.3 | Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented. | Incident comms to affected communities; tracker. |
