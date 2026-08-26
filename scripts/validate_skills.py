@@ -24,6 +24,11 @@ def relative(path: Path, root: Path) -> str:
     return path.relative_to(root).as_posix()
 
 
+def canonical_markdown(path: Path) -> bytes:
+    text = path.read_text(encoding="utf-8")
+    return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+
+
 def parse_frontmatter(skill_file: Path) -> tuple[dict[str, str], str] | None:
     text = skill_file.read_text(encoding="utf-8")
     match = FRONTMATTER_PATTERN.match(text)
@@ -132,11 +137,15 @@ def validate_archives(skill_files: list[Path], root: Path) -> list[str]:
             errors.append(f"{relative(archive, root)}: missing packed skill archive")
             continue
 
-        expected: dict[str, bytes] = {f"{name}/SKILL.md": skill_file.read_bytes()}
+        expected: dict[str, bytes] = {
+            f"{name}/SKILL.md": canonical_markdown(skill_file)
+        }
         references = skill_directory / "references"
         if references.is_dir():
             for reference in sorted(references.glob("*.md")):
-                expected[f"{name}/references/{reference.name}"] = reference.read_bytes()
+                expected[f"{name}/references/{reference.name}"] = canonical_markdown(
+                    reference
+                )
 
         with zipfile.ZipFile(archive) as packed:
             actual_files = {item for item in packed.namelist() if not item.endswith("/")}
