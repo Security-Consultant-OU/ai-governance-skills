@@ -4,13 +4,13 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Project overview
 
-This repository is an AI governance skills marketplace for Codex. It contains Markdown-based skills that make Codex a specialized compliance advisor for major AI regulations and frameworks. There is no application code — all skill content is structured Markdown with YAML frontmatter.
+This repository is an AI governance skill marketplace packaged natively for Claude Code and distributed to Codex and other Agent Skills clients as skill folders or `.skill` archives. There is no application code — all skill content is structured Markdown with YAML frontmatter.
 
 ## Plugin directory pattern
 
 ```
 plugins/<skill-name>/
-  .Codex-plugin/
+  .claude-plugin/
     plugin.json          # Plugin metadata (name, version, author, etc.)
   skills/<skill-name>/
     SKILL.md             # Primary skill definition (loaded by Codex)
@@ -20,7 +20,7 @@ plugins/<skill-name>/
 
 A plugin may contain additional skills under `skills/` (the `iso42001` plugin ships `iso-aisia`, `iso-ai-system-inventory`, `iso-ai-data-inventory`, `iso-ai-resources`, `iso-aims-policy-kit`; the `eu-ai-act` plugin ships `eu-gpai-cop`).
 
-The root `.Codex-plugin/marketplace.json` lists all plugins in the marketplace.
+The root `.claude-plugin/marketplace.json` lists all plugins in the marketplace. Codex consumes the skill folders directly; it does not consume the Claude marketplace metadata.
 
 ## Skill dispatch
 
@@ -41,7 +41,7 @@ Before answering an AI-compliance question, follow `plugins/ai-governance/skills
 
 Each `SKILL.md` follows a 5-part structure:
 
-1. **Frontmatter** — YAML block with `name`, `description`, `version`, `triggers`, and `references` list
+1. **Frontmatter** — portable Agent Skills YAML containing `name` and `description`; versions live in plugin metadata and references are linked from the body
 2. **Role and routing** — defines the persona Codex adopts and how to route user requests to the correct workflow
 3. **Overview** — regulatory context, scope, key definitions, and applicability rules
 4. **Workflows** — numbered, step-by-step procedures for each major compliance task (e.g., gap assessment, document generation, risk classification)
@@ -66,9 +66,10 @@ Use consistent severity indicators in gap assessment outputs:
 
 ## Adding a new skill
 
-1. Create the plugin directory: `plugins/<name>/.Codex-plugin/` and `plugins/<name>/skills/<name>/references/`
-2. Create `plugins/<name>/.Codex-plugin/plugin.json` with name, description, version, author, homepage, repository, license, and keywords
+1. Create the plugin directory: `plugins/<name>/.claude-plugin/` and `plugins/<name>/skills/<name>/references/`
+2. Create `plugins/<name>/.claude-plugin/plugin.json` with name, description, version, author, homepage, repository, license, and keywords
 3. Create `plugins/<name>/skills/<name>/SKILL.md` following the 5-part structure
 4. Add reference files to `plugins/<name>/skills/<name>/references/`
-5. Add the plugin entry to `.Codex-plugin/marketplace.json`
+5. Add the plugin entry to `.claude-plugin/marketplace.json`
 6. Run `python scripts/pack-skills.py` to refresh `skills/<name>.skill` archives for Claude.ai
+7. Run `python scripts/validate_skills.py` and `python -m unittest tests.test_validate_skills -v`

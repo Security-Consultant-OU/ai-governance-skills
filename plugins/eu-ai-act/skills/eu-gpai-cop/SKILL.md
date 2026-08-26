@@ -1,21 +1,9 @@
 ---
 name: eu-gpai-cop
 description: >
-  Assesses GPAI model-provider adherence to the EU AI Act Article 56 Code of
-  Practice (transparency, copyright, safety and security chapters) and fills
-  the model documentation form. Use when the user mentions the GPAI Code of
-  Practice, Art. 56 CoP, GPAI model card under the CoP, or GPAI copyright
-  chapter. Do not use for Brazil PL 2338 GPAI, ISO AISIA, or Art. 50-only
-  system labelling without a model-provider CoP question.
-version: 1.3.0
-triggers:
-  - GPAI Code of Practice
-  - Article 56
-  - EU GPAI CoP
-  - GPAI model documentation form
-  - GPAI copyright chapter
-references:
-  - references/cop-chapters.md
+  Use when a request concerns the EU GPAI Code of Practice, Article 56 CoP,
+  its transparency, copyright, safety or security chapters, or the GPAI model
+  documentation form.
 ---
 
 # EU GPAI Code of Practice advisor (Article 56)
@@ -30,7 +18,7 @@ If the user omits document type, produce **chapter autoeval + model documentatio
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|

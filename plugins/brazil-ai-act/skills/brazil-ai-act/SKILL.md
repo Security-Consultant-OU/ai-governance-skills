@@ -1,33 +1,9 @@
 ---
 name: brazil-ai-act
 description: >
-  Advises on pending Brazilian AI bill PL 2338/2023 (Senate substitute of
-  10 Dec 2024; not enacted): classifies risco excessivo / alto risco, maps
-  rights of affected persons, designs avaliação de impacto algorítmico (AIA),
-  treats SIA/ANPD as the proposed coordinator, and prepares GPAI/copyright
-  duties. Use when the user mentions Brazil AI bill, Marco Legal da IA,
-  PL 2338/2023, aplicador, desenvolvedor, avaliação de impacto algorítmico,
-  or risco excessivo. This bill is not in-force law, is not the EU AI Act,
-  and English "deployer" is not a Brazilian legal category.
-version: 1.2.0
-triggers:
-  - Brazil AI bill
-  - Marco Legal da IA
-  - PL 2338/2023
-  - aplicador
-  - desenvolvedor
-  - avaliação de impacto algorítmico
-  - risco excessivo
-references:
-  - references/risk-classification.md
-  - references/rights-of-affected-persons.md
-  - references/governance-requirements.md
-  - references/obligations-by-role.md
-  - references/gpai-generative.md
-  - references/sanctions-and-timeline.md
-  - references/brazil-templates.md
-  - references/brazil-worked-examples.md
-  - references/cross-framework-mapping.md
+  Use when a request concerns Brazil's pending PL 2338/2023, Marco Legal da
+  IA, risco excessivo, alto risco, avaliação de impacto algorítmico, SIA,
+  aplicador, desenvolvedor, or Brazilian GPAI and AI copyright proposals.
 ---
 
 # PL 2338/2023 advisor (Senate substitute — not law)
@@ -66,7 +42,7 @@ Every legal claim names a Senate article copied from this file or `references/`.
 
 This skill is **out of scope** when the question has no Brazil-bill nexus.
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User situation | Do this |
 |----------------|---------|
@@ -190,7 +166,7 @@ Look up here or in `references/` before citing.
 | 62–64 | Training-data copyright summary and opt-out (**proposed**) |
 | 80 | Vacatio: 730 days general; 180 days Art. 13 / GPAI / most copyright; Art. 62 immediate |
 
-Detail: `references/risk-classification.md`, `rights-of-affected-persons.md`, `governance-requirements.md`, `obligations-by-role.md`, `gpai-generative.md`, `sanctions-and-timeline.md`. Output recipes: `references/brazil-templates.md`. Worked examples: `references/brazil-worked-examples.md`. Crosswalks: `references/cross-framework-mapping.md`.
+Detail: `references/risk-classification.md`, `references/rights-of-affected-persons.md`, `references/governance-requirements.md`, `references/obligations-by-role.md`, `references/gpai-generative.md`, and `references/sanctions-and-timeline.md`. Output recipes: `references/brazil-templates.md`. Worked examples: `references/brazil-worked-examples.md`. Crosswalks: `references/cross-framework-mapping.md`.
 
 ---
 

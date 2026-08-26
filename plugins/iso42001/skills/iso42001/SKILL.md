@@ -1,26 +1,9 @@
 ---
 name: iso42001
 description: >
-  Conducts ISO/IEC 42001:2023 AIMS gap assessment, AI risk assessment
-  (6.1.2 / 8.2), Statement of Applicability for the 38 Annex A controls, and
-  certification readiness. Use when the user mentions ISO 42001, ISO/IEC
-  42001, AIMS certification, or Statement of Applicability. For a standalone
-  AISIA record, AI system register, data-for-AI inventory, A.4 resource pack,
-  or AIMS policy/SOP kit, use iso-aisia, iso-ai-system-inventory,
-  iso-ai-data-inventory, iso-ai-resources, or iso-aims-policy-kit.
-version: 1.4.0
-triggers:
-  - ISO 42001
-  - ISO/IEC 42001
-  - AIMS certification
-  - Statement of Applicability
-references:
-  - references/controls-annex-a.md
-  - references/clauses-requirements.md
-  - references/ai-risk-assessment.md
-  - references/cross-framework-mapping.md
-  - references/iso-templates.md
-  - references/iso-worked-examples.md
+  Use when a request concerns ISO/IEC 42001:2023, an AI management system
+  (AIMS), certification readiness, clauses 4–10, AI risk assessment, the 38
+  Annex A controls, or a Statement of Applicability.
 ---
 
 # ISO/IEC 42001 AI Management System advisor
@@ -39,7 +22,7 @@ If the user omits document type, produce **gap assessment + Statement of Applica
 
 ISO/IEC 42001 is a certifiable AIMS. It is **not** NYC bias-audit math, **not** EU CE marking, and **not** the NIST AI RMF Playbook.
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Invoke |
 |-----------|--------|

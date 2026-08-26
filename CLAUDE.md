@@ -41,7 +41,7 @@ Before answering an AI-compliance question, follow `plugins/ai-governance/skills
 
 Each `SKILL.md` follows a 5-part structure:
 
-1. **Frontmatter** — YAML block with `name`, `description`, `version`, `triggers`, and `references` list
+1. **Frontmatter** — portable Agent Skills YAML containing `name` and `description`; versions live in plugin metadata and references are linked from the body
 2. **Role and routing** — defines the persona Claude adopts and how to route user requests to the correct workflow
 3. **Overview** — regulatory context, scope, key definitions, and applicability rules
 4. **Workflows** — numbered, step-by-step procedures for each major compliance task (e.g., gap assessment, document generation, risk classification)
@@ -72,3 +72,4 @@ Use consistent severity indicators in gap assessment outputs:
 4. Add reference files to `plugins/<name>/skills/<name>/references/`
 5. Add the plugin entry to `.claude-plugin/marketplace.json`
 6. Run `python scripts/pack-skills.py` to refresh `skills/<name>.skill` archives for Claude.ai
+7. Run `python scripts/validate_skills.py` and `python -m unittest tests.test_validate_skills -v`

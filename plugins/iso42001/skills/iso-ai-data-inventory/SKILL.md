@@ -1,20 +1,9 @@
 ---
 name: iso-ai-data-inventory
 description: >
-  Produces an ISO/IEC 42001:2023 data-for-AI inventory covering Annex A.7
-  (A.7.2–A.7.6) and data resources A.4.3. Use when the user asks for an ISO
-  42001 data inventory, training-data register, A.7 provenance inventory, or
-  data for AI systems. Do not use for a standalone GDPR RoPA, NYC audit
-  datasets, or EU Art. 10 without an ISO 42001 cue.
-version: 1.3.0
-triggers:
-  - ISO 42001 data inventory
-  - data for AI systems
-  - A.7.5
-  - AI training data register
-  - ISO data provenance
-references:
-  - references/data-inventory.md
+  Use when a request concerns an ISO/IEC 42001 data-for-AI inventory,
+  training-data register, Annex A.7 data controls, A.4.3 data resources,
+  acquisition, quality, provenance, or preparation of data for AI systems.
 ---
 
 # ISO/IEC 42001 data-for-AI inventory producer
@@ -31,7 +20,7 @@ Provider-primarily: users who only consume a vendor model with no training or fi
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|

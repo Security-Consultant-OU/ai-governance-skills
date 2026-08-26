@@ -1,18 +1,9 @@
 ---
 name: using-ai-governance
 description: >
-  Use at the start of any AI-system, AI-compliance, AI-risk, or AI-regulation
-  question — routes to the correct marketplace skill and requires invoking
-  that skill before answering, including clarifying questions. Also use when
-  the user mentions EU AI Act, NIST AI RMF, ISO 42001, NYC LL144, Korea AI
-  Basic Act, Brazil PL 2338, CSA AICM, GPAI, FRIA, AIMS, AEDT, or CAIQ.
-version: 1.0.0
-triggers:
-  - AI governance
-  - AI compliance
-  - AI regulation
-  - AI Act
-  - which AI skill
+  Use when a request concerns AI-system governance, compliance, risk, or
+  regulation, including EU AI Act, NIST AI RMF, ISO 42001, NYC LL144, Korea
+  AI Basic Act, Brazil PL 2338, CSA AICM, GPAI, FRIA, AIMS, AEDT, or CAIQ.
 ---
 
 # Using the AI governance marketplace
@@ -25,11 +16,10 @@ If another skill in this marketplace might apply, **invoke it before you answer*
 
 Do not improvise another jurisdiction from memory. Do not mix EU article numbers into a Korea or Brazil answer. Do not treat a mapping table as a substitute for the source skill.
 
-If the Skill tool cannot find the skill, tell the user to install it:
-
-`/plugin install <plugin>@ai-governance-skills`
-
-Then continue with whatever skills **are** loaded.
+If the skill is unavailable, name the missing skill and explain that it must be
+installed before that slice can be answered reliably. Use installation guidance
+for the current client when known; otherwise direct the user to the marketplace
+`INSTALL.md`. Then continue only with the skills that are loaded.
 
 User instructions (CLAUDE.md, AGENTS.md, direct requests) override skills. Skip a skill workflow only when the user explicitly says to.
 
@@ -90,7 +80,7 @@ Examples:
 | “A mapping row is enough” | Mapping tables are lookup aids. Invoke the source skill. |
 | “This is just a quick question” | Quick questions still pick a jurisdiction. |
 | “I’ll answer ISO and mention EU in passing” | Invoke both; two labelled artefacts. |
-| “The skill isn’t installed, I’ll approximate” | Say it is missing and give the install line. |
+| “The skill isn’t installed, I’ll approximate” | Name the missing skill and give client-appropriate installation guidance. |
 
 ## After routing
 

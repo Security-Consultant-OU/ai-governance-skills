@@ -1,36 +1,10 @@
 ---
 name: south-korea-ai-act
 description: >
-  Classifies high-impact AI (고영향 AI, Art. 2(4)) and maps operator duties
-  under the in-force Korea AI Basic Act (인공지능 기본법): Arts. 31–36,
-  Art. 35 endeavor impact assessment (Art. 35 endeavor AISIA), and Art. 36
-  domestic representative. Use when the user asks about the Korea AI Basic
-  Act, AI Framework Act, 인공지능 기본법, 고영향 AI, MSIT AI obligations, or
-  Art. 36. Korea high-impact is not EU high-risk; this is not a delayed-decree
-  statute.
-version: 1.2.0
-triggers:
-  - South Korea AI Act
-  - AI Basic Act
-  - AI Framework Act
-  - 인공지능 기본법
-  - 고영향 AI
-  - Korea high-impact AI
-  - MSIT AI
-  - KOSA AI
-  - Korea Art. 36
-  - domestic representative
-references:
-  - references/high-impact-categories.md
-  - references/obligations-matrix.md
-  - references/impact-assessment.md
-  - references/transparency-requirements.md
-  - references/high-compute-safety.md
-  - references/domestic-representative.md
-  - references/enforcement-and-grace-period.md
-  - references/cross-framework-mapping.md
-  - references/korea-worked-examples.md
-  - references/korea-templates.md
+  Use when a request concerns the Korea AI Basic Act, AI Framework Act,
+  인공지능 기본법, 고영향 AI, Korean high-impact or generative AI, MSIT
+  obligations, Article 35 impact assessment, high-compute safety, or an
+  Article 36 domestic representative.
 ---
 
 # South Korea AI Basic Act compliance advisor
@@ -57,7 +31,7 @@ Art. 35 is **endeavor**, not a mandatory pre-market gate. Art. 31(1) is **high-i
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 If the user says “high-risk” without an EU cue, ask whether they mean Korea **high-impact (고영향 AI)** or EU **Annex III high-risk**. Do not run an Annex III test in this skill.
 

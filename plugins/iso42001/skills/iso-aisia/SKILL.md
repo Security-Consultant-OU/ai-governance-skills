@@ -1,20 +1,9 @@
 ---
 name: iso-aisia
 description: >
-  Produces an ISO/IEC 42001:2023 AI system impact assessment (AISIA) record
-  under Clauses 6.1.4 and 8.4 and controls A.5.2–A.5.5. Use when the user
-  asks for an ISO AISIA, ISO/IEC 42001 impact assessment, or A.5 impact
-  record. Do not use for EU Art. 27 FRIA, Korea Art. 35 endeavor AISIA, or
-  Brazil AIA.
-version: 1.3.0
-triggers:
-  - ISO AISIA
-  - ISO/IEC 42001 AISIA
-  - ISO 42001 impact assessment
-  - A.5.2
-  - Clause 6.1.4
-references:
-  - references/aisia-record.md
+  Use when a request concerns an ISO/IEC 42001 AI system impact assessment
+  (AISIA), Clauses 6.1.4 or 8.4, controls A.5.2–A.5.5, or impacts of an AI
+  system on individuals, groups, or society within an AIMS.
 ---
 
 # ISO/IEC 42001 AISIA record producer
@@ -29,7 +18,7 @@ If the user omits document type, produce one **AISIA record** per named system u
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|
