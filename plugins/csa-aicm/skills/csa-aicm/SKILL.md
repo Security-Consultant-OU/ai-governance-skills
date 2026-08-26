@@ -1,20 +1,9 @@
 ---
 name: csa-aicm
 description: >
-  Fills CSA AI-CAIQ answers and AICM control gap tables from the user's AICM
-  workbook; supports STAR for AI Level 1 evidence and mappings to ISO 42001
-  or NIST AI 600-1 when those sheets exist. Use when the user mentions CSA
-  AICM, AI-CAIQ, STAR for AI, CSA AI Controls Matrix, or CAIQ for AI. Do not
-  use for ISO 42001 SoA, EU CE marking, or NIST Current vs Target Profiles.
-version: 1.0.0
-triggers:
-  - CSA AICM
-  - AI-CAIQ
-  - STAR for AI
-  - CSA AI Controls Matrix
-  - CAIQ for AI
-references:
-  - references/caiq-templates.md
+  Use when a request concerns CSA AICM, the AI Controls Matrix, AI-CAIQ,
+  CAIQ for AI, STAR for AI, or evidence and mappings from a user's AICM
+  workbook.
 ---
 
 # CSA AICM and AI-CAIQ advisor
@@ -29,7 +18,7 @@ If the user omits document type, produce a **CAIQ answer table** plus 🔴🟡�
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|

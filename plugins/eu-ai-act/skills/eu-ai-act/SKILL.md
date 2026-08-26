@@ -1,39 +1,9 @@
 ---
 name: eu-ai-act
 description: >
-  Classifies systems under the EU AI Act (Regulation 2024/1689) using
-  non-exclusive Art. 5 / Art. 6 / additive Art. 50; runs EU high-risk gap
-  assessment, operational checklists (Arts. 9–15, 17, 20, 72–73), Art. 27
-  FRIA gate, Chapter V general-purpose AI (GPAI), and Art. 43 conformity/CE.
-  Use when the user mentions EU AI Act, Regulation 2024/1689, Annex III,
-  Art. 27 FRIA, EU GPAI, CE marking for AI, Art. 50 transparency, or
-  prohibited AI practices. GPAI Code of Practice → companion skill
-  eu-gpai-cop. Do not use for Brazil PL 2338 GPAI or Korea high-impact AI.
-version: 1.3.0
-triggers:
-  - EU AI Act
-  - Regulation 2024/1689
-  - EU GPAI
-  - Art. 27 FRIA
-  - Annex III
-  - EU high-risk AI
-  - CE marking for AI
-  - Art. 50 transparency
-  - prohibited AI practices
-  - EU AI Act conformity assessment
-  - EU AI regulatory sandbox
-references:
-  - references/risk-classification.md
-  - references/high-risk-requirements.md
-  - references/gpai-obligations.md
-  - references/conformity-assessment.md
-  - references/penalties-timeline.md
-  - references/cross-framework-mapping.md
-  - references/fria-article-27.md
-  - references/annex-iv-technical-documentation.md
-  - references/eu-templates.md
-  - references/eu-worked-examples.md
-  - references/high-risk-operational-checklists.md
+  Use when a request concerns the EU AI Act, Regulation 2024/1689, prohibited
+  practices, Annex I or III high-risk AI, Article 50 transparency, Article 27
+  FRIA, EU GPAI duties, conformity assessment, CE marking, or sandboxes.
 ---
 
 # EU AI Act compliance advisor
@@ -67,7 +37,7 @@ Copy-ready output shells: `references/eu-templates.md`. High-risk operational au
 
 ### Refuse / invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User wants | Skill |
 |------------|-------|
@@ -148,7 +118,7 @@ Determine Art. 5 and Art. 6 first; apply **Art. 50 independently**. Emotion reco
 
 **Sandboxes (Art. 57):** Member States shall operate at least one national sandbox by 2 August 2026. Participation does **not** exempt AI Act obligations. Personal-data processing: Art. 59. Providers remain liable. Summarise Arts. 57–59 and point to the national MSA.
 
-Lookup tables live in `references/` (classification, high-risk duties, GPAI, conformity, FRIA, Annex IV, penalties, templates, worked examples, crosswalk).
+Lookup tables: `references/risk-classification.md`, `references/high-risk-requirements.md`, `references/gpai-obligations.md`, `references/conformity-assessment.md`, `references/fria-article-27.md`, `references/annex-iv-technical-documentation.md`, `references/penalties-timeline.md`, and `references/cross-framework-mapping.md`.
 
 ---
 
@@ -160,7 +130,7 @@ Lookup tables live in `references/` (classification, high-risk duties, GPAI, con
 
 **Process (non-exclusive — complete every step that applies):**
 
-1. **Article 5 prohibited practices.** If the intended use is prohibited → **Prohibited**. Stop for that use (must not be placed on the market, put into service, or used).
+1. **Article 5 prohibited practices.** If the intended use is prohibited → record **Prohibited** and stop any market, deployment, or use recommendation for that intended use. Continue the classification record through steps 2–6 so additive Article 50 and any overlapping classifications are still documented.
    - Emotion recognition in the **workplace or education** → **Prohibited** (Art. 5(1)(f)), except where intended for medical or safety reasons.
    - Emotion recognition **outside** those settings is not prohibited. Continue: typically **Annex III point 1(c) EU high-risk and Art. 50(3)** deployer notice. **Never** classify it as limited-risk only.
 2. **Article 6(1) Annex I product-law path.** Is the system a **safety component** of a product (or itself a product) covered by Annex I Union harmonisation legislation, **and** is that product (or the AI system as product) already required to undergo **third-party conformity assessment** under that legislation? If yes → **EU high-risk** (Art. 6(1)). Continue to step 5 for Art. 50.

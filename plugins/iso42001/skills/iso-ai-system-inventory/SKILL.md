@@ -1,20 +1,9 @@
 ---
 name: iso-ai-system-inventory
 description: >
-  Produces an ISO/IEC 42001:2023 AI system register for AIMS scope (Clause
-  4.3). Use when the user asks for an ISO 42001 AI system inventory, AI
-  system register, AIMS inventory, or Clause 4.3 register. Do not use for
-  NIST GOVERN inventory without an ISO 42001 cue, NYC AEDT lists, or Korea
-  high-impact catalogues.
-version: 1.3.0
-triggers:
-  - ISO 42001 AI system inventory
-  - AI system register
-  - AIMS inventory
-  - Clause 4.3
-  - ISO AI inventory
-references:
-  - references/system-register.md
+  Use when a request concerns an ISO/IEC 42001 AI system inventory, AIMS
+  register, Clause 4.3 scope evidence, or a structured register of AI-system
+  owners, roles, purposes, dependencies, and lifecycle status.
 ---
 
 # ISO/IEC 42001 AI system register producer
@@ -31,7 +20,7 @@ Clarify: **AI provider**, **AI user**, or **both**. Role drives later SoA exclus
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|

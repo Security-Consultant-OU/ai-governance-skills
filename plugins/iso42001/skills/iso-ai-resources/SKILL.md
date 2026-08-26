@@ -1,20 +1,9 @@
 ---
 name: iso-ai-resources
 description: >
-  Produces an ISO/IEC 42001:2023 AI resource inventory under Annex A.4
-  (A.4.2–A.4.6) and Clause 7.1 AIMS resources. Use when the user asks for
-  ISO 42001 AI resources, A.4 resource documentation, AI tooling inventory,
-  or AIMS resource allocation. Do not use for generic FinOps, HR headcount,
-  or NIST profiles without an ISO 42001 cue.
-version: 1.3.0
-triggers:
-  - ISO 42001 AI resources
-  - A.4.2
-  - AI resource inventory
-  - AI tooling inventory
-  - Clause 7.1
-references:
-  - references/resource-inventory.md
+  Use when a request concerns ISO/IEC 42001 AI resources, Annex A.4 resource
+  documentation, Clause 7.1 resource allocation, or inventories of AI data,
+  tooling, compute, infrastructure, and human competencies.
 ---
 
 # ISO/IEC 42001 AI resource inventory producer
@@ -31,7 +20,7 @@ Provider-primarily for A.4.3–A.4.5 (data, tooling, compute). **A.4.2** and **A
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|

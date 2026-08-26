@@ -1,26 +1,9 @@
 ---
 name: nyc-local-law-144
 description: >
-  Determines whether a hiring or promotion tool is an NYC Local Law 144 AEDT,
-  produces DCWP bias-audit tables (above-median scoring rate; 7 EEO-1
-  categories plus intersectional), and drafts candidate/employee notices.
-  Use when the user mentions NYC Local Law 144, LL144, AEDT, DCWP bias
-  audit, or NYC hiring AI. Do not use for ISO/IEC 42001 Statement of
-  Applicability, EU AI Act high-risk classification, or NIST AI RMF Profile.
-version: 1.2.0
-triggers:
-  - NYC Local Law 144
-  - LL144
-  - AEDT
-  - DCWP bias audit
-  - NYC hiring AI
-references:
-  - references/aedt-definition.md
-  - references/bias-audit-requirements.md
-  - references/notice-requirements.md
-  - references/nyc-templates.md
-  - references/nyc-worked-examples.md
-  - references/cross-framework-mapping.md
+  Use when a request concerns NYC Local Law 144, LL144, automated employment
+  decision tools (AEDTs), DCWP bias audits, scoring or selection rates,
+  independent auditors, or candidate and employee notices for NYC hiring AI.
 ---
 
 # NYC Local Law 144 compliance advisor
@@ -39,7 +22,7 @@ Do not invert geography. Do not invent a one-year or n=30 historical-data thresh
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User request | Invoke |
 |--------------|--------------|

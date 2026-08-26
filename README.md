@@ -8,7 +8,7 @@ Full “what / when / will not” for every skill: [SKILLS.md](SKILLS.md).
 
 1. Install **`ai-governance`**. A session-start hook loads `using-ai-governance` (the catalog).
 2. Install the specialists you need. Mixed-jurisdiction questions run **one skill per slice**.
-3. The agent announces `Using [skill] to [purpose]`, then follows that skill. If a skill is missing it prints `/plugin install <name>@ai-governance-skills`.
+3. The agent announces `Using [skill] to [purpose]`, then follows that skill. If a skill is missing it names the skill and gives installation guidance for the current client.
 
 Collision terms (`high-risk`, `GPAI`, `FRIA`, `AISIA`, `deployer`) are disambiguated in `using-ai-governance`. Mapping tables are lookup aids, not a substitute for the source skill.
 
@@ -59,7 +59,7 @@ Gap status is always **🔴 not started / 🟡 partial / 🟢 implemented**. Ski
 
 Official ISO, EU OJ, and CSA PDFs are **cited, not copied**. AICM / CAIQ IDs come from the user’s workbook.
 
-This repo is Markdown skills only (YAML frontmatter). Conventions for contributors: [CLAUDE.md](CLAUDE.md).
+This repo is Markdown skills plus dependency-free packaging and validation scripts. Validate changes with `python scripts/validate_skills.py`; contributor conventions: [CLAUDE.md](CLAUDE.md).
 
 ## License
 

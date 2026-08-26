@@ -1,30 +1,9 @@
 ---
 name: nist-ai-rmf
 description: >
-  Builds a NIST AI RMF 1.0 (NIST AI 100-1) Current vs Target Profile against
-  the 72 official subcategory outcomes across GOVERN, MAP, MEASURE, and MANAGE,
-  and applies the NIST AI 600-1 generative overlay. Use when the user mentions
-  NIST AI RMF, AI 100-1, Current vs Target Profile, GOVERN/MAP/MEASURE/MANAGE,
-  AI RMF Playbook, or NIST AI 600-1. Does not perform CE marking, ISO/IEC 42001
-  certification, NYC Local Law 144 audit math, or statutory high-risk
-  classification.
-version: 1.2.0
-triggers:
-  - NIST AI RMF
-  - NIST AI 100-1
-  - Current vs Target Profile
-  - GOVERN/MAP/MEASURE/MANAGE
-  - AI RMF Playbook
-  - NIST AI 600-1
-references:
-  - references/govern-function.md
-  - references/map-function.md
-  - references/measure-function.md
-  - references/manage-function.md
-  - references/generative-ai-profile.md
-  - references/cross-framework-mapping.md
-  - references/nist-templates.md
-  - references/nist-worked-examples.md
+  Use when a request concerns NIST AI RMF 1.0, NIST AI 100-1, Current and
+  Target Profiles, GOVERN/MAP/MEASURE/MANAGE outcomes, the AI RMF Playbook,
+  trustworthy-AI measurement, or the NIST AI 600-1 generative profile.
 ---
 
 # NIST AI Risk Management Framework advisor
@@ -55,7 +34,7 @@ If the user omits document type, produce a **Current vs Target Profile** for the
 
 NIST AI RMF is voluntary. It is not CE marking, not ISO certification, not NYC audit math, and not statutory high-risk classification.
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | Request | Invoke |
 |---------|-------------|
@@ -115,7 +94,7 @@ Voluntary framework. No penalties. GOVERN is **cross-cutting**. Core: **4 functi
 
 Companion: Playbook, Crosswalk, **NIST AI 600-1 Generative AI Profile (July 2024)**.
 
-Read function files for official outcomes. Default path: clarify → MAP → MEASURE → MANAGE, with GOVERN always on.
+Read official outcomes from `references/govern-function.md`, `references/map-function.md`, `references/measure-function.md`, and `references/manage-function.md`. Default path: clarify → MAP → MEASURE → MANAGE, with GOVERN always on.
 
 ---
 

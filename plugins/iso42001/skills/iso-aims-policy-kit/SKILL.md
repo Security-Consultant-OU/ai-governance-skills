@@ -1,20 +1,9 @@
 ---
 name: iso-aims-policy-kit
 description: >
-  Produces an ISO/IEC 42001:2023 AIMS document-control kit — policies, SOPs,
-  forms, and a master list mapped to clauses 4–10 and Annex A. Use when the
-  user asks for an AIMS policy pack, ISO 42001 SOPs, document master list,
-  management manual outline, or Stage 1 documented information set. Do not
-  use for SoA scoring of all 38 controls, EU CE marking, or CSA CAIQ.
-version: 1.4.0
-triggers:
-  - AIMS policy pack
-  - ISO 42001 SOP
-  - AIMS document master list
-  - ISO 42001 management manual
-  - AIMS-DOC
-references:
-  - references/document-master-list.md
+  Use when a request concerns an ISO/IEC 42001 AIMS policy pack, management
+  manual, SOPs, forms, document master list, documented-information controls,
+  or a Stage 1 certification evidence set.
 ---
 
 # ISO/IEC 42001 AIMS policy and document kit
@@ -31,7 +20,7 @@ Strip client names from any source draft.
 
 ### Out of scope — invoke sister skills
 
-Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing: `/plugin install <plugin>@ai-governance-skills`. Routing catalog: `using-ai-governance`.
+Names in the table are **other skills**. Before answering that slice, **invoke** the named skill (Skill tool, or read its `SKILL.md`). Announce `Using [skill] to [purpose]`. Do not improvise that jurisdiction. If it is missing, name it and give installation guidance for the current client; otherwise direct the user to the marketplace `INSTALL.md`. Routing catalog: `using-ai-governance`.
 
 | User need | Skill |
 |-----------|-------|
